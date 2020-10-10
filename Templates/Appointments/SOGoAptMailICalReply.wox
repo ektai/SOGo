@@ -1,0 +1,27 @@
+<!DOCTYPE container>
+<html 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:var="http://www.skyrix.com/od/binding"
+  xmlns:const="http://www.skyrix.com/od/constant"
+  xmlns:rsrc="OGo:url"
+  xmlns:label="OGo:label">
+
+  <head>
+    <style type="text/css">
+th, td { font-family: Lucida Grande, Bitstream VeraSans, Tahoma, sans-serif; font-size: 12px; line-height: 18px; }
+    </style>
+  </head>
+  <body>
+    <table cellpadding="2" cellspacing="2" border="0" style="width: 100%; max-width: 600px;">
+      <tr>
+      <th></th>
+      <td><h1 style="font-size: 18px; font-weight: normal; padding-bottom: 9px; border-bottom: 1px solid #ccc;"><var:string
+        value="getSubject" const:escapeHTML="NO"/></h1></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><var:string value="bodyStartText" const:escapeHTML="NO"/></td>
+      </tr>
+    </table>
+  </body>
+</html>

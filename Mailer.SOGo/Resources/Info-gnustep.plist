@@ -1,0 +1,5 @@
+{
+  NOTE = "Automatically generated, do not edit!";
+  NSExecutable = "Mailer";
+  NSPrincipalClass = "SOGoMailerProduct";
+}

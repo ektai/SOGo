@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE container>
+<container 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xml="http://www.w3.org/XML/1998/namespace"
+  xmlns:var="http://www.skyrix.com/od/binding"
+  xmlns:const="http://www.skyrix.com/od/constant"
+  xmlns:rsrc="OGo:url"
+  xmlns:label="OGo:label">
+  <div id="loginScreen">
+    <table>
+      <tr>
+	<td>
+	  <img const:alt="*" id="splash" rsrc:src="sogo-logo.png"/>
+	</td>
+	<td id="loginCell" width="250">
+	  <p><var:string label:value="browserNotCompatible"/></p>
+	  <p class="browser"><a href="http://www.getfirefox.com/"><var:string label:value="Download"/> Firefox</a> <img const:alt="*" rsrc:src="browser_firefox.gif" /></p>
+	    <p><var:string label:value="alternativeBrowsers"/></p>
+	  <p class="browser"><a href="http://www.google.com/chrome/"><var:string label:value="Download"/> Chrome</a> <img const:alt="*" rsrc:src="browser_chrome.gif" /></p>
+          <p class="browser"><a href="http://www.apple.com/safari/download/"><var:string label:value="Download"/> Safari</a> <img const:alt="*" rsrc:src="browser_safari.gif" valign="middle" /></p>
+	  <var:if condition="isIE7Compatible">
+	    <p class="browser"><a href="http://www.microsoft.com/ie/download/"><var:string label:value="Download"/> Internet Explorer</a> <img const:alt="*" rsrc:src="browser_ie.gif" valign="middle" /></p>
+	  </var:if>
+	</td>
+      </tr>
+    </table>
+  </div>
+</container>

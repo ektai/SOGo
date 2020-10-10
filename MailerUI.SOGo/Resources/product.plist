@@ -1,0 +1,433 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, MainUI, CommonUI, Mailer, MailPartViewers );
+
+  publicResources = ();
+
+  factories = {};
+
+  categories = {
+    SOGoMailFolder = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoMailFolder.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "View";
+          actionClass = "UIxMailListActions";
+          actionName  = "getUIDs";
+        };
+        headers = {
+          protectedBy = "View";
+          actionClass = "UIxMailListActions";
+          actionName  = "getHeaders";
+        };
+        subscribe = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "subscribe";
+        };
+        unsubscribe = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "unsubscribe";
+        };
+        quotas = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "quotas";
+        };
+        expunge = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "expunge";
+        };
+        createFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "createFolder";
+        };
+        save = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "renameFolder";
+        };
+        move = {
+          protectedBy = "Change Images And Files";
+          actionClass = "UIxMailFolderActions";
+          actionName = "moveFolder";
+        };
+        delete = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "delete";
+        };
+        batchDelete = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "batchDelete";
+        };
+        saveMessages = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "saveMessages";
+        };
+        markRead = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "markFolderRead";
+        };
+        exportFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "exportFolder";
+        };
+        copyMessages = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "copyMessages";
+        };
+        moveMessages = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "moveMessages";
+        };
+        setAsDraftsFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "setAsDraftsFolder";
+        };
+        setAsSentFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "setAsSentFolder";
+        };
+        setAsTrashFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "setAsTrashFolder";
+        };
+        setAsJunkFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "setAsJunkFolder";
+        };
+        markMessagesAsJunk = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "markMessagesAsJunk";
+        };
+        markMessagesAsNotJunk = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "markMessagesAsNotJunk";
+        };
+        UIxMailUserRightsEditor = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxMailUserRightsEditor";
+        };
+        userRights = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxMailUserRightsEditor";
+          actionName  = "userRights";
+        };
+        saveUserRights = {
+          protectedBy = "Change Permissions";
+          pageName    = "UIxMailUserRightsEditor";
+          actionName  = "saveUserRights";
+        };
+        addOrRemoveLabel = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName  = "addOrRemoveLabel";
+        };
+        removeAllLabels = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName  = "removeAllLabels";
+        };
+      };
+    };
+
+    SOGoTrashFolder = {
+      /* just a new toolbar, other things come from SOGoMailFolder */
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoMailFolder.toolbar";
+        };
+      };
+      methods = {
+        emptyTrash = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "emptyTrash";
+        };
+      };
+    };
+
+    SOGoMailObject = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoMailObject.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "View";
+          pageName    = "UIxMailView";
+          actionName = "default";
+        };
+        sendMDN = {
+          protectedBy = "View";
+          pageName    = "UIxMailView";
+          actionName = "sendMDN";
+        };
+        archiveAttachments = {
+          protectedBy = "View";
+          pageName    = "UIxMailView";
+          actionName = "archiveAttachments";
+        };
+        viewsource = {
+          protectedBy = "View";
+          actionClass = "UIxMailSourceView";
+          actionName = "viewSource";
+        };
+        popupview = {
+          protectedBy = "View";
+          pageName    = "UIxMailPopupView";
+        };
+        junk = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "junk";
+        };
+        edit = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName = "edit";
+        };
+        reply = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "reply";
+        };
+        replyall = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "replyToAll";
+        };
+        forward = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "forward";
+        };
+        viewplain = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "viewPlain";
+        };
+        markMessageUncollapse = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageUncollapse";
+        };
+        markMessageCollapse = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageCollapse";
+        };
+        markMessageUnflagged = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageUnflagged";
+        };
+        markMessageFlagged = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageFlagged";
+        };
+        markMessageUnread = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageUnread";
+        };
+        markMessageRead = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName  = "markMessageRead";
+        };
+      };
+    };
+
+    SOGoMailAccounts = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoMailFolder.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+        };
+        compose = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+          actionName  = "compose";
+        };
+        foldersState = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+          actionName  = "getFoldersState";
+        };
+        saveDragHandleState = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+          actionName  = "saveDragHandleState";
+        };
+        saveFoldersState = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+          actionName  = "saveFoldersState";
+        };
+        saveColumnsState = {
+          protectedBy = "View";
+          pageName    = "UIxMailMainFrame";
+          actionName  = "saveColumnsState";
+        };
+        search = {
+          protectedBy = "View";
+          pageName    = "UIxMailSearch";
+        };
+        unseenCount = {
+          protectedBy = "View";
+          actionClass = "UIxMailMainFrame";
+          actionName = "unseenCount";
+        };
+        mailAccounts = {
+          protectedBy = "View";
+          actionClass = "UIxMailMainFrame";
+          actionName = "mailAccounts";
+        };
+        // viewerTemplate = {
+        //   protectedBy = "View";
+        //   pageName    = "UIxMailViewTemplate";
+        // };
+        UIxMailPopupView = {
+          protectedBy = "View";
+          pageName    = "UIxMailPopupView";
+        };
+        UIxMailEditor = {
+          protectedBy = "View";
+          pageName    = "UIxMailEditor";
+        };
+      };
+    };
+
+    SOGoMailAccount = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoMailFolder.toolbar";
+        };
+      };
+      methods = {
+        compose = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName  = "compose";
+        };
+        view = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName = "listMailboxes";
+        };
+        viewAll = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName = "listAllMailboxes";
+        };
+        subscribe = {
+          protectedBy = "Access Contents Information";
+          pageName    = "UIxMailFolderSubscriptions";
+        };
+        createFolder = {
+          protectedBy = "View";
+          actionClass = "UIxMailFolderActions";
+          actionName = "createFolder";
+        };
+        delegation = {
+          protectedBy = "View";
+          pageName = "UIxMailUserDelegationEditor";
+        };
+        addDelegate = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName = "addDelegate";
+        };
+        removeDelegate = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName = "removeDelegate";
+        };
+        certificate = {
+          protectedBy = "View";
+          actionClass = "UIxMailAccountActions";
+          actionName = "certificate";
+        };
+        importCertificate = {
+          protectedBy = "Change Images And Files";
+          actionClass = "UIxMailAccountActions";
+          actionName = "importCertificate";
+        };
+        removeCertificate = {
+          protectedBy = "Change Images And Files";
+          actionClass = "UIxMailAccountActions";
+          actionName = "removeCertificate";
+        };
+      };
+    };
+
+    SOGoDraftObject = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value       = "SOGoDraftObject.toolbar";
+        };
+      };
+      methods = {
+        edit = {
+          protectedBy = "View";
+          pageName    = "UIxMailEditor";
+          actionName = "edit";
+        };
+        save = {
+          protectedBy = "View";
+          pageName    = "UIxMailEditor";
+          actionName  = "save";
+        };
+        send = {
+          protectedBy = "View";
+          pageName    = "UIxMailEditor";
+          actionName  = "send";
+        };
+        delete = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName = "delete";
+        };
+        deleteAttachment = {
+          protectedBy = "View";
+          actionClass = "UIxMailActions";
+          actionName = "deleteAttachment";
+        };
+      };
+    };
+  };
+}
+

@@ -1,0 +1,24 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, MainUI, CommonUI );
+
+  publicResources = ();
+
+  factories = {};
+
+  categories = {
+    SOGoUserFolder = {
+      slots = {
+      };
+      methods = {
+        Administration = {
+          protectedBy = "View";
+          pageName = "UIxAdministration";
+        };
+        UIxAdministrationAclEditor = {
+          protectedBy = "View";
+          pageName = "UIxAdministrationAclEditor";
+        };
+      };
+    };
+  };
+}

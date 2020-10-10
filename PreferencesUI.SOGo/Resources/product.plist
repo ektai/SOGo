@@ -1,0 +1,53 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, MainUI, CommonUI );
+
+  publicResources = ();
+
+  factories = {
+  };
+
+  categories = {
+    SOGoUserFolder = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "UIxPreferences.toolbar";
+        };
+      };
+      methods = {
+        Preferences = {
+          protectedBy = "View";
+          pageName = "UIxPreferences";
+        };
+        editAccount = {
+          protectedBy = "View";
+          pageName = "UIxAccountEditor";
+        };
+        editFilter = {
+          protectedBy = "View";
+          pageName = "UIxFilterEditor";
+        };
+        activeExternalSieveScripts = {
+          protectedBy = "View";
+          pageName = "UIxJSONPreferences";
+          actionName = "activeExternalSieveScripts";
+        };
+        jsonDefaults = {
+          protectedBy = "View";
+          pageName = "UIxJSONPreferences";
+          actionName = "jsonDefaults";
+        };
+        jsonSettings = {
+          protectedBy = "View";
+          pageName = "UIxJSONPreferences";
+          actionName = "jsonSettings";
+        };
+        save = {
+          protectedBy = "Change Images And Files";
+          pageName    = "UIxPreferences";
+          actionName  = "save";
+        };
+      };
+    };
+  };
+}

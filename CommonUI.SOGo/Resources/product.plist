@@ -1,0 +1,161 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, Contacts, Mailer );
+
+  publicResources = (
+                     calendar.css,
+                     uix.css,
+                     menu_logo_top.gif,
+                     line_left.gif,
+                     line_stretch.gif,
+                     line_right.gif,
+                     box_topleft.gif,
+                     box_top.gif,
+                     box_topright.gif,
+                     box_left.gif,
+                     box_right.gif,
+                     box_botleft.gif,
+                     box_bottom.gif,
+                     box_botright.gif,
+                     corner_right.gif,
+                     closewindow.gif,
+                     OGoLogo.gif,
+                     upward_sorted.gif,
+                     downward_sorted.gif,
+                     non_sorted.gif
+                     );
+
+  factories = {
+  };
+
+  categories = {
+    SOGoObject = {
+      methods = {
+        addUserInAcls = { 
+          protectedBy = "Change Permissions";
+          actionClass = "UIxObjectActions";
+          actionName  = "addUserInAcls";
+        };
+        removeUserFromAcls = { 
+          protectedBy = "Change Permissions";
+          actionClass = "UIxObjectActions";
+          actionName  = "removeUserFromAcls";
+        };
+        delete = {
+          protectedBy = "Delete Object";
+          actionClass = "UIxObjectActions";
+          actionName  = "delete";
+        };
+        saveAcls = {
+          protectedBy = "Change Permissions";
+          pageName    = "UIxAclEditor";
+          actionName  = "saveAcls";
+        };
+        userRights = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxUserRightsEditor";
+          actionName  = "userRights";
+        };
+        saveUserRights = {
+          protectedBy = "Change Permissions";
+          pageName    = "UIxUserRightsEditor";
+          actionName = "saveUserRights";
+        };
+        acls = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxAclEditor";
+          actionName  = "acls";
+        };
+        UIxAclEditor = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxAclEditor";
+        };
+      };
+    };
+    SOGoUserFolder = {
+      methods = {
+        labels = {
+          protectedBy = "Access Contents Information";
+          pageName = "UIxPageFrame";
+          actionName  = "labels";
+        };
+      };
+    };
+    SOGoParentFolder = {
+      methods = {
+        createFolder = {
+          protectedBy = "Add Folders";
+          actionClass = "UIxParentFolderActions";
+          actionName = "createFolder";
+        };
+        saveFoldersActivation = {
+          protectedBy = "Change Images And Files";
+          actionClass = "UIxParentFolderActions";
+          actionName = "saveFoldersActivation";
+        };
+      };
+    };
+    SOGoFolder = {
+      methods = {
+        newguid = {
+          protectedBy = "<public>";
+          actionClass = "UIxFolderActions";
+          actionName  = "newguid";
+        };
+      };
+    };
+    SOGoGCSFolder = {
+      methods = {
+        subscribe = {
+          protectedBy = "<public>";
+          actionClass = "UIxFolderActions";
+          actionName = "subscribe";
+        };
+        unsubscribe = {
+          protectedBy = "<public>";
+          actionClass = "UIxFolderActions";
+          actionName = "unsubscribe";
+        };
+        canAccessContent = {
+          protectedBy = "Access Object";
+          actionClass = "UIxFolderActions";
+          actionName = "canAccessContent";
+        };
+        activateFolder = {
+          protectedBy = "<public>";
+          actionClass = "UIxFolderActions";
+          actionName = "activateFolder";
+        };
+        deactivateFolder = {
+          protectedBy = "<public>";
+          actionClass = "UIxFolderActions";
+          actionName  = "deactivateFolder";
+        };
+        subscribeUsers = {
+          protectedBy = "Change Permissions";
+          actionClass = "UIxFolderActions";
+          actionName  = "subscribeUsers";
+        };
+        save = {
+          protectedBy = "Access Contents Information";
+          actionClass = "UIxFolderActions";
+          actionName  = "renameFolder";
+        };
+        batchDelete = {
+          protectedBy = "Delete Objects";
+          actionClass = "UIxFolderActions";
+          actionName  = "batchDelete";
+        };
+        copy = {
+          protectedBy = "Access Contents Information";
+          actionClass = "UIxFolderActions";
+          actionName = "copy";
+        };
+        move = {
+          protectedBy = "Delete Objects";
+          actionClass = "UIxFolderActions";
+          actionName = "move";
+        };
+      };
+    };
+  };
+}

@@ -1,0 +1,349 @@
+/* toolbar */
+"Save and Close" = "Lagre og Avslutt";
+"Close" = "Avslutt";
+"Preferences saved" = "Preferanser lagret";
+
+/* tabs */
+"General" = "Generelt";
+"Calendar Options" = "Kalenderinnstillinger";
+"Contacts Options" = "Kontaktinnstillinger";
+"Mail Options" = "E-postinnstillinger";
+"IMAP Accounts" = "IMAP-kontoer";
+"Vacation" = "Fravær";
+"Forward" = "Videresend";
+"Password" = "Passord";
+"Categories" = "Kategorier";
+"Appointments invitations" = "Avtale varslinger";
+"Name" = "Navn";
+"Color" = "Farge";
+"Add" = "Legg til";
+"Delete" = "Fjern";
+
+/* contacts categories */
+"contacts_category_labels" = "Kollega, Konkurrent, Kunde, Venn, Familie, Foretningspartner, Leverandør, Presse, VIP";
+
+/* vacation (auto-reply) */
+"Enable vacation auto reply" = "Aktiver auto-svar ved fravær";
+"Auto reply message" = "Auto-svar melding";
+"Email addresses (separated by commas)" = "E-postadresser (separert med komma)";
+"Add default email addresses" = "Legg til standard e-postadresser";
+"Days between responses" = "Dager mellom svar";
+"Do not send responses to mailing lists" = "Ikke send svar til e-postlister";
+"Disable auto reply on" = "Skru av auto-svar";
+"Always send vacation message response" = "Alltid send ferie melding";
+"Please specify your message and your email addresses for which you want to enable auto reply."
+= "Skriv melding og angi din e-postadresse som du vil aktivere auto-svar for.";
+"Your vacation message must not end with a single dot on a line." = "Fraværsmeldingen kan ikke slutte med ett ensomt punktum på en linje.";
+"End date of your auto reply must be in the future."
+= "Slutt-dato for auto-svar må være i framtiden.";
+
+/* forward messages */
+"Forward incoming messages" = "Videresend innkommende e-post";
+"Keep a copy" = "Behold en kopi";
+"Please specify an address to which you want to forward your messages."
+= "Angi adressen du vil videresende dine meldinger til.";
+"You are not allowed to forward your messages to an external email address." = "Du har ikke lov til å videresende mail til en ekstern e-mail addresse.";
+"You are not allowed to forward your messages to an internal email address." = "Du har ikke love til å videresende mail til en ekstern e-mail addresse.";
+
+/* d & t */
+"Current Time Zone" = "Gjeldende tidssone";
+"Short Date Format" = "Kort datoformat";
+"Long Date Format" = "Langt datoformat";
+"Time Format" = "Tidsformat";
+"default" = "Standard";
+"Default Module" = "Standardmodus";
+"Save" = "Lagre";
+"shortDateFmt_0" = "%d-%b-%y";
+"shortDateFmt_1" = "%d-%m-%y";
+"shortDateFmt_2" = "%d/%m/%y";
+"shortDateFmt_3" = "%e/%m/%y";
+"shortDateFmt_4" = "%d-%m-%Y";
+"shortDateFmt_5" = "%d/%m/%Y";
+"shortDateFmt_6" = "%m-%d-%y";
+"shortDateFmt_7" = "%m/%d/%y";
+"shortDateFmt_8" = "%m/%e/%y";
+"shortDateFmt_9" = "%y-%m-%d";
+"shortDateFmt_10" = "%y/%m/%d";
+"shortDateFmt_11" = "%y.%m.%d";
+"shortDateFmt_12" = "%Y-%m-%d";
+"shortDateFmt_13" = "%Y/%m/%d";
+"shortDateFmt_14" = "%Y.%m.%d";
+"shortDateFmt_15" = "";
+   
+"longDateFmt_0" = "%A, %B %d, %Y";
+"longDateFmt_1" = "%B %d, %Y";
+"longDateFmt_2" = "%A, %d %B, %Y";
+"longDateFmt_3" = "%d %B, %Y";
+"longDateFmt_4" = "";
+"timeFmt_0" = "%I:%M %p";
+"timeFmt_1" = "%H:%M";
+"timeFmt_2" = "";
+
+/* calendar */
+"Week begins on" = "Uken begynner med";
+"Day start time" = "Dagen begynner kl.";
+"Day end time" = "Dagen slutter kl.";
+"Day start time must be prior to day end time." = "Dagens starttid må være før dagens sluttid.";
+"Show time as busy outside working hours" = "Vis tid som opptatt utenfor arbeidstid";
+"First week of year" = "Første uken i året";
+"Enable reminders for Calendar items" = "Aktivere påminnelser for kalenderelementer";
+"Play a sound when a reminder comes due" = "Avspill lyd ved en påminnelse";
+"Default reminder" = "Standardpåminnelse";
+"firstWeekOfYear_January1" = "Begynner den 1. januar";
+"firstWeekOfYear_First4DayWeek" = "Første firedagersuken i året";
+"firstWeekOfYear_FirstFullWeek" = "Første hele uken i året";
+"Prevent from being invited to appointments" = "Hindre fra å bli invitert til avtaler";
+"White list for appointment invitations" = "Hviteliste for avtale invitasjoner";
+"Contacts Names" = "Kontakters navn";
+
+/* Default Calendar */
+"Default calendar" = "Standard kalender";
+"selectedCalendar" = "Valgte kalender";
+"personalCalendar" = "Personlig kalender";
+"firstCalendar" = "Første aktiverte kalender";
+"reminder_NONE" = "Ingen påminnelse";
+"reminder_5_MINUTES_BEFORE" = "5 minutter";
+"reminder_10_MINUTES_BEFORE" = "10 minutter";
+"reminder_15_MINUTES_BEFORE" = "15 minutter";
+"reminder_30_MINUTES_BEFORE" = "30 minutter";
+"reminder_45_MINUTES_BEFORE" = "45 minutter før";
+"reminder_1_HOUR_BEFORE" = "1 time";
+"reminder_2_HOURS_BEFORE" = "2 timer";
+"reminder_5_HOURS_BEFORE" = "5 timer";
+"reminder_15_HOURS_BEFORE" = "15 timer";
+"reminder_1_DAY_BEFORE" = "1 dag";
+"reminder_2_DAYS_BEFORE" = "2 dager";
+"reminder_1_WEEK_BEFORE" = "1 uke før";
+
+/* Mailer */
+"Labels" = "Merkelapper";
+"Label" = "Etikett";
+"Show subscribed mailboxes only" = "Vis bare abonnerte postbokser";
+"Sort messages by threads" = "Sorter meldinger etter tråder";
+"When sending mail, add unknown recipients to my" = "Ved sending av mail, legg til ukjente mottakere til min";
+"Address Book" = "Adressebok";
+"Forward messages" = "Videresend meldinger";
+"messageforward_inline" = "Innsatt";
+"messageforward_attached" = "Som Vedlegg";
+"When replying to a message" = "Ved svar på melding";
+"replyplacement_above" = "Start svaret ovenfor";
+"replyplacement_below" = "Start svaret under";
+"And place my signature" = "Legg til min signatur";
+"signatureplacement_above" = "over mitt svar";
+"signatureplacement_below" = "under mitt svar";
+"Compose messages in" = "Opprett melding i";
+"composemessagestype_html" = "HTML";
+"composemessagestype_text" = "Ren text";
+"Display remote inline images" = "Vis bilder lenket til fra andre nettsteder";
+"displayremoteinlineimages_never" = "Aldri";
+"displayremoteinlineimages_always" = "Alltid";
+"Auto save every" = "Lagre automatisk";
+"minutes" = "minutter";
+
+/* Contact */
+"Personal Address Book" = "Personlig addressebok";
+"Collected Address Book" = "Samlet addressebok";
+
+/* IMAP Accounts */
+"Mail Account" = "Epost konto";
+"New Mail Account" = "Ny e-postkonto";
+"Server Name" = "Servernavn";
+"Port" = "Port";
+"Encryption" = "Kryptering";
+"None" = "Ingen";
+"User Name" = "Brukernavn";
+"Full Name" = "Fullt navn";
+"Email" = "E-post";
+"Reply To Email" = "Svar til e-post";
+"Signature" = "Signatur";
+"(Click to create)" = "(Klikk for å opprette)";
+"Please enter your signature below" = "Vennligst fyll ut signatur under";
+"Please specify a valid sender address." = "Vennligst angi en gyldig avsenderadresse.";
+"Please specify a valid reply-to address." = "Vennligst angi en gyldig svar-til-adresse.";
+
+/* Additional Parameters */
+"Additional Parameters" = "Øvrige parametre";
+
+/* password */
+"New password" = "Nytt passord";
+"Confirmation" = "Bekreft";
+"Change" = "Endre";
+
+/* Event+task classifications */
+"Default events classification" = "Standard hendelsesklassifikasjon";
+"Default tasks classification" = "Standard oppgaveklassifisering";
+"PUBLIC_item" = "Offentlig";
+"CONFIDENTIAL_item" = "Konfidensiell";
+"PRIVATE_item" = "Privat";
+
+/* Event+task categories */
+"Calendar Category" = "Kalender kategori";
+"Add Calendar Category" = "Legg til kalender kategori";
+"Remove Calendar Category" = "Fjern kalender kategori";
+"Contact Category" = "Kontakt kategori";
+"Add Contact Category" = "Legg til kontakt kategori";
+"Remove Contact Category" = "Fjern kalender kategori";
+"category_none" = "Ingen";
+"calendar_category_labels" = "Arbeid,Diverse,Favoritter,Ferier,Fritid,Fødselsdager,Gaver,Helligdager,Idéer,Jubileum,Konkurranser,Kunder,Leverandører,Møter,Oppfølging,Personlig,Presentasjoner,Reiser,Prosjekt,Status,Telefonsamtaler,Ærend";
+
+/* Default module */
+"Calendar" = "Kalender";
+"Contacts" = "Adressebok";
+"Mail" = "E-post";
+"Last" = "Sist besøkt";
+"Default Module " = "Standardmodul";
+"SOGo Version" = "SOGo versjon";
+
+/* Confirmation asked when changing the language */
+"Save preferences and reload page now?" = "Lagre preferanser og oppdater siden nå?";
+"Language" = "Språk";
+"choose" = "Velg ...";
+"Arabic" = "العربية";
+"Basque" = "Euskara";
+"Catalan" = "Català";
+"ChineseChina" = "简体中文";
+"ChineseTaiwan" = "Chinese (Taiwan)";
+"Croatian" = "Hrvatski";
+"Czech" = "Česky";
+"Danish" = "Dansk (Danmark)";
+"Dutch" = "Nederlands";
+"English" = "English";
+"Finnish" = "Suomi";
+"French" = "Français";
+"German" = "Deutsch";
+"Hebrew" = "עברית";
+"Hungarian" = "Magyar";
+"Icelandic" = "Íslenska";
+"Indonesian" = "bahasa Indonesia";
+"Italian" = "Italiano";
+"Japanese" = "日本語";
+"Latvian" = "Latviešu";
+"Macedonian" = "Makedonsk";
+"NorwegianBokmal" = "Norsk bokmål";
+"NorwegianNynorsk" = "Norsk nynorsk";
+"Polish" = "Polski";
+"Portuguese" = "Portugisisk";
+"BrazilianPortuguese" = "Português brasileiro";
+"Romanian" = "Română";
+"Russian" = "Русский";
+"Serbian" = "Српски";
+"Slovak" = "Slovensky";
+"Slovenian" = "Slovenščina";
+"SpanishSpain" = "Español (España)";
+"SpanishArgentina" = "Español (Argentina)";
+"Swedish" = "Svenska";
+"TurkishTurkey" = "Türkçe (Türkiye)";
+"Ukrainian" = "Українська";
+"Welsh" = "Cymraeg";
+"Refresh View" = "Oppdater Visning";
+"refreshview_manually" = "Manuelt";
+"refreshview_every_minute" = "Hvert minutt";
+"refreshview_every_2_minutes" = "Hvert 2. minutt";
+"refreshview_every_5_minutes" = "Hvert 5. minutt";
+"refreshview_every_10_minutes" = "Hvert 10. minutt";
+"refreshview_every_20_minutes" = "Hvert 20. minutt";
+"refreshview_every_30_minutes" = "Hvert 30. minutt";
+"refreshview_once_per_hour" = "Hver time";
+
+/* Return receipts */
+"When I receive a request for a return receipt" = "Når jeg mottar anmodning om en returkvittering";
+"Never send a return receipt" = "Send aldri en returkvittering";
+"Allow return receipts for some messages" = "Tillat returkvittering for noen meldinger";
+"If I'm not in the To or Cc of the message" = "Hvis jeg ikke er i Til- eller Cc-feltet i meldingen";
+"If the sender is outside my domain" = "Hvis senderen er utenfor mitt domene";
+"In all other cases" = "I alle andre tilfeller";
+"Never send" = "Aldri send";
+"Always send" = "Alltid send";
+"Ask me" = "Spør meg";
+
+/* Filters - UIxPreferences */
+"Filters" = "Filtre";
+"Active" = "Aktiv";
+"Move Up" = "Flytt opp";
+"Move Down" = "Flytt ned";
+"Connection error" = "Koblingsfeil";
+"Service temporarily unavailable" = "Tjeneste midlertidig utilgjengelig";
+
+/* Filters - UIxFilterEditor */
+"Filter name" = "Filternavn";
+/* Button label */
+"Add a condition" = "Legg til en betingelse";
+/* Button label */
+"Add an action" = "Legg til en handling";
+"For incoming messages that" = "For innkommende meldinger som";
+"match all of the following rules" = "samsvarer med alt av følgende regler";
+"match any of the following rules" = "samsvarer med en av følgende regler";
+"match all messages" = "samsvarer med alle meldinger";
+"Perform these actions" = "Utfør disse handlingene";
+"Untitled Filter" = "Ikke navngitt filter";
+"Subject" = "Emne";
+"From" = "Fra";
+"To" = "Til";
+"Cc" = "Kopi";
+"To or Cc" = "Til eller Kopi";
+"Size (Kb)" = "Størrelse (Kb)";
+"Header" = "Tittel";
+"Body" = "Kropp";
+"Flag the message with" = "Flagg meldingen med";
+"Discard the message" = "Forkast meldingen";
+"File the message in" = "Fil meldingen i";
+"Keep the message" = "Behold meldingen";
+"Forward the message to" = "Videresend melding til";
+"Send a reject message" = "Send en avvisningsmelding";
+"Send a vacation message" = "Send en feriemelding";
+"Stop processing filter rules" = "Stopp prosessering av filterregler";
+"is under" = "er under";
+"is over" = "er over";
+"is" = "er";
+"is not" = "er ikke";
+"contains" = "inneholder";
+"does not contain" = "inneholder ikke";
+"matches" = "samsvarer med";
+"does not match" = "samsvarer ikke med";
+"matches regex" = "samsvarer med regex";
+"does not match regex" = "samvarer ikke med regex";
+/* Placeholder for the value field of a condition */
+"Value" = "Verdi";
+"Seen" = "Sett";
+"Deleted" = "Slettet";
+"Answered" = "Svart";
+"Flagged" = "Flagget";
+"Junk" = "Søppel";
+"Not Junk" = "Ikke søppel";
+
+/* Password policy */
+"The password was changed successfully." = "Passordet ble endret.";
+"Password must not be empty." = "Passord kan ikke være tomme.";
+"The passwords do not match. Please try again." = "Passordene er ikke like. Prøv igjen.";
+"Password change failed" = "Passordendring feilet";
+"Password change failed - Permission denied" = "Passordendring feilet - ikke tilgang";
+"Password change failed - Insufficient password quality" = "Passordendring feilet - for dårlig passord";
+"Password change failed - Password is too short" = "Passordendring feilet - passordet er for kort";
+"Password change failed - Password is too young" = "Passordendring feilet - passordet er nylig brukt før";
+"Password change failed - Password is in history" = "Passordendring feilet - passordet er brukt før";
+"Unhandled policy error: %{0}" = "Uhåndtert policy-feil: %{0}";
+"Unhandled error response" = "Uhåndtert feilrespons";
+"Password change is not supported." = "Passordendring er ikke støttet.";
+"Unhandled HTTP error code: %{0}" = "Uhåndtert HTTP feilkode: %{0}";
+"Cancel" = "Avbryt";
+"Invitations" = "Invitasjoner";
+"Edit Filter" = "Endre filter";
+"Delete Filter" = "Fjern filter";
+"Create Filter" = "Lag filter";
+"Delete Label" = "Fjern merkelapp";
+"Create Label" = "Lag merkelapp";
+"Accounts" = "Kontoer";
+"Edit Account" = "Rediger konto";
+"Delete Account" = "Fjern konto";
+"Create Account" = "Opprett konto";
+"Account Name" = "Konto navn";
+"SSL" = "SSL";
+"TLS" = "TLS";
+
+/* Avatars */
+"Alternate Avatar" = "Alternativ Avatar";
+"none" =  "Ingen";
+"identicon" = "Identitetsikon";
+"monsterid" = "Monster";
+"wavatar" = "Wavatar";
+"retro" = "Retro";

@@ -1,0 +1,2 @@
+!function(){"use strict";function a(){}a.$factory=["$q","$timeout","$log","sgSettings","Resource","User",function(t,e,o,r,n,i){return angular.extend(a,{$q:t,$timeout:e,$log:o,$$resource:new n(r.activeUser("folderURL"),r.activeUser()),activeUser:r.activeUser(),$User:i}),new a}];try{angular.module("SOGo.AdministrationUI")}catch(t){angular.module("SOGo.AdministrationUI",["SOGo.Common"])}angular.module("SOGo.AdministrationUI").factory("Administration",a.$factory)}();
+//# sourceMappingURL=Administration.services.js.map

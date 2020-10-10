@@ -1,0 +1,139 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE var:component>
+<var:component xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:var="http://www.skyrix.com/od/binding"
+               xmlns:const="http://www.skyrix.com/od/constant"
+               xmlns:rsrc="OGo:url"
+               xmlns:label="OGo:label"
+               className="UIxPageFrame"
+               title="title"
+               const:jsFiles="Common.js, Administration.js,
+                              Administration.services.js, Preferences.services.js,
+                              Contacts.services.js, Scheduler.services.js">
+
+  <main class="view"
+        layout="row" layout-fill="layout-fill"
+        ui-view="administration"
+        ng-controller="navController"><!-- administration --></main>
+
+  <script type="text/ng-template" id="administration.html">
+
+    <!-- Sidenav -->
+    <md-sidenav class="md-sidenav-left md-whiteframe-z1" layout="column"
+                md-component-id="left" md-is-locked-open="isGtMedium"
+                ng-class="{ 'sg-close': leftIsClose }">
+      <var:component className="UIxSidenavToolbarTemplate" />
+      <md-content class="md-flex" layout="column" md-scroll-y="md-scroll-y"
+                  md-colors="::{ backgroundColor: 'default-background-300' }">
+        <md-list>
+          <md-list-item ng-click="app.go('rights')"
+                        ui-sref="administration.rights"
+                        ui-sref-active="md-default-theme md-background md-bg md-hue-1">
+            <md-icon>security</md-icon>
+            <p class="sg-item-name"><var:string label:value="Rights"/></p>
+          </md-list-item>
+        </md-list>
+      </md-content>
+    </md-sidenav>
+
+    <section layout="column" layout-fill="layout-fill"
+             ui-view="module"><!-- admin module --></section>
+
+  </script>
+
+  <!--
+      RIGHTS ADMINISTRATION PANEL
+  -->
+  <script type="text/ng-template" id="rights.html">
+    <!-- TOP RIGHT TOOLBAR -->
+    <md-toolbar layout="row" layout-align="space-between center" class="toolbar-main">
+      <var:component className="UIxTopnavToolbar" />
+    </md-toolbar>
+
+    <div layout="row" class="md-flex">
+
+      <div class="view-list" layout="column">
+        <md-toolbar class="md-accent md-hue-1">
+          <!-- search toolbar -->
+          <form class="md-toolbar-tools"
+                name="searchForm"
+                sg-search="app.filter(searchText)"
+                sg-allow-dot="false">
+            <md-icon>search</md-icon>
+            <md-input-container class="md-block md-flex" md-no-float="md-no-float">
+              <input name="folderSearch" type="search" ng-minlength="3"
+                     label:placeholder="Search Users"/>
+            </md-input-container>
+          </form>
+        </md-toolbar>
+
+        <md-divider><!-- divider --></md-divider>
+
+        <md-content id="usersList" layout="column" class="md-flex">
+          <md-subheader ng-show="app.service.$query">
+            <span ng-switch="app.users.length">
+              <span ng-switch-when="0"><var:string label:value="No matching user"/></span>
+              <span ng-switch-default="true">{{app.users.length}} <var:string label:value="users found"/></span>
+            </span>
+          </md-subheader>
+          <md-subheader ng-hide="app.service.$query">
+            <var:string label:value="Start a search to edit the rights"/>
+          </md-subheader>
+          <md-virtual-repeat-container class="md-flex">
+            <md-list class="sg-section-list">
+              <div ng-repeat="user in app.users">
+                <md-list-item ng-class="{ 'sg-collapsed': user.uid != app.selectedUser.uid,
+                                        'sg-expanded': user.uid == app.selectedUser.uid }"
+                              ng-click="app.selectUser($index)"
+                              aria-label="{{::user.c_email}}">
+                  <sg-avatar-image class="md-avatar"
+                                   sg-email="::user.c_email"
+                                   size="40">{{::user.$avatarIcon}}</sg-avatar-image>
+                  <div class="sg-tile-content">
+                    <div class="sg-md-subhead">
+                      <div>{{::user.cn}}</div>
+                    </div>
+                    <div class="sg-md-body">
+                      <div>{{::user.c_email}}</div>
+                    </div>
+                  </div>
+                  <md-button class="md-icon-button"><md-icon ng-class="{'md-rotate-180': user.uid == app.selectedUser.uid}">expand_more</md-icon></md-button>
+                </md-list-item>
+                <div ng-show="user == app.selectedUser">
+                  <!-- folders list -->
+                  <md-list-item ng-show="user.$$folders.length == 0">
+                    <md-icon>warning</md-icon>
+                    <var:string label:value="No resource"/>
+                  </md-list-item>
+                  <md-list-item class="sg-folder" ng-repeat="folder in user.$$folders"
+                                aria-label="{{::folder.displayName}}" title="{{::folder.displayName}}"
+                                ng-click="app.selectFolder(folder)">
+                    <md-icon>{{ folder.type == 'Contact' ? 'contacts' : 'event' }}</md-icon>
+                    <span class="sg-no-wrap" ng-bind="::folder.displayName"><!-- folder name --></span>
+                  </md-list-item>
+                  <md-divider><!-- divider --></md-divider>
+                </div>
+              </div>
+            </md-list>
+          </md-virtual-repeat-container>
+        </md-content>
+      </div>
+
+      <div id="detailView" class="view-detail"
+           layout="column" layout-align="start center"
+           ng-class="{ 'sg-close': !app.selectedUser.selectedFolder }"
+           md-colors="::{backgroundColor: 'default-background-200'}"
+           ui-view="acl">
+        <md-content class="hide show-gt-md md-flex"
+                    md-colors="::{backgroundColor: 'default-background-200'}"
+                    layout="column" layout-align="center center" layout-fill="layout-fill">
+          <div class="sg-md-title"
+               md-colors="::{color: 'default-background-500'}"><var:string label:value="No resource selected"/></div>
+        </md-content>
+      </div>
+
+    </div>
+  </script>
+
+</var:component>
+

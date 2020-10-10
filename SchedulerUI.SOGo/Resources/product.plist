@@ -1,0 +1,342 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, MainUI, CommonUI, Appointments, Contacts, ContactsUI );
+
+  publicResources = ();
+
+  factories = {};
+
+  categories = {
+    SOGoAppointmentFolders = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoAppointmentFolders.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "View";
+          pageName    = "UIxCalMainView";
+        };
+        printView = {
+          protectedBy = "<public>";
+          pageName    = "UIxCalViewPrint";
+          actionClass = "UIxCalViewPrint";
+        };
+        addWebCalendar = {
+          protectedBy = "View";
+          actionClass = "UIxCalMainActions";
+          actionName  = "addWebCalendar";
+        };
+        saveDragHandleState = {
+          protectedBy = "View";
+          pageName    = "UIxCalMainView";
+          actionName  = "saveDragHandleState";
+        };
+        saveSelectedList = {
+          protectedBy = "View";
+          pageName    = "UIxCalMainView";
+          actionName  = "saveSelectedList";
+        };          
+        saveListState = {
+          protectedBy = "View";
+          pageName    = "UIxCalMainView";
+          actionName  = "saveListState";
+        };
+        saveFoldersOrder = {
+          protectedBy = "View";
+          pageName    = "UIxCalMainView";
+          actionName  = "saveFoldersOrder";
+        };
+        calendarslist = {
+          protectedBy = "View";
+          pageName = "UIxCalendarSelector";
+          actionName = "calendarsList";
+        };
+        alarmslist = {
+          protectedBy = "View";
+          actionClass = "UIxCalListingActions";
+          actionName = "alarmsList";
+        };
+        eventslist = {
+          protectedBy = "View";
+          actionClass = "UIxCalListingActions";
+          actionName = "eventsList";
+        };
+        eventsblocks = {
+          protectedBy = "View";
+          actionClass = "UIxCalListingActions";
+          actionName = "eventsBlocks";
+        };
+        taskslist = {
+          protectedBy = "View";
+          actionClass = "UIxCalListingActions";
+          actionName = "tasksList";
+        };
+        activeTasks = {
+          protectedBy = "View";
+          actionClass = "UIxCalListingActions";
+          actionName = "activeTasks";
+        };
+        dayview = {
+          protectedBy = "View";
+          pageName    = "UIxCalDayView"; 
+        };
+        multicolumndayview = {
+          protectedBy = "View";
+          pageName    = "UIxCalMulticolumnDayView"; 
+        };
+        weekview = {
+          protectedBy = "View";
+          pageName    = "UIxCalWeekView"; 
+        };
+        monthview = {
+          protectedBy = "View";
+          pageName    = "UIxCalMonthView"; 
+        };
+        show = { 
+          protectedBy = "View";
+          pageName    = "UIxCalView"; 
+          actionName  = "redirectForUIDs";
+        };
+        userRights = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxCalUserRightsEditor";
+          actionName  = "userRights";
+        };
+        saveUserRights = {
+          protectedBy = "Change Permissions";
+          pageName    = "UIxCalUserRightsEditor";
+          actionName  = "saveUserRights";
+        };
+        UIxAppointmentViewTemplate = {
+          protectedBy = "View";
+          pageName    = "UIxAppointmentViewTemplate";
+        };
+        UIxTaskViewTemplate = {
+          protectedBy = "View";
+          pageName    = "UIxTaskViewTemplate";
+        };
+        UIxAppointmentEditorTemplate = {
+          protectedBy = "View";
+          pageName    = "UIxAppointmentEditorTemplate";
+        };
+        UIxTaskEditorTemplate = {
+          protectedBy = "View";
+          pageName    = "UIxTaskEditorTemplate";
+        };
+        editAttendees = {
+          protectedBy = "View";
+          pageName    = "UIxAttendeesEditor";
+        };
+        editRecurrence = {
+          protectedBy = "View";
+          pageName    = "UIxRecurrenceEditor";
+        };
+        editReminder = {
+          protectedBy = "View";
+          pageName    = "UIxReminderEditor";
+        };
+      };
+    };
+
+    SOGoAppointmentFolder = {
+      methods = {
+        properties = { 
+          protectedBy = "Access Contents Information";
+          pageName    = "UIxCalendarProperties"; 
+        };
+        save = {
+          protectedBy = "Access Contents Information";
+          pageName = "UIxCalendarProperties";
+          actionName = "saveProperties";
+        };
+        show = { 
+          protectedBy = "View";
+          pageName    = "UIxCalView"; 
+          actionName  = "redirectForUIDs";
+        };
+        import = {
+          protectedBy = "Add Documents, Images, and Files";
+          actionClass = "UIxCalFolderActions";
+          actionName  = "import";
+        };
+        UIxCalUserRightsEditor = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxCalUserRightsEditor";
+        };
+        userRights = {
+          protectedBy = "ReadAcls";
+          pageName    = "UIxCalUserRightsEditor";
+          actionName  = "userRights";
+        };
+        saveUserRights = {
+          protectedBy = "Change Permissions";
+          pageName    = "UIxCalUserRightsEditor";
+          actionName  = "saveUserRights";
+        };
+        links = {
+          protectedBy = "Access Contents Information";
+          pageName = "UIxCalendarFolderLinksTemplate";
+        };
+      };
+    };
+
+    SOGoWebAppointmentFolder = {
+      methods = {
+        reload = {
+          protectedBy = "View";
+          actionClass = "UIxCalFolderActions";
+          actionName = "reload";
+        };
+        "set-credentials" = {
+          protectedBy = "View";
+          actionClass = "UIxCalFolderActions";
+          actionName = "setCredentials";
+        };
+      };
+    };
+
+    SOGoAppointmentFolderICS = {
+      methods = {
+        export = {
+          protectedBy = "Access Contents Information";
+          actionClass = "UIxCalFolderActions";
+          actionName  = "export";
+        };
+      };
+    };
+
+    SOGoCalendarComponent = {
+    };
+
+    SOGoAppointmentObject = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoAppointmentObject.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "ViewAllComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "view";
+        };
+        save = { 
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "save";
+        };
+        rsvpAppointment = {
+          protectedBy = "RespondToComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "rsvp";
+        };
+        saveAsAppointment = {
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "save";
+        };
+        copy = {
+          protectedBy = "ViewAllComponent";
+          actionClass = "UIxAppointmentActions";
+          actionName  = "copy";
+        };
+        move = {
+          protectedBy = "Delete Object";
+          actionClass = "UIxAppointmentActions";
+          actionName  = "move";
+        };
+        raw = {
+          protectedBy = "ViewAllComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "raw";
+        };
+        adjust = {
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxAppointmentActions"; 
+          actionName  = "adjust";
+        };
+      };
+    };
+
+    SOGoTaskObject = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoAppointmentObject.toolbar";
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "ViewAllComponent";
+          actionClass = "UIxTaskEditor";
+          actionName  = "view";
+        };
+        save = {
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxTaskEditor";
+          actionName  = "save";
+        };
+        saveAsTask = { 
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxTaskEditor";
+          actionName  = "save";
+        };
+        raw = {
+          protectedBy = "ViewAllComponent";
+          actionClass = "UIxTaskEditor";
+          actionName  = "raw";
+        };
+      };
+    };
+
+    SOGoAppointmentOccurence = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoAppointmentObject.toolbar";
+        };
+      };
+      methods = {
+        save = { 
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxAppointmentEditor";
+          actionName  = "save";
+        };
+        delete = {
+          protectedBy = "Delete Object";
+          actionClass = "UIxOccurenceEditor";
+          actionName  = "delete";
+        };
+        adjust = {
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxAppointmentActions"; 
+          actionName  = "adjust";
+        };
+      };
+    };
+
+    SOGoTaskOccurence = {
+      slots = {
+        toolbar = {
+          protectedBy = "View";
+          value = "SOGoTaskObject.toolbar";
+        };
+      };
+      methods = {
+        save = { 
+          protectedBy = "ModifyComponent";
+          actionClass = "UIxTaskEditor";
+          actionName  = "save";
+        };
+        delete = {
+          protectedBy = "Delete Object";
+          actionClass = "UIxOccurenceEditor";
+          actionName  = "delete";
+        };
+      };
+    };
+  };
+}

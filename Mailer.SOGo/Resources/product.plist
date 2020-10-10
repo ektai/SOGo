@@ -1,0 +1,75 @@
+{
+  requires = ( MAIN, Contacts );
+
+  publicResources = (
+  );
+
+  factories = {
+  };
+  
+  classes = {
+    SOGoMailBaseObject = {
+      superclass    = "SOGoObject";
+    };
+    SOGoMailAccounts = {
+      superclass    = "SOGoFolder";
+      defaultRoles = {
+        "View"          = ( "Owner", "AuthorizedSubscriber" );
+        "Access Contents Information" = ( "Owner", "AuthorizedSubscriber" );
+        "Add Documents, Images, and Files" = ( "Owner", "ObjectCreator" );
+        "WebDAV Access" = ( "Owner", "AuthorizedSubscriber" );
+      };
+    };
+    SOGoMailAccount = {
+      superclass    = "SOGoMailBaseObject";
+      defaultRoles = {
+        "View"          = ( "Owner", "AuthorizedSubscriber" );
+        "Access Contents Information" = ( "Owner", "AuthorizedSubscriber" );
+        "Add Documents, Images, and Files" = ( "Owner", "ObjectCreator" );
+        "WebDAV Access" = ( "Owner", "AuthorizedSubscriber" );
+      };
+    };
+    SOGoMailFolder = {
+      superclass    = "SOGoMailBaseObject";
+      defaultRoles = {
+        "View" = ( "Owner", "ObjectViewer" );
+        "Access Contents Information" = ( "Owner", "ObjectViewer" );
+        "Add Documents, Images, and Files" = ( "Owner", "ObjectCreator" );
+        "Delete Objects" = ( "Owner", "ObjectEraser" );
+        "WebDAV Access" = ( "Owner", "ObjectViewer" );
+        "ReadAcls" = ( "Owner", "MailAdministrator" );
+        "Change Permissions" = ( "Owner", "MailAdministrator" );
+      };
+    };
+    SOGoTrashFolder = {
+      superclass    = "SOGoMailFolder";
+    };
+    SOGoMailObject = {
+      superclass    = "SOGoMailBaseObject";
+    };
+    SOGoMailBodyPart = {
+      superclass    = "SOGoMailBaseObject";
+    };
+    SOGoHTMLMailBodyPart = {
+      superclass    = "SOGoMailBodyPart";
+    };
+    SOGoImageMailBodyPart = {
+      superclass    = "SOGoMailBodyPart";
+    };
+    SOGoMessageMailBodyPart = {
+      superclass    = "SOGoMailBodyPart";
+    };
+    SOGoCalendarMailBodyPart = {
+      superclass    = "SOGoMailBodyPart";
+    };
+    SOGoVCardMailBodyPart = {
+      superclass    = "SOGoMailBodyPart";
+    };
+    SOGoDraftsFolder = {
+      superclass    = "SOGoMailBaseObject";
+    };
+    SOGoDraftObject = {
+      superclass    = "SOGoMailBaseObject";
+    };
+  };
+}

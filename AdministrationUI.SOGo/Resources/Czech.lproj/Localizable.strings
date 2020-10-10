@@ -1,0 +1,27 @@
+/* this file is in UTF-8 format! */
+
+"Help" = "Nápověda";
+"Close" = "Zavřít";
+"Modules" = "Moduly";
+/* Modules short names */
+"ACLs" = "Přístupová práva";
+/* Modules titles */
+"ACLs_title" = "Managenent přístupových práv složek uživatelů";
+/* Modules descriptions */
+"ACLs_description" = "<p>Administrační modul přístupových práv umožňuje nastavovat přístupová práva ke kalendářům a adresářům každého uživatele.</p><p>Chcete-li změnit přístupová práva ke složkám uživatele, zadejte jeho uživatelské jméno do vyhledávacího pole v horní části okna, rozbalte stromovou strukturu jeho složek a na požadované složce udělejte dvojkliknutí.</p>";
+"Name or Email" = "Jméno nebo e-mail";
+"ACLs saved" = "ACL uloženy";
+/* Rights module: initial search message */
+"Start a search to edit the rights" = "Vyhledat k úpravě práv";
+/* Rights module: Empty search result */
+"No matching user" = "Žádný odpovídající uživatel";
+/* Rights module: no selection */
+"No resource selected" = "Nebyl vybrán žádný zdroj";
+"Add User" = "Přidat uživatele";
+"Subscribe User" = "Odebírat";
+"Rights" = "Práva";
+"Search Users" = "Vyhledat uživatele";
+"users found" = "uživatelů nalezeno";
+"No resource" = "Není zdroj";
+"Any Authenticated User" = "Každý ověřený uživatel";
+"Public Access" = "Veřejný přístup";

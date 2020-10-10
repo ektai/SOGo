@@ -1,0 +1,364 @@
+/* this file is in UTF-8 format! */
+
+"Contact" = "Kontakt";
+"Address" = "Adres";
+"Photos" = "Zdjęcia";
+"Other" = "Inne";
+"Address Books" = "Książki adresowe";
+"Addressbook" = "Książka adresowa";
+"Addresses" = "Adresy";
+"Update" = "Aktualizacja";
+"Cancel" = "Anuluj";
+"Common" = "Wspólne";
+"Contact editor" = "Edytor kontaktów";
+"Contact viewer" = "Przeglądarka kontaktów";
+"Email" = "E-mail";
+"Screen Name" = "Nazwa ekranowa";
+"Extended" = "Rozszerzone";
+"Fax" = "Fax";
+"Firstname" = "Imię";
+"Home" = "Dom";
+"HomePhone" = "Telefon domowy";
+"Lastname" = "Nazwisko";
+"Location" = "Miejscowość";
+"Add a category" = "Dodaj kategorię";
+"MobilePhone" = "Telefon komórkowy";
+"Name" = "Nazwa";
+"OfficePhone" = "Telefon do biura";
+"Organization" = "Organizacja";
+"Work Phone" = "Telefon do pracy";
+"Cell" = "Komórka";
+"Pager" = "Pager";
+"Pref" = "Pref";
+"Phone" = "Telefon";
+"Phones" = "Telefony";
+"Postal" = "Adres korespondencyjny";
+"Save" = "Zapisz";
+"Internet" = "Internet";
+"Unit" = "Jednostka";
+"delete" = "usuń";
+"edit" = "edytuj";
+"invalidemailwarn" = "Podany adres e-mail jest nieprawidłowy";
+"new" = "nowy";
+"Preferred Phone" = "Preferowany telefon";
+"Move To" = "Przenieś do";
+"Copy To" = "Kopiuj do";
+"Add to" = "Dodaj do";
+"To" = "Do";
+"Carbon Copy (Cc)" = "Do wiadomości (Cc)";
+"Blind Carbon Copy (Bcc)" = "Ukryte DW (Bcc)";
+
+/* Search scope: name fields */
+"name" = "Nazwa";
+
+/* Search scope: name fields */
+"c_cn" = "Nazwa";
+
+/* Search scope: secondary email field */
+"mozillanickname" = "Dodatkowy e-mail";
+
+/* Search scope: screen name field */
+"nsaimid" = "Nazwa ekranowa";
+
+/* Search scope: mail fields */
+"mail" = "E-mail";
+
+/* Search scope: mail fields */
+"c_mail" = "E-mail";
+
+/* Search scope: telephone field */
+"telephonenumber" = "Telefon";
+
+/* Search scope: telephone field */
+"homephone" = "Telefon";
+
+/* Search scope: mobile field */
+"mobile" = "Telefon kom.";
+
+/* Search scope: fax field */
+"facsimiletelephonenumber" = "Fax";
+
+/* Search scope: pager field */
+"pager" = "Pager";
+
+/* Search scope: categories field */
+"c_categories" = "Kategorie";
+
+/* Search scope: categories field */
+"vcardcategories" = "Kategorie";
+
+/* Search scope: title field */
+"title" = "Tytuł";
+
+/* Search scope: organization field */
+"c_o" = "Organizacja";
+
+/* Search scope: organization field */
+"o" = "Organizacja";
+
+/* Search scope: department field */
+"ou" = "Dział";
+
+/* Search scope: city field */
+"l" = "Miasto";
+
+/* Search scope: country field */
+"c" = "Kraj";
+
+/* Search scope: home address field */
+"mozillahomestreet" = "Adres domowy";
+
+/* Search scope: state/province field */
+"st" = "Województwo";
+
+/* Search scope: home state/province field */
+"mozillahomestate" = "Województwo";
+
+/* Search scope: zip/postal code field */
+"postalCode" = "Kod pocztowy";
+
+/* Search scope: home zip/postal code field */
+"mozillahomepostalcode" = "Kod pocztowy";
+
+/* Search scope: home country field */
+"mozillahomecountryname" = "Kraj";
+
+/* Search scope: home web page field */
+"mozillahomeurl" = "Strona domowa";
+
+/* Search scope: work web page field */
+"mozillaworkurl" = "Strona firmowa";
+
+/* Search scope: note field */
+"description" = "Uwagi";
+
+/* Subheader of empty addressbook */
+"No contact" = "Brak kontaktów";
+
+/* Subheader of system addressbook */
+"Start a search to browse this address book" = "Aby przeglądnąć książkę adresową, rozpocznij wyszukiwanie";
+
+/* Number of contacts in addressbook; string is prefixed by number */
+"contacts" = "kontaktów";
+
+/* No contact matching search criteria */
+"No matching contact" = "Żaden kontakt nie pasuje";
+
+/* Number of contacts matching search criteria; string is prefixed by number */
+"matching contacts" = "pasujących kontaktów";
+
+/* Number of selected contacts in list */
+"selected" = "wybranych";
+
+/* Empty right pane */
+"No contact selected" = "Nie wybrano kontaktów";
+
+/* Tooltips */
+"Create a new address book card" = "Utwórz nowy kontakt w książce adresowej";
+"Create a new list" = "Utwórz nową listę";
+"Edit the selected card" = "Edytuj zaznaczoną kartę";
+"Send a mail message" = "Wyślij wiadomość e-mail";
+"Delete selected card or address book" = "Usuń zaznaczony kontakt lub książkę adresową";
+"Reload all contacts" = "Przeładuj wszystkie kontakty";
+"htmlMailFormat_UNKNOWN" = "Nieznany";
+"htmlMailFormat_FALSE" = "czysty tekst";
+"htmlMailFormat_TRUE" = "HTML";
+"Name or Email" = "Nazwa lub e-mail";
+"Category" = "Category";
+"Personal Addressbook" = "Osobista książka adresowa";
+"Search in Addressbook" = "Szukaj w książce adresowej";
+"New Card" = "Nowy kontakt";
+"New List" = "Nowa lista";
+"Edit" = "Edytuj";
+"Properties" = "Właściwości";
+"Sharing..." = "Udostępnianie";
+"Write" = "Napisz";
+"Delete" = "Usuń";
+"Instant Message" = "Szybka wiadomość";
+"Add..." = "Dodaj";
+"Remove" = "Usuń";
+"Please wait..." = "Zaczekaj chwilę...";
+"No possible subscription" = "Brak możliwej subskrypcji";
+"Preferred" = "Preferowane";
+"Display" = "Wyświetl";
+"Display Name" = "Nazwa wyświetlana";
+"Additional Email" = "Dodatkowy E-mail";
+"Phone Number" = "Numer telefonu";
+"Prefers to receive messages formatted as" = "Preferuję wiadomości w formacie";
+"Categories" = "Kategorie";
+"First" = "Imię";
+"Last" = "Nazwisko";
+"Nickname" = "Pseudonim";
+"Telephone" = "Telefon";
+"Work" = "Praca";
+"Mobile" = "Telefon kom.";
+"Pager" = "Pager";
+
+/* categories */
+"contacts_category_labels" = "Kolega, Konkurencja, Klient, Przyjaciel, Rodzina, Biznes, Dostawca, Prasa, VIP";
+"New category" = "Nowa kategoria";
+
+/* adresses */
+"Title" = "Tytuł";
+"Service" = "Usługa";
+"Company" = "Firma";
+"Department" = "Oddział";
+"City" = "Miejscowość";
+"State_Province" = "Województwo";
+"ZIP_Postal Code" = "Kod pocztowy";
+"Country" = "Kraj";
+"Web Page" = "Strona WWW";
+"Other Infos" = "Inne informacje";
+"Note" = "Uwagi";
+"Timezone" = "Strefa czasowa";
+"Birthday" = "Urodziny";
+"Birthday (yyyy-mm-dd)" = "Urodziny (yyyy-mm-dd)";
+"Freebusy URL" = "URL statusu wolny-zajęty";
+"Add as..." = "Dodaj jako";
+"Recipient" = "Odbiorca";
+"Carbon Copy" = "Do wiadomości";
+"Blind Carbon Copy" = "Ukryte DW";
+"New Addressbook..." = "Nowa książka adresowa";
+"Subscribe to an Addressbook..." = "Subskrybuj książkę adresową";
+"Remove the selected Addressbook" = "Usuń zaznaczoną książkę adresową";
+"Subscribe to a shared folder" = "Subskrybuj współdzielony folder";
+"Search User" = "Wyszukaj użytkownika";
+"Name of the Address Book" = "Nazwa książki adresowej";
+"Are you sure you want to delete the selected address book?"
+= "Czy na pewno chcesz skasować zaznaczoną książkę adresową?";
+"Are you sure you want to delete the addressbook \"%{0}\"?"
+= "Na pewno chcesz usunąć książkę adresową \"%{0}\"?";
+"You cannot remove nor unsubscribe from a public addressbook."
+= "Nie możesz usunąć ani zrezygnować z subskrypcji publicznej książki adresowej.";
+"You cannot remove nor unsubscribe from your personal addressbook."
+= "Nie możesz usunąć ani zrezygnować z subskrypbji osobistej książki adresowej.";
+"Are you sure you want to delete the selected contacts?"
+= "Czy na pewno chcesz skasować zaznaczone kontakty?";
+"Are you sure you want to delete the card of %{0}?" = "Na pewno chcesz usunąć kartę \"%{0}\"?";
+"You cannot delete the card of \"%{0}\"."
+= "Nie możesz skasować kontaktu do \"%{0}\".";
+"You cannot subscribe to a folder that you own!"
+= "Nie możesz zrezygnować z subskrypcji foldera, którego jesteś właścicielem.";
+"Unable to subscribe to that folder!"
+= "Nie można włączyć subskrypcji tego foldera.";
+
+/* security */
+"Security" = "Zabezpieczenia";
+"Uninstall" = "Odinstaluj";
+"Error reading the card certificate." = "Błąd odczytu certyfikatu karty.";
+"No certificate associated to card." = "Nie ma certyfikatu powiązanego z tą kartą.";
+
+/* acls */
+"Access rights to" = "Uprawnienia dla";
+"For user" = "Dla użytkownika";
+"Any Authenticated User" = "Każdy zalogowany użytkownik";
+"Public Access" = "Dostęp publiczny";
+"This person can add cards to this addressbook."
+= "Ta osoba może dodawać kontakty do tej książki adresowej.";
+"This person can edit the cards of this addressbook."
+= "Ta osoba może edytować kontakty w tej książce adresowej.";
+"This person can list the content of this addressbook."
+= "Ta osoba może przeglądać zawartość tej książki adresowej.";
+"This person can read the cards of this addressbook."
+= "Ta osoba może odczytywać kontakty z tej książki adresowej.";
+"This person can erase cards from this addressbook."
+= "Ta osoba może usuwać kontakty z tej książki adresowej.";
+"The selected contact has no email address."
+= "Wskazany kontakt nie ma adresu e-mail.";
+"Please select a contact." = "Zaznacz kontakt.";
+
+/* Messages for move and copy */
+"%{0} card(s) copied" = "Skopiowano %{0} kart";
+"%{0} card(s) moved" = "Przeniesiono %{0} kart";
+"SoAccessDeniedException" = "Nie masz prawa zapisu do tej książki adresowej.";
+"Forbidden" = "Zabronione";
+"Invalid Contact" = "Wskazany kontakt już nie istnieje.";
+"Unknown Destination Folder" = "Wybrana docelowa książka adresowa już nie istnieje.";
+
+/* Lists */
+"List details" = "Szczegóły listy";
+"List name" = "Nazwa listy";
+"List nickname" = "Nick listy";
+"List description" = "Opis listy";
+"Members" = "Uczestnicy";
+"Contacts" = "Kontakty";
+"Add" = "Dodaj";
+"Lists can't be moved or copied." = "Listy nie mogą być przeniesione ani skopiowane.";
+"Export" = "Eksport";
+"Export Address Book..." = "Eksportuj książkę adresową";
+"View Raw Source" = "Obejrzyj źródło";
+
+/* Import */
+"Import Cards" = "Importuj kontakty";
+"Select a vCard or LDIF file." = "Wskaż plik vCard lub LDIF.";
+"Upload" = "Wyślij";
+"Uploading" = "Wysyłanie";
+"Done" = "Zrobione";
+"An error occured while importing contacts." = "W trakcie importu kontaktów pojawił się błąd.";
+"No card was imported." = "Nie zaimportowano żadnego kontaktu.";
+"A total of %{0} cards were imported in the addressbook." = "Liczba wszystkich kontaktów zaimportowanych do książki adresowej: %{0}.";
+"Reload" = "Przeładuj";
+
+/* Properties window */
+"Address Book Name" = "Nazwa książki adresowej";
+"Links to this Address Book" = "Linki do tej książki adresowej";
+"Authenticated User Access" = "Dostęp dla zalogowanych użytkowników";
+"CardDAV URL" = "CardDAV URL";
+"Options" = "Opcje";
+"Rename" = "Zmień nazwę";
+"Subscriptions" = "Subskrybcje";
+"Global Addressbooks" = "Globalna książka adresowa";
+"Search" = "Szukaj";
+"Sort" = "Sortuj";
+"Descending Order" = "Kolejność malejąca";
+"Back" = "Wstecz";
+"Select All" = "Zaznacz wszystkie";
+"Copy contacts" = "Kopiuj kontakty";
+"More messages options" = "Więcej opcji wiadomości";
+"New Contact" = "Nowy kontakt";
+"Close" = "Zamknij";
+"More contact options" = "Więcej opcji kontaktów";
+"Organization Unit" = "Jednostka";
+"Add Organizational Unit" = "Dodaj jednostkę";
+"Type" = "Typ";
+"Email Address" = "Adres e-mail";
+"New Email Address" = "Nowy adres e-mail";
+"New Phone Number" = "Nowy numer telefonu";
+"URL" = "URL";
+"New URL" = "Nowy URL";
+"street" = "ulica";
+"street (continued)" = "ulica (kontynuacja)";
+"Postoffice" = "Poczta";
+"Region" = "Region";
+"Postal Code" = "Kod pocztowy";
+"New Address" = "Nowy adres";
+"Reset" = "Wyczyść";
+"Description" = "Opis";
+"Add Member" = "Dodaj uczestnika";
+"Subscribe" = "Subskrybuj";
+"Add Birthday" = "Dodaj urodziny";
+"Import" = "Importuj";
+"More options" = "Więcej opcji";
+"Role" = "Rola";
+"Add Screen Name" = "Dodaj nazwę ekranową";
+"Custom 1" = "Własna 1";
+"Custom 2" = "Własna 2";
+"Custom 3" = "Własna 3";
+"Custom 4" = "Własna 4";
+"Custom Value" = "Własna wartość";
+"New Custom Value" = "Nowa własna wartość";
+"Synchronization" = "Synchronizacja";
+"Synchronize" = "Synchronizuj";
+"Sucessfully subscribed to address book" = "Subskrypcja książki adresowej zakończona powodzeniem";
+
+/* Aria label for scope of search on contacts */
+"Search scope" = "Zakres wyszukiwania";
+
+/* Aria label for avatar button to select and unselect a card */
+"Toggle item" = "Odwróć wskazanie";
+
+/* Hotkey to create a new card */
+"key_create_card" = "c";
+
+/* Hotkey to create a new list */
+"key_create_list" = "l";

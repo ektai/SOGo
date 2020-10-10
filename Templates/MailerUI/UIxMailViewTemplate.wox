@@ -1,0 +1,406 @@
+<?xml version='1.0' standalone='yes'?>
+<container
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:var="http://www.skyrix.com/od/binding"
+    xmlns:const="http://www.skyrix.com/od/constant"
+    xmlns:rsrc="OGo:url"
+    xmlns:label="OGo:label"
+    xmlns:uix="OGo:uix">
+
+  <div class="sg-reversible" ng-class="{ 'sg-flip': viewer.showRawSource }">
+    <div class="sg-face" layout="column" layout-fill="layout-fill">
+      <md-card>
+        <md-card-actions flex-none="flex-none" layout="row" layout-align="end center">
+          <md-button ng-click="toggleCenter()"
+                     class="md-icon-button md-primary md-hue-1 hide show-gt-xs"
+                     aria-hidden="true"
+                     ng-if="::!isPopup">
+            <md-icon>{{ centerIsClose ? 'fullscreen_exit' : 'fullscreen' }}</md-icon>
+          </md-button>
+          <md-button class="md-icon-button"
+                     ng-if="::isPopup"
+                     label:aria-label="Close"
+                     ng-click="viewer.closePopup()">
+            <md-icon>close</md-icon>
+          </md-button>
+          <md-button class="md-icon-button hide-gt-xs"
+                     ng-hide="::isPopup"
+                     label:aria-label="Close"
+                     ng-click="viewer.close()">
+            <md-icon>close</md-icon>
+          </md-button>
+          <div class="md-flex"><!-- spacer --></div>
+          <md-button class="sg-icon-button" label:aria-label="Flagged" ng-click="viewer.message.toggleFlag()">
+            <md-icon ng-class="{ 'sg-icon-star': viewer.message.isflagged }">{{ viewer.message.isflagged ? 'star' : 'star_border' }}</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button"
+                     ng-hide="::viewer.message.isDraft"
+                     ng-click="viewer.reply($event)"
+                     label:aria-label="Reply">
+            <md-tooltip md-direction="bottom"><var:string label:value="Reply to Sender Only"/></md-tooltip>
+            <md-icon>reply</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button"
+                     ng-show="viewer.message.allowReplyAll()"
+                     ng-click="viewer.replyAll($event)"
+                     label:aria-label="Reply All">
+            <md-tooltip md-direction="bottom"><var:string label:value="Reply to sender and all recipients"/></md-tooltip>
+            <md-icon>reply_all</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button" label:aria-label="Forward"
+                     ng-hide="::viewer.message.isDraft"
+                     ng-click="viewer.forward($event)">
+            <md-tooltip md-direction="bottom"><var:string label:value="Forward selected message"/></md-tooltip>
+            <md-icon>forward</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button" label:aria-label="Edit"
+                     ng-show="::viewer.message.isDraft"
+                     ng-click="viewer.edit($event)">
+            <md-icon>create</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button" label:aria-label="Delete"
+                     ng-click="viewer.deleteMessage()">
+            <md-tooltip md-direction="bottom"><var:string label:value="Delete selected message or folder"/></md-tooltip>
+            <md-icon>delete</md-icon>
+          </md-button>
+          <md-button class="sg-icon-button hide show-gt-md" label:aria-label="'Open in New Mail Window'.asSafeJSString"
+                     ng-hide="::isPopup"
+                     ng-click="viewer.openInPopup()">
+            <md-tooltip md-direction="bottom"><var:string label:value="Open in New Mail Window"/></md-tooltip>
+            <md-icon>open_in_new</md-icon>
+          </md-button>
+          <md-menu>
+            <md-button label:aria-label="More mail options" class="sg-icon-button" ng-click="$mdMenu.open($event)">
+              <md-icon>more_vert</md-icon>
+            </md-button>
+            <md-menu-content width="4">
+              <md-menu-item ng-hide="viewer.showFlags">
+                <md-button label:aria-label="Add a tag"
+                           ng-click="viewer.addFlags($event)">
+                  <var:string label:value="Add a tag"/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button label:aria-label="Save As..."
+                           ng-click="viewer.message.download()">
+                  <var:string label:value="Save As..."/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item ng-show="::viewer.message.attachmentAttrs.length">
+                <md-button label:aria-label="Download all attachments"
+                           ng-click="viewer.message.downloadAttachments()">
+                  <var:string label:value="Download all attachments"/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button label:aria-label="View Message Source"
+                           ng-click="viewer.toggleRawSource($event)">
+                  <var:string label:value="View Message Source"/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button label:aria-label="Print..."
+                           ng-click="viewer.print()">
+                  <var:string label:value="Print..."/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider><!-- divider --></md-menu-divider>
+              <md-menu-item>
+                <md-button label:aria-label="Convert To Event"
+                           ng-click="viewer.convertToEvent($event)">
+                  <var:string label:value="Convert To Event"/>
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button label:aria-label="Convert To Task"
+                           ng-click="viewer.convertToTask($event)">
+                  <var:string label:value="Convert To Task"/>
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </md-card-actions>
+        <md-card-content>
+          <div class="sg-padded">
+            <h5 class="sg-md-headline" ng-bind="viewer.message.subject"><!-- subject --></h5>
+            <time class="msg-date" datetime="viewer.message.date" ng-bind="::viewer.message.date"><!-- date --></time>
+          </div>
+          <div layout="row" layout-wrap="layout-wrap">
+            <div class="pseudo-input-container--compact" flex="50" flex-xs="100">
+              <div layout="row" layout-align="start center">
+                <sg-avatar-image class="md-tile-left"
+                                 sg-email="::viewer.message.from[0].email"
+                                 size="40">person</sg-avatar-image>
+                <div>
+                  <span ng-bind="::viewer.message.from[0].name"><!-- from --></span>
+                  <a href="#" class="md-caption"
+                     ng-bind="::viewer.message.from[0].email"
+                     ng-click="viewer.selectRecipient(viewer.message.from[0], $event)"><!-- from --></a>
+                </div>
+              </div>
+            </div>
+            <div class="msg-recipients" layout="column" flex="50" flex-xs="100">
+              <!-- to -->
+              <div class="pseudo-input-container--compact" ng-show="::viewer.message.to.length > 0">
+                <label class="pseudo-input-label">
+                  <var:string label:value="To"/>
+                </label>
+                <div class="pseudo-input-field" ng-hide="viewer.$showDetailedRecipients">
+                  <a href="#" ng-click="viewer.toggleDetailedRecipients($event)"
+                     ng-bind="::viewer.message.$shortRecipients(5)"><!-- to --></a>
+                </div>
+                <div class="pseudo-input-field" ng-show="viewer.$showDetailedRecipients">
+                  <md-chips
+                      class="sg-dense sg-readonly"
+                      ng-model="::viewer.message.to"
+                      md-removable="::false"
+                      readonly="::true">
+                    <md-chip-template
+                        ng-click="viewer.selectRecipient($chip, $event)"
+                        ng-focus="viewer.focusChip($event)"
+                        ng-blur="viewer.blurChip($event)">
+                      {{ $chip.name || $chip.email }}
+                    </md-chip-template>
+                  </md-chips>
+                </div>
+              </div>
+              <!-- cc -->
+              <div class="pseudo-input-container--compact" ng-show="viewer.$showDetailedRecipients">
+                <label class="pseudo-input-label" ng-show="::viewer.message.cc.length > 0">
+                  <var:string label:value="Cc"/>
+                </label>
+                <div class="pseudo-input-field" ng-show="::viewer.message.cc.length > 0">
+                  <md-chips
+                      class="sg-dense sg-readonly"
+                      ng-model="::viewer.message.cc"
+                      md-removable="::false"
+                      readonly="::true">
+                    <md-chip-template
+                        ng-click="viewer.selectRecipient($chip, $event)"
+                        ng-focus="viewer.focusChip($event)"
+                        ng-blur="viewer.blurChip($event)">
+                      {{ $chip.name || $chip.email }}
+                    </md-chip-template>
+                  </md-chips>
+                </div>
+              </div>
+              <!-- bcc -->
+              <div class="pseudo-input-container--compact" ng-show="viewer.$showDetailedRecipients">
+                <label class="pseudo-input-label" ng-show="::viewer.message.bcc.length > 0">
+                  <var:string label:value="Bcc"/>
+                </label>
+                <div class="pseudo-input-field" ng-show="::viewer.message.bcc.length > 0">
+                  <md-chips
+                      class="sg-dense sg-readonly"
+                      ng-model="::viewer.message.bcc"
+                      md-removable="::false"
+                      readonly="::true">
+                    <md-chip-template
+                        ng-click="viewer.selectRecipient($chip, $event)"
+                        ng-focus="viewer.focusChip($event)"
+                        ng-blur="viewer.blurChip($event)">
+                      {{ $chip.name || $chip.email }}
+                    </md-chip-template>
+                  </md-chips>
+                </div>
+                <md-button
+                    ng-hide="viewer.$alwaysShowDetailedRecipients || !viewer.$showDetailedRecipients"
+                    style="float: right"
+                    label:aria-label="Hide"
+                    ng-click="viewer.toggleDetailedRecipients($event)">
+                  <var:string label:value="Hide"/>
+                </md-button>
+              </div>
+            </div>
+          </div>
+          <div class="sg-padded" ng-show="viewer.showFlags">
+            <md-chips class="sg-readonly"
+                      sg-focus-on="flags"
+                      ng-model="viewer.message.flags"
+                      md-transform-chip="$chip.name">
+              <md-chip-template>
+                <span class="sg-chip-color">
+                  <span ng-style="{ 'background-color': viewer.service.$tags[$chip][1] }"><!-- color --></span>
+                </span>
+                <span ng-bind="viewer.service.$tags[$chip][0] || $chip"><!-- tag --></span>
+              </md-chip-template>
+              <md-autocomplete
+                  md-search-text="viewer.tags.searchText"
+                  md-items="tag in viewer.service.filterTags(viewer.tags.searchText, viewer.message.flags)"
+                  md-no-cache="true"
+                  label:placeholder="Add a tag">
+                <md-item-template>
+                  <div layout="row" layout-align="start center">
+                    <div class="sg-color-chip"
+                         ng-style="{ 'background-color': tag.color }"><!-- color --></div>
+                    <div md-highlight-text="viewer.tags.searchText"
+                         md-highlight-flags="^i">{{ tag.description }}</div>
+                  </div>
+                </md-item-template>
+              </md-autocomplete>
+            </md-chips>
+          </div>
+
+          <!-- S/MIME Signature -->
+          <sg-block-toggle class="hide-print" layout="column"
+                           ng-show="::viewer.message.signed">
+            <md-divider><!-- divider --></md-divider>
+            <md-list-item class="sg-button-toggle">
+              <div>
+                <md-icon ng-hide="::viewer.message.signed.valid"
+                         class="md-warn"
+                         rsrc:md-svg-src="img/certificate-off.svg"><!-- certificate --></md-icon>
+                <md-icon ng-show="::viewer.message.signed.valid"
+                         class="md-accent"
+                         rsrc:md-svg-src="img/certificate.svg"><!-- certificate --></md-icon>
+              </div>
+              <p class="md-padding md-flex" ng-bind-html="::viewer.message.signed.message"><!-- message --></p>
+              <md-icon class="sg-icon-toggle">expand_more</md-icon>
+            </md-list-item>
+            <div class="sg-block-toggle">
+              <div class="md-margin" md-whiteframe="3">
+                <div class="md-padding" layout="row" layout-wrap="layout-wrap">
+                  <div flex="50" flex-xs="100">
+                    <div class="md-subhead md-default-theme md-fg md-primary"
+                        ng-bind="::'Subject Name' | loc"><!-- Subject Name --></div>
+                    <div ng-repeat="field in ::viewer.message.signed.certificate.subject">
+                      <div class="pseudo-input-label" ng-bind="field[0] | loc"><!-- label --></div>
+                      <div class="pseudo-input-field md-body-1" ng-bind="field[1]"><!-- value --></div>
+                    </div>
+                  </div>
+                  <div flex="50" flex-xs="100">
+                    <div class="md-subhead md-default-theme md-fg md-primary"
+                        ng-bind="::'Issuer' | loc"><!-- Issuer --></div>
+                    <div ng-repeat="field in ::viewer.message.signed.certificate.issuer">
+                      <div class="pseudo-input-label" ng-bind="field[0] | loc"><!-- label --></div>
+                      <div class="pseudo-input-field md-body-1" ng-bind="field[1]"><!-- value --></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </sg-block-toggle>
+
+          <!-- S/MIME Encryption -->
+          <div class="hide-print" layout="column"
+               ng-show="::viewer.message.encrypted">
+            <md-divider><!-- divider --></md-divider>
+            <md-list-item>
+              <div>
+                <md-icon ng-show="::viewer.message.encrypted.valid">lock_outline</md-icon>
+                <md-icon ng-hide="::viewer.message.encrypted.valid" class="md-warn">lock_outline</md-icon>
+              </div>
+              <p class="md-padding md-flex" ng-bind-html="::viewer.message.encrypted.message"><!-- message --></p>
+            </md-list-item>
+          </div>
+
+          <!-- Load external images -->
+          <div class="hide-print" ng-show="viewer.message.$hasUnsafeContent">
+            <md-divider><!-- divider --></md-divider>
+            <md-list-item class="md-clickable" layout="row" layout-align="space-between center"
+                          label:aria-label="Load Images"
+                          ng-click="viewer.message.loadUnsafeContent()">
+              <md-icon class="md-warn">collections</md-icon>
+              <p class="md-flex"><var:string label:value="This message contains external images."/></p>
+              <md-icon>cloud_download</md-icon>
+            </md-list-item>
+          </div>
+
+          <!-- Return Receipt / Send MDN -->
+          <md-whiteframe class="md-whiteframe-z2 hide-print" layout="column" layout-align="center start"
+                         ng-show="viewer.message.shouldAskReceipt == 1">
+            <div layout="row" layout-align="start center">
+              <div class="md-tile-left">
+                <md-icon class="md-warn">message</md-icon>
+              </div>
+              <p class="sg-padded--right"><var:string label:value="The sender of this message has asked to be notified when you read this message. Do you with to notify the sender?"/></p>
+            </div>
+            <div layout-fill="layout-fill" layout="row" layout-align="end center">
+              <md-button label:aria-label="No"
+                         type="button"
+                         ng-click="viewer.message.shouldAskReceipt = 0"><var:string label:value="No"/></md-button>
+              <md-button label:aria-label="Yes"
+                         type="submit"
+                         ng-click="viewer.message.$sendMDN()"><var:string label:value="Yes"/></md-button>
+            </div>
+          </md-whiteframe>
+
+          <md-divider><!-- end of headers --></md-divider>
+          <div>
+            <div class="msg-body">
+              <div layout="row" layout-wrap="layout-wrap">
+                <div class="mailer_mailcontent" layout="row" layout-wrap="layout-wrap"
+                     ng-repeat="part in viewer.message.$content()"
+                     ng-class="::part.msgclass">
+                  <div class="md-flex sg-mail-part"
+                       tabindex="-1"
+                       ng-if="::part.html"
+                       ng-click="viewer.filterMailtoLinks($event)"
+                       ng-bind-html="part.content | ensureTarget"><!-- html msg --></div>
+                  <div class="md-flex sg-mail-part"
+                       ng-if="::part.compile"
+                       sg-compile="part.content"
+                       sg-zoomable-image="$index"><!-- angular-friendly msg --></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div class="sg-back" layout="column" layout-fill="layout-fill">
+      <md-card>
+        <md-card-actions flex-none="flex-none" layout="row" layout-align="end center">
+          <div class="md-flex"><!-- spacer --></div>
+          <md-button class="md-icon-button"
+                     label:aria-label="Close"
+                     ng-click="viewer.toggleRawSource()">
+            <md-icon>arrow_forward</md-icon>
+          </md-button>
+        </md-card-actions>
+        <md-card-content>
+          <pre ng-bind-html="viewer.message.$rawSource"><!-- raw source --></pre>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+
+  <!-- template of contextual menu for a recipient -->
+  <script type="text/ng-template" id="UIxMailViewRecipientMenu">
+    <div md-whiteframe="3">
+      <md-menu-content class="md-dense" width="3">
+        <md-menu-item>
+          <md-button disabled="disabled" md-menu-align-target="md-menu-align-target">
+            {{ $menuCtrl.recipient.full }}
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button type="button"
+                     ng-click="$menuCtrl.newMessage($event, { to: [$menuCtrl.recipient.full] })">
+            <var:string label:value="Write a new message"/>
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-menu md-position-mode="cascade cascade">
+            <md-button
+                label:aria-label="Add to Address Book..."
+                ng-mouseenter="$mdMenu.open($event)"
+                ng-keydown="$mdMenu.onKeyDown($event)">
+              <var:string label:value="Add to Address Book..."/>
+            </md-button>
+            <md-menu-content class="md-dense" width="4">
+              <md-menu-item ng-repeat="addressbook in $menuCtrl.addressbooks track by addressbook.id">
+                <md-button ng-click="$menuCtrl.newCard($menuCtrl.recipient, addressbook.id)">{{addressbook.name}}</md-button>
+              </md-menu-item>
+              <md-menu-item ng-repeat="addressbook in $menuCtrl.subscriptions track by addressbook.id">
+                <md-button ng-click="$menuCtrl.newCard($menuCtrl.recipient, addressbook.id)"
+                           ng-disabled="!addressbook.acls.objectCreator">{{addressbook.name}}</md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </md-menu-item>
+      </md-menu-content>
+    </div>
+  </script>
+
+</container>

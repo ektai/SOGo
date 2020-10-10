@@ -1,0 +1,367 @@
+<?xml version='1.0' standalone='yes'?>
+<container
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:var="http://www.skyrix.com/od/binding"
+    xmlns:label="OGo:label">
+  <div class="view-list hide-print" layout="column" ng-class="{'view-list--close': mailbox.centerIsClose(centerIsClose)}">
+
+    <!-- in virtual mailbox mode -->
+    <md-toolbar class="md-whiteframe-z1 md-hue-3"
+                ng-hide="mailbox.service.$virtualPath === false || mailbox.mode.multiple">
+      <div class="md-toolbar-tools"
+         layout="row" layout-align="start start">
+        <div class="pseudo-input-container pseudo-input-container--compact md-flex sg-no-wrap">
+          <label class="pseudo-input-label pseudo-input-label">
+            <var:string label:value="Search messages in"/>
+          </label>
+          <md-select class="pseudo-input-field" ng-model="mailbox.service.$virtualPath">
+            <md-option ng-value="''">
+              <span ng-bind="app.accounts[0].name"><!-- main account name --></span>
+            </md-option>
+            <md-option ng-repeat="folder in
+                                  app.accounts[0].$flattenMailboxes()
+                                  track by folder.path"
+                       ng-value="folder.path">
+              <span ng-class="'sg-child-level-' + folder.level"
+                    ng-bind="folder.$displayName"><!-- mailbox name --></span>
+            </md-option>
+          </md-select>
+        </div>
+        <md-menu>
+          <md-button class="sg-icon-button" label:aria-label="More search options" ng-click="$mdMenu.open()">
+            <md-icon>settings</md-icon>
+          </md-button>
+          <md-menu-content>
+            <md-menu-item>
+              <sg-checkmark ng-model="app.search.subfolders"
+                            sg-true-value="1"
+                            sg-false-value="0">
+                <var:string label:value="Search subfolders"/>
+              </sg-checkmark>
+            </md-menu-item>
+            <md-menu-divider><!-- divider --></md-menu-divider>
+            <md-menu-item>
+              <md-button ng-click="app.search.match='AND'">
+                <md-icon label:aria-label="Match all of the following">{{ app.search.match == 'AND' ? 'check' : null }}</md-icon>
+                <var:string label:value="Match all of the following"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="app.search.match='OR'">
+                <md-icon label:aria-label="Match any of the following">{{ app.search.match == 'OR' ? 'check' : null }}</md-icon>
+                <var:string label:value="Match any of the following"/>
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+        <md-button class="sg-icon-button"
+                   label:aria-label="Search"
+                   ng-click="app.toggleAdvancedSearch()"
+                   ng-disabled="app.search.params.length == 0">
+          <md-icon>{{ app.service.selectedFolder.$isLoading ? 'stop' : 'search' }}</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <!-- single-selection toolbars -->
+    <md-toolbar class="md-accent md-hue-1"
+                ng-hide="mailbox.service.$virtualPath !== false || mailbox.mode.multiple">
+      <!-- sort mode (default) -->
+      <div class="md-toolbar-tools" ng-hide="mailbox.mode.search">
+        <md-button class="sg-icon-button" label:aria-label="Search"
+                   ng-click="mailbox.searchMode()">
+          <md-icon>search</md-icon>
+        </md-button>
+        <a href="#" class="sg-folder-name"
+           ng-click="mailbox.searchMode($event)" ng-bind="mailbox.selectedFolder.$displayName"><!-- mailbox name --></a>
+        <md-menu>
+          <md-button class="sg-icon-button" label:aria-label="Sort"
+                     ng-click="$mdMenu.open()">
+            <md-icon>sort</md-icon>
+          </md-button>
+          <md-menu-content>
+            <md-menu-item>
+              <md-button ng-click="mailbox.sort('subject')">
+                <md-icon label:aria-label="Subject">{{ mailbox.sortedBy('subject') ? 'check' : null }}</md-icon> <var:string label:value="Subject"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.sort('from')">
+                <md-icon label:aria-label="From">{{ mailbox.sortedBy('from') ? 'check' : null }}</md-icon> <var:string label:value="From"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.sort('date')">
+                <md-icon label:aria-label="Date">{{ mailbox.sortedBy('date') ? 'check' : null }}</md-icon> <var:string label:value="Date"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.sort('size')">
+                <md-icon label:aria-label="Size">{{ mailbox.sortedBy('size') ? 'check' : null }}</md-icon> <var:string label:value="Size"/>
+              </md-button>
+            </md-menu-item>
+	    <md-menu-item>
+              <md-button ng-click="mailbox.sort('arrival')">
+                <md-icon label:aria-label="Order Received">{{ mailbox.sortedBy('arrival') ? 'check' : null }}</md-icon> <var:string label:value="Order Received"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-divider> <!-- divider --></md-menu-divider>
+            <md-menu-item>
+              <sg-checkmark
+                  label:aria-label="Descending Order"
+                  ng-model="mailbox.service.$query.asc"
+                  ng-change="mailbox.selectedFolder.$filter()"
+                  sg-true-value="0"
+                  sg-false-value="1"><var:string label:value="Descending Order"/></sg-checkmark>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+        <md-button class="sg-icon-button" label:aria-label="Get Mail" ng-click="mailbox.refresh()" >
+          <md-icon>refresh</md-icon>
+        </md-button>
+      </div>
+      <!-- search mode -->
+      <form class="md-toolbar-tools sg-toolbar-secondary"
+            name="searchForm"
+            layout="row"
+            ng-show="mailbox.mode.search"
+            sg-search="mailbox.selectedFolder.$filter(null, [{ searchBy: searchField, searchInput: searchText }])"
+            sg-allow-dot="false">
+        <md-button class="sg-icon-button"
+                   sg-search-cancel="mailbox.cancelSearch()"
+                   label:aria-label="Back">
+          <md-icon>arrow_back</md-icon>
+        </md-button>
+        <md-input-container class="md-flex" md-no-float="md-no-float">
+          <input name="folderSearch" type="search" var:minlength="minimumSearchLength" label:placeholder="Search" sg-focus-on="search" />
+          <div ng-messages="searchForm.folderSearch.$error" ng-show="searchForm.folderSearch.$dirty">
+            <div ng-message="minlength"><var:string value="minimumSearchLengthLabel"/></div>
+          </div>
+        </md-input-container>
+        <md-input-container flex="25">
+          <md-select label:aria-label="Search scope">
+            <md-option value="subject_or_from" selected="selected"><var:string label:value="Subject or Sender"/></md-option>
+            <md-option value="subject"><var:string label:value="Subject"/></md-option>
+            <md-option value="from"><var:string label:value="Sender"/></md-option>
+            <md-option value="to_or_cc"><var:string label:value="To or Cc"/></md-option>
+            <md-option value="body"><var:string label:value="Entire Message"/></md-option>
+          </md-select>
+        </md-input-container>
+      </form>
+    </md-toolbar>
+
+    <!-- multiple-selection mode -->
+    <md-toolbar class="md-hue-1 sg-toolbar-secondary"
+                ng-show="mailbox.mode.multiple">
+      <div class="md-toolbar-tools">
+        <md-button class="sg-icon-button" ng-click="mailbox.unselectMessages()">
+          <md-icon>arrow_back</md-icon>
+        </md-button>
+        <label class="md-truncate"><span ng-bind="mailbox.service.selectedFolder.$selectedCount()"><!-- count --></span> <var:string label:value="selected"/></label>
+        <div class="md-flex"><!-- spacer --></div>
+        <md-button class="sg-icon-button" ng-click="mailbox.selectAll()">
+          <md-tooltip md-direction="bottom"><var:string label:value="Select All"/></md-tooltip>
+          <md-icon>select_all</md-icon>
+        </md-button>
+        <md-button class="sg-icon-button" ng-click="mailbox.confirmDeleteSelectedMessages($event)">
+          <md-icon>delete</md-icon>
+        </md-button>
+        <md-button class="sg-icon-button" ng-click="mailbox.markOrUnMarkMessagesAsJunk()">
+          <md-icon ng-hide="::mailbox.service.selectedFolder.type == 'junk'">thumb_down</md-icon>
+	  <md-tooltip ng-hide="::mailbox.service.selectedFolder.type == 'junk'" md-direction="bottom"><var:string label:value="Junk"/></md-tooltip>	
+          <md-icon ng-hide="::mailbox.service.selectedFolder.type != 'junk'">thumb_up</md-icon>
+	  <md-tooltip ng-hide="::mailbox.service.selectedFolder.type != 'junk'" md-direction="bottom"><var:string label:value="Not junk"/></md-tooltip>
+        </md-button>
+        <md-menu>
+          <md-button class="sg-icon-button" label:aria-label="More messages options" ng-click="$mdMenu.open()">
+            <md-icon>more_vert</md-icon>
+          </md-button>
+          <md-menu-content width="2">
+            <md-menu-item>
+              <md-button ng-click="mailbox.markSelectedMessagesAsFlagged()">
+                <var:string label:value="Flag"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.markSelectedMessagesAsUnread()">
+                <var:string label:value="Mark as Unread"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.markSelectedMessagesAsRead()">
+                <var:string label:value="Mark as Read"/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-click="mailbox.selectedFolder.saveSelectedMessages()">
+                <var:string label:value="Save As..."/>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-menu>
+                <md-button label:aria-label="Copy To" ng-click="$mdMenu.open($event)">
+                  <var:string label:value="Copy To"/>
+                </md-button>
+                <md-menu-content width="4">
+                  <div ng-repeat="account in ::mailbox.accounts track by account.id">
+                    <md-menu-item>
+                      <md-menu>
+                        <md-button class="md-primary" ng-click="$mdMenu.open($event)"
+                                   ng-bind="::account.name"><!-- account name --></md-button>
+                        <md-menu-content class="md-dense" width="4">
+                          <div ng-repeat="folder in
+                                          account.$flattenMailboxes({ all: true })
+                                          track by folder.path">
+                            <md-menu-item>
+                              <md-button class="sg-no-wrap"
+                                         aria-label="{{folder.$displayName}}"
+                                         ng-disabled="::(mailbox.service.selectedFolder.id == folder.id)"
+                                         ng-click="mailbox.copySelectedMessages(folder.id)">
+                                <span ng-class="::('sg-child-level-' + folder.level)"
+                                      ng-bind="folder.$displayName"><!-- mailbox name --></span>
+                              </md-button>
+                            </md-menu-item>
+                          </div>
+                        </md-menu-content>
+                      </md-menu>
+                    </md-menu-item>
+                  </div>
+                </md-menu-content>
+              </md-menu>
+            </md-menu-item>
+            <md-menu-item>
+              <md-menu>
+                <md-button label:aria-label="Move To" ng-click="$mdMenu.open($event)">
+                  <var:string label:value="Move To"/>
+                </md-button>
+                <md-menu-content width="4">
+                  <div ng-repeat="account in ::mailbox.accounts track by account.id">
+                    <md-menu-item>
+                      <md-menu>
+                        <md-button class="md-primary" ng-click="$mdMenu.open($event)"
+                                   ng-bind="::account.name"><!-- account name --></md-button>
+                        <md-menu-content class="md-dense" width="4">
+                          <div ng-repeat="folder in
+                                          account.$flattenMailboxes({ all: true })
+                                          track by folder.path">
+                            <md-menu-item>
+                              <md-button class="sg-no-wrap"
+                                         aria-label="{{folder.$displayName}}"
+                                         ng-disabled="::(mailbox.service.selectedFolder.id == folder.id)"
+                                         ng-click="mailbox.moveSelectedMessages(folder.id)">
+                                <span ng-class="::('sg-child-level-' + folder.level)"
+                                      ng-bind="folder.$displayName"><!-- mailbox name --></span>
+                              </md-button>
+                            </md-menu-item>
+                          </div>
+                        </md-menu-content>
+                      </md-menu>
+                    </md-menu-item>
+                  </div>
+                </md-menu-content>
+              </md-menu>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </md-toolbar>
+
+    <md-divider><!-- divider --></md-divider>
+
+    <md-content id="messagesList" layout="column" class="md-flex">
+      <md-subheader>
+        <div layout="row"  layout-align="space-between center">
+          <div class="md-truncate" ng-switch="mailbox.service.selectedFolder.getLength()">
+            <!-- message count -->
+            <span ng-switch-when="0"><var:string label:value="No message"/></span>
+            <span ng-switch-default="true"><span ng-bind="mailbox.service.selectedFolder.getLength()"><!-- count --></span> <var:string label:value="messages"/></span>
+          </div>
+          <div class="md-truncate"><md-icon ng-class="{ 'md-flip': mailbox.ascending() }">sort</md-icon> <span ng-bind="mailbox.sort() | loc"><!-- active sort --></span></div>
+        </div>
+      </md-subheader>
+      <md-virtual-repeat-container class="md-flex" md-top-index="mailbox.selectedFolder.$topIndex">
+        <md-list class="sg-section-list"
+                 ng-class="{ 'sg-list-selectable': mailbox.mode.multiple }"
+                 sg-draggable="mailbox.selectedFolder"
+                 sg-drag-start="mailbox.selectedFolder.hasSelectedMessage() || mailbox.selectedFolder.$selectedCount()"
+                 sg-drag-count="mailbox.selectedFolder.$selectedCount()">
+          <md-list-item
+              aria-label="{{currentMessage.subject}}"
+              class="sg-message-list-item"
+              ng-class="{'md-default-theme md-accent md-bg md-hue-2': mailbox.selectedFolder.isSelectedMessage(currentMessage.uid, currentMessage.$mailbox.path), 'sg-message-thread-first': currentMessage.first, 'sg-message-thread': currentMessage.threadMember}"
+              md-virtual-repeat="currentMessage in mailbox.service.selectedFolder"
+              md-on-demand="md-on-demand" md-item-size="56"
+              ng-click="mailbox.selectMessage(currentMessage)"
+              sg-message="currentMessage">
+            <div class="md-secondary sg-avatar-selectable"
+                 label:aria-label="Select Message"
+                 ng-class="{ 'sg-avatar-selected': currentMessage.selected }"
+                 ng-click="mailbox.toggleMessageSelection($event, currentMessage)">
+              <sg-avatar-image
+                  sg-email="mailbox.service.selectedFolder.type == 'sent' ? currentMessage.to[0].email : currentMessage.from[0].email"
+                  size="40">person</sg-avatar-image>
+            </div>
+            <div class="md-list-item-inner sg-message-list-item-main">
+              <!-- sgMessageListItemMain directive -->
+            </div>
+          </md-list-item>
+        </md-list>
+      </md-virtual-repeat-container>
+      <div class="sg-progress-circular-floating"
+           ng-show="mailbox.service.selectedFolder.$isLoading">
+        <md-progress-circular class="md-accent"
+                              md-mode="indeterminate"
+                              md-diameter="32"><!-- mailbox loading progress --></md-progress-circular>
+      </div>
+    </md-content>
+  </div>
+
+  <md-fab-speed-dial
+      class="md-scale sg-fab-bottom-center"
+      ng-if="::!mailbox.composeWindowEnabled()"
+      ng-show="!mailbox.selectedFolder.hasSelectedMessage() || isGtExtraSmall"
+      ng-cloak="ng-cloak"
+      ng-class="{ 'sg-sidenav-close': leftIsClose, 'sg-center-close': mailbox.centerIsClose(centerIsClose) }"
+      md-direction="up">
+    <md-fab-trigger>
+      <md-button class="md-fab md-accent" label:aria-label="Write a new message">
+        <md-icon>edit</md-icon>
+      </md-button>
+    </md-fab-trigger>
+    <md-fab-actions>
+      <md-button class="md-fab md-raised md-mini" var:aria-label="Write a new message"
+                 ng-click="mailbox.newMessage($event)">
+        <md-tooltip md-direction="left"><var:string label:value="Write a new message"/></md-tooltip>
+        <md-icon>open_in_browser</md-icon>
+      </md-button>
+      <md-button class="md-fab md-raised md-mini" var:aria-label="Write a message in new window"
+                 ng-click="mailbox.newMessage($event, true)">
+        <md-tooltip md-direction="left"><var:string label:value="Write a message in new window"/></md-tooltip>
+        <md-icon>open_in_new</md-icon>
+      </md-button>
+    </md-fab-actions>
+  </md-fab-speed-dial>
+
+  <md-button
+      class="md-fab md-accent sg-fab-bottom-center"
+      var:aria-label="Write a new message"
+      ng-if="::mailbox.composeWindowEnabled()"
+      ng-show="!mailbox.selectedFolder.hasSelectedMessage() || isGtExtraSmall"
+      ng-class="{ 'sg-sidenav-close': leftIsClose, 'sg-center-close': mailbox.centerIsClose(centerIsClose) }"
+      ng-click="mailbox.newMessage($event)">
+    <md-tooltip md-direction="left"><var:string label:value="Write a new message"/></md-tooltip>
+    <md-icon>edit</md-icon>
+  </md-button>
+
+  <div id="detailView" class="view-detail sg-block-print"
+       layout="column" layout-align="start center"
+       ng-class="{ 'sg-close': !mailbox.service.selectedFolder.hasSelectedMessage() }"
+       md-colors="::{backgroundColor: 'default-background-200'}"
+       ui-view="message">
+    <md-content class="hide show-gt-md md-flex"
+                md-colors="::{backgroundColor: 'default-background-200'}"
+                layout="column" layout-align="center center" layout-fill="layout-fill">
+      <div class="sg-md-title"
+           md-colors="::{color: 'default-background-500'}"><var:string label:value="No message selected"/></div>
+    </md-content>
+  </div>
+</container>

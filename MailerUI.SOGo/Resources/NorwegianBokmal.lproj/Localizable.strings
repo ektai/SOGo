@@ -1,0 +1,342 @@
+/* this file is in UTF-8 format! */
+
+/* Icon's label */
+"Create"      = "Opprett";
+"Empty Trash" = "Tøm papirkurven";
+"Delete"      = "Slett";
+"Expunge"     = "Slett";
+"Forward"     = "Videresend";
+"Get Mail"    = "Hent e-post";
+"Junk"        = "Søppelpost";
+"Not junk"    = "Ikke søppel";
+"Reply"       = "Svar";
+"Reply All"   = "Svar alle";
+"Print"       = "Skriv ut";
+"Stop"        = "Stopp";
+"Write"       = "Skriv";
+"Search"      = "Søk";
+"Send" = "Send";
+"Contacts" = "Kontakter";
+"Attach" = "Vedlegg";
+"Save" = "Lagre";
+"Options" = "Innstillinger";
+"Close" = "Lukk";
+"Size" = "Størrelse";
+
+/* Tooltips */
+"Send this message now" = "Send meldingen nå";
+"Select a recipient from an Address Book" = "Velg en mottaker fra en adressebok";
+"Include an attachment" = "Legg til et vedlegg";
+"Save this message" = "Lagre denne meldingen";
+"Get new messages" = "Hent ny e-post";
+"Create a new message" = "Ny e-postmelding";
+"Go to address book" = "Gå til adresseboken";
+"Reply to the message" = "Svar på meldingen";
+"Reply to sender and all recipients" = "Svar avsender og alle mottakere";
+"Forward selected message" = "Videresend valgt melding";
+"Delete selected message or folder" = "Slett merket melding eller mappe";
+"Print this message" = "Skriv ut denne meldingen";
+"Stop the current transfer" = "Stopp pågående overføring";
+"Attachment" = "Vedlegg";
+"Unread" = "Ulest";
+"Flagged" = "Flagget";
+"Search multiple mailboxes" = "Søk i flere postkasser";
+
+/* Main Frame  */
+"Home"                 = "Hjem"; 
+"Calendar"             = "Kalender";
+"Addressbook"          = "Adressebok";
+"Mail"                 = "E-post";
+"Right Administration" = "Rettighetsadministrasjon";
+"Help" = "Hjelp";
+
+/* Mail account main windows */
+"Welcome to the SOGo Mailer. Use the folder tree on the left to browse your mail accounts!" = "Velkommen til SOGo Mailer. Bruk mappeviseren på venstre side for å se igjennom dine e-postkontoer!";
+"Read messages"       = "Les meldinger";
+"Write a new message" = "Skriv en ny melding";
+"Share" = "Del";
+"Account" = "Konto";
+"Shared Account" = "Delt konto";
+
+/* A mailbox is selected, but no message (only shown on large screens) */
+"No message selected" = "Ingen valgte meldinger";
+
+/* No mailbox is selected (usually resulting from an IMAP connection problem) */
+"No mailbox selected" = "Ingen valgt mailboks.";
+
+/* acls */
+"Access rights to" = "Tilgangsrettighet til";
+"For user" = "For bruker";
+"Any Authenticated User" = "Hvilken som heldst autentisert bruker";
+"List and see this folder" = "Vis og se i mappen";
+"Read mails from this folder" = "Les meldinger fra denne mappen";
+"Mark mails read and unread" = "Markere meldinger, leste og uleste";
+"Modify the flags of the mails in this folder" = "Endre flagg til meldingene i denne mappen";
+"Insert, copy and move mails into this folder" = "Legg inn, kopier og flytt meldinger til mappen";
+"Post mails" = "Send e-postmeldinger";
+"Add subfolders to this folder" = "Legg til undermapper til denne mappen";
+"Remove this folder" = "Fjern denne mappen";
+"Erase mails from this folder" = "Slett meldinger fra denne mappen";
+"Expunge this folder" = "Fjern denne mappen";
+"Export This Folder" = "Eksporter denne mappen";
+"Modify the acl of this folder" = "Endre adgangsrettigheter til denne mappen";
+"Saved Messages.zip" = "Lagrede Meldinger.zip";
+"Update" = "Oppdater";
+"Cancel" = "Avbryt";
+
+/* Mail edition */
+"From"          = "Fra";
+"Subject"       = "Emne";
+"To"            = "Til";
+"Cc"            = "Kopi";
+"Bcc"           = "Blindkopi";
+"Reply-To"	    = "Svar-til";
+"Add address"   = "Legg til adresse";
+"Body"          = "Kropp";
+"Open" = "Åpne";
+"Select All" = "Velg alle";
+"Attach Web Page..." = "Legg til nettside...";
+"file" = "fil";
+"files" = "filer";
+"Save all" = "Lagre alle";
+"to"            = "Til";
+"cc"            = "Kopi";
+"bcc"           = "Blindkopi";
+"Add a recipient" = "Legg til mottaker";
+"Edit Draft..." = "Rediger utkast...";
+"Load Images" = "Last inn bilder";
+"Return Receipt" = "Returkvittering";
+"The sender of this message has asked to be notified when you read this message. Do you with to notify the sender?" = "The sender of this message has asked to be notified when you read this message. Do you wish to notify the sender?";
+"Return Receipt (displayed) - %@"= "Returkvittering (vist) - %@";
+"This is a Return Receipt for the mail that you sent to %@.\n\nNote: This Return Receipt only acknowledges that the message was displayed on the recipient's computer. There is no guarantee that the recipient has read or understood the message contents." = "Dette er en returkvittering for e-posten du sendte til %@.\n\nMerk: Denne returkvitteringen forteller bare at meldingen ble vist hos mottaker. Det er ingen garanti at mottaker har lest eller forstått innholdet i e-postmeldingen.";
+"Priority" = "Prioritet";
+"highest" = "Høyest";
+"high" = "Høy";
+"normal" = "Normal";
+"low" = "Lav";
+"lowest" = "Lavest";
+"This mail is being sent from an unsecure network!" = "Denne e-posten sendes fra en usikker nettverksforbindelse!";
+"Address Book" = "Adressebok";
+"Search For" = "Søk etter";
+
+/* Popup "show" */
+"all"     = "alle";
+"read"    = "lest";
+"unread"  = "ulest";
+"deleted" = "slettet";
+"flagged" = "flagget";
+
+/* MailListView */
+"Sender" = "Avsender";
+"Subject or Sender" = "Emne eller avsender";
+"To or Cc" = "Til eller Kopi";
+"Entire Message" = "Hele meldingen";
+"Date"          = "Dato";
+"View"          = "Vis";
+"All"           = "Alle";
+"No message"    = "Ingen melding";
+"messages"      = "meldinger";
+"Yesterday"     = "I går";
+"first"         = "Første";
+"previous"      = "Forrige";
+"next"          = "Neste";
+"last"          = "Siste";
+"msgnumber_to"  = "til";
+"msgnumber_of"  = "av";
+"Mark Unread" = "Merk som ulest";
+"Mark Read"   = "Merk som lest";
+"Untitled" = "Uten emne";
+
+/* Tree */
+"SentFolderName"   = "Sendt";
+"TrashFolderName"  = "Søppel";
+"InboxFolderName"  = "Innboks";
+"DraftsFolderName" = "Kladder";
+"JunkFolderName" = "Søppelpost";
+"SieveFolderName"  = "Filtre";
+"Folders"          = "Mapper"; /* title line */
+
+/* MailMoveToPopUp */
+"MoveTo"        = "Flytt &hellip;";
+
+/* Address Popup menu */
+"Add to Address Book..." = "Legg til adressebok...";
+"Compose Mail To" = "Skriv e-post til";
+"Create Filter From Message..." = "Opprett filter fra en melding...";
+
+/* Image Popup menu */
+"Save Image" = "Lagre bilde";
+"Save Attachment" = "Lagre vedlegg";
+
+/* Mailbox popup menus */
+"Open in New Mail Window" = "Åpne i nytt vindu";
+"Copy Folder Location" = "Kopiere mappens palssering";
+"Subscribe..." = "Abonnere...";
+"Mark Folder Read" = "Merk mappe som lest...";
+"New Folder..." = "Ny mappe...";
+"Compact This Folder" = "Komprimer mappen";
+"Search Messages..." = "Søk i meldinger...";
+"Sharing..." = "Deling...";
+"New Subfolder..." = "Ny undermappe...";
+"Rename Folder..." = "Endre navn på mappe...";
+"Delete Folder" = "Slett mappe";
+"Use This Folder For" = "Bruk mappen til";
+"Get Messages for Account" = "Hent nye meldinger for konto";
+"Properties..." = "Egenskaper...";
+"Delegation..." = "Delegering...";
+
+/* Use This Folder menu */
+"Sent Messages" = "Sendte meldinger";
+"Drafts" = "Kladder";
+"Deleted Messages" = "Slettede meldinger";
+"Junk Messages" = "Søppelpost";
+
+/* Message list popup menu */
+"Open Message In New Window" = "Åpne melding i nytt vindu";
+"Reply to Sender Only" = "Svar kun til avsender";
+"Reply to All" = "Svar alle";
+"Edit As New..." = "Rediger som ny...";
+"Move To" = "Flytt til";
+"Copy To" = "Kopier til";
+"Label" = "Etikett";
+"Mark" = "Merk";
+"Save As..." = "Lagre som...";
+"Print Preview" = "Forhåndsvisning";
+"View Message Source" = "Vis meldingskilde";
+
+/* Message view "more" menu: create an event from message */
+"Convert To Event" = "Convert To Event";
+
+/* Message view "more" menu: create a task from message */
+"Convert To Task" = "Convert To Task";
+
+"Print..." = "Skriv ut...";
+"Delete Message" = "Slett melding";
+"Delete Selected Messages" = "Slett markerte meldinger";
+"Mark the selected messages as junk" = "Merk de markerte meldingene som søppelpost";
+"Mark the selected messages as not junk" = "Marker de valgte meldingene som søppel.";
+
+/* Text appended to the recipients list when there are too many recipients */
+"and %{0} more..." = "and %{0} more...";
+
+/* Button label to hide extended list of recipients */
+"Hide" = "Hide";
+
+/* Number of selected messages in list */
+"selected" = "valgt";
+
+"This Folder" = "Denne mappen";
+
+/* Label popup menu */
+"None" = "Ingen";
+
+/* Mark popup menu */
+"As Read" = "Som lest";
+"Thread As Read" = "Hele tråden som lest";
+"As Read By Date..." = "Som lest etter dato...";
+"All Read" = "Alle som leste";
+"Flag" = "Legg til flagg";
+"As Junk" = "Som søppel";
+"As Not Junk" = "Som ikke søppel";
+"Run Junk Mail Controls" = "Kjør søppelpostkontroll";
+"Search messages in" = "Søk etter beskjeder i";
+"Search" = "Søk";
+"Search subfolders" = "Søk i undermapper";
+"Match any of the following" = "Passer noen av";
+"Match all of the following" = "Passer alle";
+"contains" = "inneholder";
+"does not contain" = "inneholder ikke";
+"No matches found" = "Ingen treff funnet";
+"results found" = "resultater funnet";
+"result found" = "resultat funnet";
+"Please specify at least one filter" = "Spesifiser minst ett filter";
+
+/* Folder operations */
+"Name" = "Navn";
+"Enter the new name of your folder"
+ ="Skriv navnet på mappen";
+"Do you really want to move this folder into the trash ?"
+ = "Vil du virkelig flytte mappen til papirkurven ?";
+"Operation failed" = "Operasjonen mislyktes";
+"Quota" = "Kvote:";
+"quotasFormat" = "%{0}% brukt av %{1} MB";
+
+/* Confirmation message when deleting multiple messages */
+"Are you sure you want to delete the selected messages?" = "Are you sure you want to delete the selected messages?";
+
+"Please select a message." = "Vennligst markér en melding.";
+"Please select a message to print." = "Vennligst markér en melding som skal skrives ut.";
+"Please select only one message to print." = "Vennligst markér kun én melding som skal skrives ut.";
+"The message you have selected doesn't exist anymore." = "Meldingen du har markert finnes ikke lengre.";
+"The folder with name \"%{0}\" could not be created."
+= "Mappen med navn \"%{0}\" kunne ikke opprettes.";
+"This folder could not be renamed to \"%{0}\"."
+= "Mappen kunne ikke bytte navn til \"%{0}\".";
+"The folder could not be deleted."
+= "Mappen kunne ikke slettes.";
+"The trash could not be emptied."
+= "Søppelkurven kunne ikke tømmes.";
+"The folder functionality could not be changed."
+= "Mappens funksjon kunne ikke endres.";
+"You need to choose a non-virtual folder!" = "Du må velge en ikke-virtuell mappe!";
+"Moving a message into its own folder is impossible!"
+= "Det er ikke mulig å flytte en e-postmelding til sin egen mappe!";
+"Copying a message into its own folder is impossible!"
+= "Det er ikke mulig å kopiere en e-postmelding til sin egen mappe!";
+
+/* Message operations */
+"The messages could not be moved to the trash folder. Would you like to delete them immediately?"
+= "Meldingene kunne ikke flyttes til søppelmappen. Vil du slette dem umiddelbart?";
+
+/* Message editing */
+"error_missingsubject" = "Meldingen manger emne. Vil du likevel sende meldingen?";
+"error_missingrecipients" = "Vennligst spesifiser minst én mottaker.";
+"Send Anyway" = "Send likevel";
+"Error while saving the draft" = "Problem ved lagring av utkast";
+
+/* Error when uploading a file attachment */
+"Error while uploading the file \"%{0}\":" = "Problem ved opplasting av fil \"%{0}\":";
+"There is an active file upload. Closing the window will interrupt it." = "Det er en aktiv fil opplasting. Lukk vinduet for å avbryte den.";
+
+/* Message sending */
+"cannot send message: (smtp) all recipients discarded" = "Kan ikke sende melding: alle mottakeradresser er ugyldige.";
+"cannot send message (smtp) - recipients discarded" = "Kan ikke sende melding. Følgende mottakeradresser er ugyldige";
+"cannot send message: (smtp) error when connecting" = "Kan ikke sende melding: tilkoblingsproblem med SMTP-tjener.";
+
+/* Contacts list in mail editor */
+"Email" = "E-post";
+"More mail options" = "Flere epost alternativer";
+"Delegation" = "Delegering";
+"Add User" = "Legg til Bruker";
+"Add a tag" = "Legg til markering";
+"reply" = "svar";
+"Edit" = "Rediger";
+"Yes" = "Ja";
+"No" = "Nei";
+"Location" = "Sted";
+"Rename" = "Endre navn";
+"Compact" = "Komprimer";
+"Export" = "Eksporter";
+"Set as Drafts" = "Sett som kladd";
+"Set as Sent" = "Sett som sendt";
+"Set as Trash" = "Sett som søppel";
+
+/* Set the folder as the one holding Junk mails */
+"Set as Junk" = "Set as Junk";
+
+"Sort" = "Sorter";
+"Descending Order" = "Synkende rekkefølge";
+"Back" = "Tilbake";
+"Copy messages" = "Kopier meldinger";
+"More messages options" = "Flere meldingsalternativer";
+"Mark as Unread" = "Marker som ulest";
+"Closing Window ..." = "Lukker vindu ...";
+"Tried to send too many mails. Please wait." = "Forsøkte å sende for mange eposter. Vennligst vent.";
+"View Mail" = "Vis epost";
+"This message contains external images." = "Denne meldingen inneholder eksterne bilder.";
+"Expanded" = "Utvidet";
+"Add a Criteria" = "Legg til kriterie";
+"More search options" = "Flere søk alternativer";
+"Your email has been saved" = "Eposten din har blitt lagret";
+"Your email has been sent" = "Eposten din har blitt sendt";
+"Folder compacted" = "Mappe komprimert";

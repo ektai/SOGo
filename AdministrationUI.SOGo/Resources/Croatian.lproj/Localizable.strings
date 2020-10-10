@@ -1,0 +1,26 @@
+/* this file is in UTF-8 format! */
+
+"Help" = "Pomoć";
+"Close" = "Zatvori";
+"Modules" = "Moduli";
+/* Modules short names */
+"ACLs" = "Popisi kontrole pristupa";
+/* Modules titles */
+"ACLs_title" = "Upravljanje pravima korisnika nad mapama";
+/* Modules descriptions */
+"ACLs_description" = "<p>Modul upravljanja popisima kontrole pristupa (ACL-ovima) omogućava promjenu prava pristupa kalendarima i imenicima svakog pojedinog korisnika.</p><p>Kako biste promijenili prava pristupa korisnikovoj mapi, upišite ime korisnika u polje za pretragu pri vrhu prozora te zatim dvaput kliknite na željenu mapu.</p>";
+"Name or Email" = "Ime ili e-adresa";
+/* Rights module: initial search message */
+"Start a search to edit the rights" = "Započnite pretragu kako biste uređivali prava";
+/* Rights module: Empty search result */
+"No matching user" = "Nema odgovarajućeg korisnika";
+/* Rights module: no selection */
+"No resource selected" = "Nema odabranog resursa";
+"Add User" = "Dodaj korisnika";
+"Subscribe User" = "Pretplati korisnika";
+"Rights" = "Prava";
+"Search Users" = "Traži korisnike";
+"users found" = "Korisnici pronađeni";
+"No resource" = "Nema resursa";
+"Any Authenticated User" = "Svaki ovlašteni korisnik";
+"Public Access" = "Javni pristup";

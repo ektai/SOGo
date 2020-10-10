@@ -1,0 +1,261 @@
+/* this file is in UTF-8 format! */
+
+"Contact" = "Yhteystieto";
+"Address" = "Osoite";
+"Photos" = "Valokuvat";
+"Other" = "Muuta";
+"Address Books" = "Osoitekirjat";
+"Addressbook" = "Osoitekirja";
+"Addresses" = "Osoitteet";
+"Update" = "Päivitä";
+"Cancel" = "Peruuta";
+"Common" = "Yleinen";
+"Contact editor" = "Yhteystietojen muokkain";
+"Contact viewer" = "Yhteystietojen katselin";
+"Email" = "Sähköposti";
+"Screen Name" = "Näytettävä nimi";
+"Extended" = "Laajennettu";
+"Fax" = "Fax";
+"Firstname" = "Etunimi";
+"Home" = "Koti";
+"HomePhone" = "Kotipuhelin";
+"Lastname" = "Sukunimi";
+"Location" = "Sijainti";
+"Add a category" = "Lisää ryhmä";
+"MobilePhone" = "Matkapuhelin";
+"Name" = "Nimi";
+"OfficePhone" = "Toimistopuhelin";
+"Organization" = "Organisaatio";
+"Work Phone" = "Työpuhelin";
+"Phone" = "Puhelin";
+"Phones" = "Puhelimet";
+"Postal" = "Postiosoite";
+"Save" = "Tallenna";
+"Internet" = "Internet";
+"Unit" = "Yksikkö";
+"delete" = "poista";
+"edit" = "muokkaa";
+"invalidemailwarn" = "Määritetty sähköpostiosoite on virheellinen.";
+"new" = "uusi";
+"Preferred Phone" = "Ensisijainen puhelin";
+"Move To" = "Siirrä";
+"Copy To" = "Kopioi";
+"Add to" = "Lisää";
+
+/* Subheader of empty addressbook */
+"No contact" = "Ei yhteystietoa";
+
+/* Subheader of system addressbook */
+"Start a search to browse this address book" = "Aloita haku tästä osoitekirjasta";
+
+/* Number of contacts in addressbook; string is prefixed by number */
+"contacts" = "yhteystietoa";
+
+/* No contact matching search criteria */
+"No matching contact" = "Ei vastaavaa yhteystietoa";
+
+/* Number of contacts matching search criteria; string is prefixed by number */
+"matching contacts" = "vastaavaa yhteystietoa";
+
+/* Number of selected contacts in list */
+"selected" = "valittu";
+
+/* Empty right pane */
+"No contact selected" = "Ei valittua yhteystietoa";
+
+/* Tooltips */
+"Create a new address book card" = "Luo uusi osoitekirjakortti";
+"Create a new list" = "Luo uusi lista";
+"Edit the selected card" = "Muokkaa valittua korttia";
+"Send a mail message" = "Lähetä sähköpostiviesti";
+"Delete selected card or address book" = "Poista valittu kortti tai osoitekirja";
+"Reload all contacts" = "Päivitä kaikki yhteystiedot";
+"htmlMailFormat_UNKNOWN" = "Tuntematon";
+"htmlMailFormat_FALSE" = "Pelkkä teksti";
+"htmlMailFormat_TRUE" = "HTML";
+"Name or Email" = "Nimi tai sähköposti";
+"Category" = "Luokka";
+"Personal Addressbook" = "Henkilökohtainen osoitekirja";
+"Search in Addressbook" = "Etsi osoitekirjasta";
+"New Card" = "Uusi yhteystietokortti";
+"New List" = "Uusi lista";
+"Edit" = "Muokkaa";
+"Properties" = "Ominaisuudet";
+"Sharing..." = "Jakaminen...";
+"Write" = "Kirjoita";
+"Delete" = "Poista";
+"Instant Message" = "Pikaviesti";
+"Add..." = "Lisää...";
+"Remove" = "Poista";
+"Please wait..." = "Odota hetki...";
+"No possible subscription" = "Tilaus ei mahdollinen";
+"Preferred" = "Ensisijainen";
+"Display" = "Näyttö";
+"Display Name" = "Näyttönimi";
+"Additional Email" = "Lisäsähköpostiosoite";
+"Phone Number" = "Puhelinnumero";
+"Prefers to receive messages formatted as" = "Vastaanottaa viestejä muotoiltuna ensisijaisesti";
+"Categories" = "Kategoriat";
+"First" = "Etunimi";
+"Last" = "Sukunimi";
+"Nickname" = "Lempinimi";
+"Telephone" = "Puhelin";
+"Work" = "Työ";
+"Mobile" = "GSM";
+"Pager" = "Hakulaite";
+
+/* categories */
+"contacts_category_labels" = "Kollega, Kilpailija, Asiakas, Ystävä, Perhe, Liikekummpani, Palveluntarjoaja, Lehdistö, VIP";
+"New category" = "Uusi kategoria";
+
+/* adresses */
+"Title" = "Titteli";
+"Service" = "Palvelu";
+"Company" = "Yritys";
+"Department" = "Osasto";
+"City" = "Kaupunki ";
+"State_Province" = "Maakunta";
+"ZIP_Postal Code" = "Postinumero";
+"Country" = "Maa";
+"Web Page" = "Web sivu";
+"Other Infos" = "Muuta tietoa";
+"Note" = "Huomautus";
+"Timezone" = "Aikavyöhyke";
+"Birthday" = "Syntymäpäivä";
+"Birthday (yyyy-mm-dd)" = "Syntymäpäivä (vvvv-kk-pp)";
+"Freebusy URL" = "Freebusy URL";
+"Add as..." = "Lisää nimellä...";
+"Recipient" = "Vastaanottaja";
+"Carbon Copy" = "Kopio";
+"Blind Carbon Copy" = "Piilokopio";
+"New Addressbook..." = "Uusi osoitekirja...";
+"Subscribe to an Addressbook..." = "Tilaa osoitekirja...";
+"Remove the selected Addressbook" = "Poista valittu osoitekirja";
+"Subscribe to a shared folder" = "Tilaa jaettu hakemisto";
+"Search User" = "Etsi käyttäjää";
+"Name of the Address Book" = "Osoitekirjan nimi";
+"Are you sure you want to delete the selected address book?"
+= "Haluatko varmasti poistaa valitun osoitekirjan?";
+"Are you sure you want to delete the addressbook \"%{0}\"?"
+= "Oletko varma että haluat poistaa osoitekirjan \"%{0}\"?";
+"You cannot remove nor unsubscribe from a public addressbook."
+= "Et voi poistaa tai lopettaa julkisen osoitekirjan tilausta.";
+"You cannot remove nor unsubscribe from your personal addressbook."
+= "et voi poistaa tai lopettaa henkilökohtaisen osoitekirjasi tilausta.";
+"Are you sure you want to delete the selected contacts?"
+= "Haluatko varmasti poistaa valitut yhteystiedot?";
+"Are you sure you want to delete the card of %{0}?" = "Oletko varma että haluat poistaa osoitekortin %{0}?";
+"You cannot delete the card of \"%{0}\"."
+= "Et voi poistaa \"%{0}\"n korttia.";
+"You cannot subscribe to a folder that you own!"
+= "Et voi tilata omistamaasi kansiota.";
+"Unable to subscribe to that folder!"
+= "Kansioon kirjautuminen ei onnistu.";
+
+/* acls */
+"Access rights to" = "Pääsyoikeudet";
+"For user" = "Käyttäjälle";
+"Any Authenticated User" = "Kuka tahansa kirjautunut käyttäjä";
+"Public Access" = "Julkinen pääsy";
+"This person can add cards to this addressbook."
+= "Tällä henkilöllä on oikeus lisätä kortteja tähän osoitekirjaan.";
+"This person can edit the cards of this addressbook."
+= "Tällä henkilöllä on oikeus muokata kortteja tässä osoitekirjassa.";
+"This person can list the content of this addressbook."
+= "Tällä henkilöllä on oikeus nähdä tämän osoitekirjan sisällysluettelo.";
+"This person can read the cards of this addressbook."
+= "Tällä henkilöllä on oikeus lukea tämän osoitekirjan kortteja. ";
+"This person can erase cards from this addressbook."
+= "Tällä henkilöllä on oikeus tyhjentää kortteja tästä osoitekirjasta.";
+"The selected contact has no email address."
+= "Valitulla yhteystiedolla ei ole sähköpostiosoitetta.";
+"Please select a contact." = "Ole hyvä ja valitse yhteystieto.";
+
+/* Messages for move and copy */
+"%{0} card(s) copied" = "%{0} osoitekortti(a) kopioitu";
+"%{0} card(s) moved" = "%{0} osoitekortti(a) siirretty";
+"SoAccessDeniedException" = "Et voi kirjoittaa tähän osoitekirjaan.";
+"Forbidden" = "Kielletty";
+"Invalid Contact" = "Valittua yhteystietoa ei enää ole. ";
+"Unknown Destination Folder" = "Valittua kohdeosoitekirjaa ei enää ole.";
+
+/* Lists */
+"List details" = "Luettelon tiedot";
+"List name" = "Luettelon nimi";
+"List nickname" = "Luettelon lempinimi";
+"List description" = "Luettelon kuvaus";
+"Members" = "Jäsenet";
+"Contacts" = "Yhteystiedot";
+"Add" = "Lisää";
+"Lists can't be moved or copied." = "Luetteloita ei voi siirtää tai kopioida.";
+"Export" = "Vie";
+"Export Address Book..." = "Vie osoitekirja...";
+"View Raw Source" = "Näytä lähdekoodi";
+
+/* Import */
+"Import Cards" = "Tuo kortteja";
+"Select a vCard or LDIF file." = "Valitse vCard tai LDIF tiedosto.";
+"Upload" = "Lataa";
+"Uploading" = "Lataus";
+"Done" = "Valmis";
+"An error occured while importing contacts." = "Yhteystietojen tuonnissa tapahtui virhe.";
+"No card was imported." = "Yhtään korttia ei tuotu.";
+"A total of %{0} cards were imported in the addressbook." = "Yhteensä %{0} korttia tuotu osoitekirjaan.";
+"Reload" = "Päivitä";
+
+/* Properties window */
+"Address Book Name" = "Osoitekirjan nimi";
+"Links to this Address Book" = "Linkit tähän osoitekirjaan";
+"Authenticated User Access" = "Kirjautuneiden käyttäjien pääsy";
+"CardDAV URL" = "CardDAV URL";
+"Options" = "Asetukset";
+"Rename" = "Nimeä uudelleen";
+"Subscriptions" = "Tilaukset";
+"Global Addressbooks" = "Julkiset osoitekirjat";
+"Search" = "Etsi";
+"Sort" = "Järjestä";
+"Descending Order" = "Laskeva järjestys";
+"Back" = "Takaisin";
+"Select All" = "Valitse kaikki";
+"Copy contacts" = "Kopioi yhteystiedot";
+"More messages options" = "Lisää viestiasetuksia";
+"New Contact" = "Uusi yhteystieto";
+"Close" = "Sulje";
+"More contact options" = "Lisää yhteystietoasetuksia";
+"Organization Unit" = "Osasto";
+"Add Organizational Unit" = "Lisää osasto";
+"Type" = "Tyyppi";
+"Email Address" = "Sähköpostiosoite";
+"New Email Address" = "Uusi sähköpostiosoite";
+"New Phone Number" = "Uusi puhelinnumero";
+"URL" = "URL";
+"New URL" = "Uusi URL";
+"street" = "katuosoite";
+"Postoffice" = "Postitoimisto";
+"Region" = "Alue";
+"Postal Code" = "Postinumero";
+"New Address" = "Uusi osoite";
+"Reset" = "Tyhjennä";
+"Description" = "Kuvaus";
+"Add Member" = "Lisää jäsen";
+"Subscribe" = "Tilaa";
+"Add Birthday" = "Lisää syntymäpäivä";
+"Import" = "Tuo";
+"More options" = "Lisää valintoja";
+"Role" = "Rooli";
+"Add Screen Name" = "Lisää näyttönimi";
+"Synchronization" = "Synkronointi";
+"Synchronize" = "Synkronoi";
+"Sucessfully subscribed to address book" = "Osoitekirjan tilaus onnistui";
+
+/* Aria label for scope of search on contacts */
+"Search scope" = "Hakualue";
+
+/* Aria label for avatar button to select and unselect a card */
+"Toggle item" = "Kohteen valinta";
+
+/* Hotkey to create a new card */
+"key_create_card" = "c";
+
+/* Hotkey to create a new list */
+"key_create_list" = "l";

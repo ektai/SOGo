@@ -1,0 +1,26 @@
+/* this file is in UTF-8 format! */
+
+"Help" = "Cymorth";
+"Close" = "Cau";
+"Modules" = "Modiwlau";
+/* Modules short names */
+"ACLs" = "Rhestrau Rheoli Mynediad";
+/* Modules titles */
+"ACLs_title" = "Rhestrau Rheoli Mynediad ar gyfer ffolderi defnyddwyr";
+/* Modules descriptions */
+"ACLs_description" = "<p>Mae'r modiwl gweinyddu Rhestrau Rheoli Mynediad yn caniatáu newid Rhestrau Rheoli Mynediad Calendrau a Llyfrau Cyfeiriadau pob defnyddiwr.</p><p>Er mwyn newid Rhestrau Rheoli Mynediad ffolder defnyddiwr, teipiwch enw'r defnyddiwr yn y maes chwilio ar ben y ffenestr a chliciwch ddwywaith ar y ffolder berthnasol.</p>";
+"Name or Email" = "Enw neu Gyfeiriad E-bost";
+/* Rights module: initial search message */
+"Start a search to edit the rights" = "Cychwyn chwiliad i olygu'r hawliau";
+/* Rights module: Empty search result */
+"No matching user" = "Dim defnyddwyr sy'n cyfateb";
+/* Rights module: no selection */
+"No resource selected" = "Dim adnodd wedi'i ddewis";
+"Add User" = "Ychwanegu Defnyddiwr";
+"Subscribe User" = "Tanysgrifio Defnyddiwr";
+"Rights" = "Hawliau";
+"Search Users" = "Chwilio Defnyddwyr";
+"users found" = "o ddefnyddwyr wedi'u canfod";
+"No resource" = "Dim adnodd";
+"Any Authenticated User" = "Unrhyw Ddefnyddiwr a Ddilyswyd";
+"Public Access" = "Mynediad Cyhoeddus";

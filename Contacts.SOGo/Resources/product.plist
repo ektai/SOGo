@@ -1,0 +1,40 @@
+{
+  requires = ( MAIN );
+
+  publicResources = (
+  );
+
+  factories = {
+  };
+  
+  classes = {
+    SOGoContactFolders = {
+      superclass = "SOGoParentFolder";
+    };
+    SOGoContactGCSFolder = {
+      superclass = "SOGoGCSFolder";
+    };
+    SOGoContactGCSEntry = {
+      superclass = "SOGoContentObject";
+    };
+    SOGoContactGCSList = {
+      superclass = "SOGoContentObject";
+    };
+    SOGoContactSourceFolder = {
+      superclass = "SOGoGCSFolder";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+	"Access Contents Information" = ( "Authenticated" );
+        "WebDAV Access" = ( "Authenticated" );
+      };
+    };
+    SOGoContactLDIFEntry = {
+      superclass = "SOGoContentObject";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+	"Access Contents Information" = ( "Authenticated" );
+        "WebDAV Access" = ( "Authenticated" );
+      };
+    };
+  };
+}

@@ -1,0 +1,215 @@
+/* this file is in UTF-8 format! */
+
+/* toolbars */
+"Save" = "Speichern";
+"Close" = "Schließen";
+"Edit User Rights" = "Benutzerrechte bearbeiten";
+"Home" = "Start";
+"Calendar" = "Kalender";
+"Address Book"  = "Adressbuch";
+"Mail" = "E-Mail";
+"Preferences" = "Einstellungen";
+"Administration" = "Administration";
+"Disconnect" = "Beenden";
+"Toggle Menu" = "Menü umschalten";
+"Right Administration" = "Rechteadministration";
+"Log Console (dev.)" = "Journal (Entwickler)";
+"User" = "Benutzer";
+"Vacation message is enabled" = "Abwesenheitsmeldung ist eingeschaltet";
+"Help" = "Hilfe";
+"noJavascriptError" = "SOGo benötigt Javascript. Bitte aktivieren Sie Javascript in Ihrem Browser.";
+"noJavascriptRetry" = "Erneut versuchen";
+"Owner" = "Besitzer";
+"Publish the Free/Busy information" = "Verfügbarkeitsinformationen veröffentlichen";
+"Add..." = "Hinzufügen...";
+"Remove" = "Löschen";
+"Subscribe User" = "Für den Benutzer abonnieren";
+"Any Authenticated User" = "Alle authentifizierten Benutzer";
+"Public Access" = "Öffentlicher Zugang";
+"Any user not listed above" = "Jeder andere Benutzer";
+"Anybody accessing this resource from the public area" = "Jeder, der diese Ressource öffentlich erreicht";
+"Sorry, the user rights can not be configured for that object." = "Leider können die Benutzerrechte für dieses Objekt nicht konfiguriert werden.";
+"Any user with an account on this system will be able to access your mailbox \"%{0}\". Are you certain you trust them all?"
+     = "Jeder Benutzer mit einem Konto auf diesem System wird in der Lage sein auf Ihren E-Mail-Ordner \"%{0}\" zuzugreifen. Sind Sie sicher, dass Sie allen vertrauen?";
+"Any user with an account on this system will be able to access your calendar \"%{0}\". Are you certain you trust them all?"
+     = "Jeder Benutzer mit einem Konto auf diesem System wird in der Lage sein, auf Ihren Kalender \"%{0}\" zuzugreifen. Sind Sie sicher, dass Sie allen vertrauen?";
+"Potentially anyone on the Internet will be able to access your calendar \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?"
+     = "Jeder aus dem Internet wird in der Lage sein, auf Ihren Kalender \"%{0}\" zuzugreifen, selbst wenn jene Personen kein Konto auf diesem System haben. Sind diese Informationen für das öffentliche Internet gedacht?";
+"Any user with an account on this system will be able to access your address book \"%{0}\". Are you certain you trust them all?"
+     = "Jeder Benutzer mit einem Konto auf diesem System wird auf Ihr Adressbuch \"%{0}\" zugreifen können. Sind Sie sicher, dass Sie allen vertrauen?";
+"Potentially anyone on the Internet will be able to access your address book \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?"
+     = "Jeder im Internet wird in der Lage sein auf Ihr Adressbuch \"%{0}\" zuzugreifen, selbst wenn diese kein Konto auf diesem System haben. Ist diese Information passend für das öffentliche Internet?";
+"Give Access" = "Allen Zugriff gewähren";
+"Keep Private" = "Privat halten";
+
+/* generic.js */
+"Unable to subscribe to that folder!"
+        = "Es ist nicht möglich, diesen Ordner zu abonnieren!";
+"You cannot subscribe to a folder that you own!"
+        = "Sie können keinen Ordner abonnieren, der Ihnen selbst gehört!";
+"Unable to unsubscribe from that folder!"
+        = "Es ist nicht möglich, diesen Ordner zu kündigen!";
+"You cannot unsubscribe from a folder that you own!"
+        = "Sie können keinen Ordner kündigen, der Ihnen selbst gehört!";
+"Unable to rename that folder!" = "Es ist nicht möglich, diesen Ordner umzubenennen!";
+"You have already subscribed to that folder!"
+        = "Sie haben diesen Ordner bereits abonniert!";
+"The user rights cannot be edited for this object!"
+        = "Die Benutzerrechte können für dieses Objekt nicht verändert werden!";
+"A folder by that name already exists." = "Ein Ordner mit diesem Namen existiert bereits.";
+"You cannot create a list in a shared address book."
+        = "Sie können keine Liste in einem gemeinsamen Adressbuch erstellen.";
+"Warning" = "Warnung";
+"Can't contact server" = "Beim Verbindungsaufbau mit dem Server ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.";
+"You are not allowed to access this module or this system. Please contact your system administrator."
+= "Sie sind nicht berechtigt auf dieses Modul oder System zuzugreifen. Bitte kontaktieren Sie ihren Systemadministrator.";
+"You don't have the required privileges to perform the operation."
+= "Sie haben nicht die benötigten Berechtigungen für diesen Befehl.";
+"noEmailForDelegation" = "Sie müssen eine Adresse angeben, an die Sie Ihre Einladung delegieren möchten.";
+"delegate is organizer" = "Der Vertreter ist der Organisator. Bitte einen anderen Vertreter angeben.";
+"delegate is a participant" = "Der Vertreter ist bereits ein Teilnehmer.";
+"delegate is a group" = "Die angegebene Adresse gehört einer Gruppe. Es kann nur an eine einzelne Person delegiert werden.";
+
+/* common buttons */
+"OK" = "OK";
+"Cancel" = "Abbrechen";
+"Yes" = "Ja";
+"No" = "Nein";
+
+/* generic messages */
+"Error" = "Fehler";
+"Success" = "Erfolg";
+
+/* confirmation dialog box */
+"Confirmation" = "Bestätigung";
+
+/* alarms */
+"Reminder" = "Erinnerung";
+"Start" = "Beginn";
+"Due Date" = "Fällig";
+"Location" = "Ort";
+"Snooze" = "Erneut erinnern";
+"Snooze for " = "Erneut erinnern nach ";
+"5 minutes" = "5 Minuten";
+"10 minutes" = "10 Minuten";
+"15 minutes" = "15 Minuten";
+"30 minutes" = "30 Minuten";
+"45 minutes" = "45 Minuten";
+"1 hour" = "1 Stunde";
+"1 day" = "1 Tag";
+
+/* mail labels */
+"Important" = "Wichtig";
+"Work" = "Geschäftlich";
+"Personal" = "Persönlich";
+"To Do" = "To-Do";
+"Later" = "Später";
+"Return Receipt Sent" = "Empfangsbestätigung gesendet";
+"a2_Sunday" = "So";
+"a2_Monday" = "Mo";
+"a2_Tuesday" = "Di";
+"a2_Wednesday" = "Mi";
+"a2_Thursday" = "Do";
+"a2_Friday" = "Fr";
+"a2_Saturday" = "Sa";
+"Access Rights" = "Zugriffsrechte";
+"Add User" = "Benutzer hinzufügen";
+"Loading" = "Lade";
+"No such user." = "Kein Benutzer gefunden";
+"You cannot (un)subscribe to a folder that you own!" = "Sie können keinen Ordner abonnieren/abbestellen, den Sie besitzen!";
+
+/* SMIME Certificate field */
+"S/MIME Certificate" = "S/MIME-Zertifikat";
+"Subject Name" = "Zertifikatsinhaber";
+"Issuer" = "Aussteller";
+"countryName" = "Land";
+"organizationName" = "Organisation";
+"organizationalUnitName" = "Organisationseinheit";
+"commonName" = "Name";
+"emailAddress" = "E-Mail";
+
+/* Authentication username */
+"Username" = "Benutzername";
+
+/* Authentication password */
+"Password" = "Passwort";
+
+/* Authentication failed */
+"Wrong username or password." = "Falscher Benutzername oder falsches Passwort";
+
+/* Error message displayed bellow search field when the search string has less than the required number of characters */
+"Enter at least %{minimumSearchLength} characters" = "Mindestens %{minimumSearchLength} Zeichen eingeben";
+
+/* Error message displayed when a file upload exceeds WOMaxUploadSize */
+"File size upload limit reached" = "Maximale Dateigröße für das Hochladen erreicht";
+
+/* Generic server error */
+"An error occured, please try again." = "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es nochmal.";
+
+/* Open datepicker */
+"Open Calendar" = "Kalender öffnen";
+
+/* Toggle visibility (ex: mail account in left navigation menu) */
+"Toggle visibility" = "Sichtbarkeit umschalten";
+
+"Keyboard Shortcuts" = "Tastenkürzel";
+
+/* Aria label for avatar button to select and unselect an item */
+"Toggle item" = "Objekt umschalten";
+
+/* Toggle multiple items at the same time (hotkeys cheatsheet) */
+"Toggle range of items" = "Mehrere Punkte umschalten";
+
+/* Question mark shows list of hotkeys */
+"Show or hide this help" = "Diese Hilfe anzeigen oder ausblenden";
+
+/* Space key */
+"key_space" = "space";
+
+/* Delete key */
+"key_delete" = "Löschen";
+
+/* Shift and space key */
+"key_shift+space" = "Umschalt + Leerzeichen";
+
+/* Up arrow key */
+"key_up" = "↑";
+
+/* Down arrow key */
+"key_down" = "↓";
+
+/* Left arrow key */
+"key_left" = "←";
+
+/* Right arrow key */
+"key_right" = "→";
+
+/* Shift and up arrow combo keys */
+"key_shift+up" = "shift + ↑";
+
+/* Shift and down arrow combo keys */
+"key_shift+down" = "shift + ↓";
+
+/* Backspace key */
+"key_backspace" = "⌫";
+
+/* Hotkey to start a search */
+"hotkey_search" = "s";
+
+/* Hotkey description to select next list item */
+"View next item" = "Nächsten Eintrag ansehen";
+
+/* Hotkey description to select previous list item */
+"View previous item" = "Vorherigen Eintrag ansehen";
+
+/* Hotkey description to add next list item to selection */
+"Add next item to selection" = "Nächsten Eintrag zur Auswahl hinzufügen";
+
+/* Hotkey description to add previous list item to selection */
+"Add previous item to selection" = "Vorherigen Eintrag zur Auswahl hinzufügen";
+
+/* Hotkey description to move backward in current view */
+"Move backward" = "Zurück";
+
+/* Hotkey description to move forward in current view */
+"Move forward" = "Weiter";

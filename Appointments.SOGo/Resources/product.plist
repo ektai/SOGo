@@ -1,0 +1,123 @@
+{
+  requires = ( MAIN );
+
+  publicResources = (
+  );
+
+  factories = {
+  };
+  
+  classes = {
+    SOGoAppointmentFolders = {
+      superclass = "SOGoParentFolder";
+    };
+    SOGoWebAppointmentFolder = {
+        superclass = "SOGoGCSFolder";
+        defaultRoles = {
+            "Add Documents, Images, and Files" = ( "ImpossibleWriter" );
+            "Access Contents Information" = ( "Owner", "PublicResponder", "PublicModifier", "PublicViewer", "PublicDAndTViewer", "PrivateResponder", "PrivateModifier", "PrivateViewer", "PrivateDAndTViewer", "ConfidentialResponder", "ConfidentialModifier", "ConfidentialViewer", "ConfidentialDAndTViewer" );
+            "ViewWholePublicRecords" = ( "Owner", "PublicResponder", "PublicModifier", "PublicViewer" );
+            "ViewWholePrivateRecords" = ( "Owner", "PrivateResponder", "PrivateModifier", "PrivateViewer" );
+            "ViewWholeConfidentialRecords" = ( "Owner", "ConfidentialResponder", "ConfidentialModifier", "ConfidentialViewer" );
+            "ViewDAndTOfPublicRecords" = ( "Owner", "PublicDAndTViewer" );
+            "ViewDAndTOfPrivateRecords" = ( "Owner", "PrivateDAndTViewer" );
+            "ViewDAndTOfConfidentialRecords" = ( "Owner", "ConfidentialDAndTViewer" );
+            "ModifyPublicRecords" = ( "NoOne" );
+            "ModifyPrivateRecords" = ( "NoOne" );
+            "ModifyConfidentialRecords" = ( "NoOne" );
+            "RespondToPublicRecords" = ( "NoOne" );
+            "RespondToPrivateRecords" = ( "NoOne" );
+            "RespondToConfidentialRecords" = ( "NoOne" );
+        };
+    };
+    SOGoAppointmentFolder = {
+      superclass = "SOGoGCSFolder";
+      defaultRoles = {
+        "Read FreeBusy" = ( "Owner", "AuthorizedSubscriber", "ObjectEraser" );
+	"Access Contents Information" = ( "Owner", "PublicResponder", "PublicModifier", "PublicViewer", "PublicDAndTViewer", "PrivateResponder", "PrivateModifier", "PrivateViewer", "PrivateDAndTViewer", "ConfidentialResponder", "ConfidentialModifier", "ConfidentialViewer", "ConfidentialDAndTViewer", "AuthorizedSubscriber" );
+	"ViewWholePublicRecords" = ( "Owner", "PublicResponder", "PublicModifier", "PublicViewer" );
+	"ViewDAndTOfPublicRecords" = ( "Owner", "PublicDAndTViewer" );
+	"ModifyPublicRecords" = ( "Owner", "PublicModifier" );
+	"RespondToPublicRecords" = ( "Owner", "PublicModifier", "PublicResponder" );
+	"ViewWholePrivateRecords" = ( "Owner", "PrivateResponder", "PrivateModifier", "PrivateViewer" );
+	"ViewDAndTOfPrivateRecords" = ( "Owner", "PrivateDAndTViewer" );
+	"ModifyPrivateRecords" = ( "Owner", "PrivateModifier" );
+	"RespondToPrivateRecords" = ( "Owner", "PrivateModifier", "PrivateResponder" );
+	"ViewWholeConfidentialRecords" = ( "Owner", "ConfidentialResponder", "ConfidentialModifier", "ConfidentialViewer" );
+	"ViewDAndTOfConfidentialRecords" = ( "Owner", "ConfidentialDAndTViewer" );
+	"ModifyConfidentialRecords" = ( "Owner", "ConfidentialModifier" );
+	"RespondToConfidentialRecords" = ( "Owner", "ConfidentialModifier", "ConfidentialResponder" );
+      };
+    };
+    SOGoAppointmentFolderObject = {
+      superclass = "SOGoAppointmentFolder";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+        "Access Contents Information" = ( "Owner", "PublicResponder", "PublicModifier", "PublicViewer", "PublicDAndTViewer", "PrivateResponder", "PrivateModifier", "PrivateViewer", "PrivateDAndTViewer", "ConfidentialResponder", "ConfidentialModifier", "ConfidentialViewer", "ConfidentialDAndTViewer", "AuthorizedSubscriber" );
+        "WebDAV Access" = ( "Owner", "Authenticated", "PublicUser" );
+        "Change Images And Files"  = ( "NoOne" );
+      };
+    };
+    SOGoAppointmentFolderICS = {
+      superclass = "SOGoAppointmentFolderObject";
+    };
+    SOGoAppointmentFolderXML = {
+      superclass = "SOGoAppointmentFolderObject";
+    };
+    SOGoAppointmentInboxFolder = {
+      superclass = "SOGoAppointmentFolder";
+      defaultRoles = {
+        "Access Contents Information" = ( "Owner", "AuthorizedSubscriber" );
+      };
+    };
+    SOGoCalendarComponent = {
+      superclass = "SOGoContentObject";
+      defaultRoles = {
+        "SOGoDAVReadPermission" = ( "Owner", "ComponentDAndTViewer", "ComponentViewer", "ComponentResponder", "ComponentModifier" );
+	"ViewDAndT" = ( "Owner", "ComponentDAndTViewer", "ComponentViewer", "ComponentResponder", "ComponentModifier", "ObjectEditor" );
+	"ViewAllComponent" = ( "Owner", "ComponentViewer", "ComponentResponder", "ComponentModifier", "ObjectEditor" );
+	"RespondToComponent" = ( "Owner", "ComponentResponder", "ComponentModifier", "ObjectEditor" );
+	"ModifyComponent" = ( "Owner", "ComponentModifier", "ObjectEditor" );
+	"Access Object" = ( "Owner", "ObjectCreator", "ObjectEraser", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+	"Change Images and Files" = ( "Owner", "ComponentModifier", "ComponentResponder", "ObjectEditor" );
+      	"Access Contents Information" = ( "Owner", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+        "WebDAV Access" = ( "Owner", "ObjectCreator", "ObjectEraser", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+      };
+    };
+    SOGoAppointmentObject = {
+      superclass = "SOGoCalendarComponent";
+    };
+    SOGoTaskObject = {
+      superclass = "SOGoCalendarComponent";
+    };
+    SOGoComponentOccurence = {
+      superclass = "SOGoObject";
+      protectedBy = "Access Object";
+      defaultRoles = {
+        "SOGoDAVReadPermission" = ( "Owner", "ComponentDAndTViewer", "ComponentViewer", "ComponentResponder", "ComponentModifier" );
+	"ViewDAndT" = ( "Owner", "ComponentDAndTViewer", "ComponentViewer", "ComponentResponder", "ComponentModifier" );
+	"ViewAllComponent" = ( "Owner", "ComponentViewer", "ComponentResponder", "ComponentModifier" );
+	"RespondToComponent" = ( "Owner", "ComponentResponder", "ComponentModifier" );
+	"ModifyComponent" = ( "Owner", "ComponentModifier" );
+	"Access Object" = ( "Owner", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+	"Change Images and Files" = ( "Owner", "ComponentModifier", "ComponentResponder" );
+      	"Access Contents Information" = ( "Owner", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+        "WebDAV Access" = ( "Owner", "ComponentModifier", "ComponentResponder", "ComponentViewer", "ComponentDAndTViewer" );
+      };
+    };
+    SOGoAppointmentOccurence = {
+      superclass = "SOGoComponentOccurence";
+    };
+    SOGoTaskOccurence = {
+      superclass = "SOGoComponentOccurence";
+    };
+    SOGoFreeBusyObject = {
+      superclass = "SOGoContentObject";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+	"Access Contents Information" = ( "Owner", "Authenticated", "PublicUser" );
+        "WebDAV Access" = ( "Owner", "Authenticated", "PublicUser" );
+      };
+    };
+  };
+}

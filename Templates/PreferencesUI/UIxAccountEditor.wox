@@ -1,0 +1,355 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE container>
+<container
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:var="http://www.skyrix.com/od/binding"
+    xmlns:const="http://www.skyrix.com/od/constant"
+    xmlns:label="OGo:label"
+    xmlns:rsrc="OGo:url"
+    xmlns:uix="OGo:uix"><var:string var:value="doctype" const:escapeHTML="NO" />
+<md-dialog flex="50" flex-sm="80" flex-xs="100">
+  <form id="accountForm" name="accountForm" var:href="ownPath">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <md-icon class="material-icons sg-icon-toolbar-bg">account_box</md-icon>
+        <md-input-container class="md-block md-flex">
+          <label><var:string label:value="Account Name"/></label>
+          <input type="text" required="required"
+                 md-autofocus="true"
+                 ng-readonly="$AccountDialogController.accountId == 0"
+                 ng-model="$AccountDialogController.account.name"/>
+        </md-input-container>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <md-tabs class="md-flex" md-border-bottom="md-border-bottom" md-dynamic-height="true">
+
+        <!-- general settings -->
+        <md-tab id="accountSettingsView" label:label="Settings">
+          <md-content class="md-padding">
+
+            <div layout="row">
+              <md-input-container class="md-block md-flex">
+                <label><var:string label:value="Server Name"/></label>
+                <input name="serverName" type="text" required="required"
+                       ng-pattern="$AccountDialogController.hostnameRE"
+                       ng-disabled="$AccountDialogController.accountId == 0"
+                       ng-model="$AccountDialogController.account.serverName"/>
+                <div ng-messages="accountForm.serverName.$error" role="alert">
+                  <div ng-message="pattern"><var:string label:value="Specify a hostname other than the local host"/></div>
+                </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex="30">
+                <label><var:string label:value="Port"/></label>
+                <input type="number" min="1" max="65535"
+                       ng-disabled="$AccountDialogController.accountId == 0"
+                       ng-model="$AccountDialogController.account.port"
+                       placeholder=""
+                       sg-placeholder="$AccountDialogController.defaultPort"/>
+              </md-input-container>
+            </div>
+
+            <md-input-container class="md-block md-input-has-value">
+              <label><var:string label:value="Encryption"/></label>
+              <md-radio-group ng-model="$AccountDialogController.account.encryption">
+                <div layout="row" layout-align="space-around">
+                  <div>
+                    <md-radio-button
+                        ng-click="$AccountDialogController.defaultPort = 143"
+                        ng-disabled="$AccountDialogController.accountId == 0"
+                        value="none" class="md-primary"><var:string label:value="None"/></md-radio-button>
+                  </div>
+                  <div>
+                    <md-radio-button
+                        ng-click="$AccountDialogController.defaultPort = 993"
+                        ng-disabled="$AccountDialogController.accountId == 0"
+                        value="ssl"><var:string label:value="SSL"/></md-radio-button>
+                  </div>
+                  <div>
+                    <md-radio-button
+                        ng-click="$AccountDialogController.defaultPort = 143"
+                        ng-disabled="$AccountDialogController.accountId == 0"
+                        value="tls"><var:string label:value="TLS"/></md-radio-button>
+                  </div>
+                </div>
+              </md-radio-group>
+            </md-input-container>
+
+            <div layout="row">
+              <md-input-container class="md-block" flex="50">
+                <label><var:string label:value="User Name"/></label>
+                <input type="text" required="required"
+                       autocomplete="off"
+                       ng-disabled="$AccountDialogController.accountId == 0"
+                       ng-model="$AccountDialogController.account.userName"/>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex="50"
+                                  ng-hide="$AccountDialogController.accountId == 0">
+                <label><var:string label:value="Password"/></label>
+                <input type="password"
+                       autocomplete="off"
+                       ng-model="$AccountDialogController.account.password"/>
+              </md-input-container>
+            </div>
+
+            <!-- identities -->
+            <div class="pseudo-input-container" ng-if="$AccountDialogController.hasIdentities()">
+              <label class="pseudo-input-label"><var:string label:value="Identities"/></label>
+              <md-card ng-repeat="identity in $AccountDialogController.account.identities | filter:$AccountDialogController.isEditableIdentity"
+                       class="sg-collapsed"
+                       ng-class="{ 'sg-expanded': $index == $AccountDialogController.selectedIdentity }">
+                <a class="md-flex md-button" ng-click="$AccountDialogController.selectIdentity($index)">
+                  <div layout="row" layout-align="start center">
+                    <div class="card-picture">
+                      <sg-avatar-image class="md-avatar"
+                                       sg-email="identity.email"
+                                       size="40">person</sg-avatar-image>
+                    </div>
+                    <div class="sg-tile-content">
+                      <div class="sg-md-subhead">
+                        <div>
+                          <span ng-bind="identity.fullName"><!-- fullName --></span>
+                          <span ng-show="identity.email">
+                            <var:entity const:name="nbsp"/>
+                            <var:entity const:name="lt"/><span ng-bind="identity.email"><!-- email --></span><var:entity const:name="gt"/>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="sg-md-body">
+                        <i ng-bind-html="$AccountDialogController.account.getTextSignature(identity)"><!-- signature --></i>
+                      </div>
+                    </div>
+                    <md-button class="sg-icon-button" type="button"
+                               ng-click="$AccountDialogController.removeIdentity($index)"
+                               ng-show="$AccountDialogController.canRemoveIdentity($index)">
+                      <md-icon>delete</md-icon>
+                    </md-button>
+                    <md-button class="sg-icon-button"
+                               label:aria-label="Default Identity"
+                               ng-click="$AccountDialogController.setDefaultIdentity($event, $index)">
+                      <md-icon ng-class="{ 'md-warn md-hue-2': identity.isDefault }">{{ identity.isDefault ? 'favorite' : 'favorite_border' }}</md-icon>
+                    </md-button>
+                    <md-icon ng-class="{ 'md-rotate-180': $index == $AccountDialogController.selectedIdentity }">expand_more</md-icon>
+                  </div>
+                </a>
+                <md-card-content ng-show="$index == $AccountDialogController.selectedIdentity">
+                  <md-input-container class="md-block md-flex">
+                    <label><var:string label:value="Full Name"/></label>
+                    <input type="text" required="required"
+                           ng-disabled="$AccountDialogController.customFromIsReadonly()"
+                           ng-model="identity.fullName"/>
+                  </md-input-container>
+                  <md-autocomplete
+                      class="md-block" required="required"
+                      md-no-cache="true"
+                      md-search-text="identity.email"
+                      md-items="address in $AccountDialogController.filterEmailAddresses(identity.email)"
+                      md-escape-options="clear"
+                      md-require-match="$AccountDialogController.customFromIsReadonly()"
+                      md-min-length="0"
+                      label:md-floating-label="Email">
+                    <md-item-template>
+                      <span md-highlight-text="identity.email"
+                            md-highlight-flags="gi">{{ address }}</span>
+                    </md-item-template>
+                  </md-autocomplete>
+                  <md-input-container class="md-block"
+                                      ng-hide="$AccountDialogController.customFromIsReadonly()">
+                    <label><var:string label:value="Reply To Email"/></label>
+                    <input type="email"
+                           autocomplete="off"
+                           ng-model="identity.replyTo"/>
+                  </md-input-container>
+                  <md-input-container
+                      class="md-block md-flex"
+                      ng-if="$AccountDialogController.defaults.SOGoMailComposeMessageType == 'text'">
+                    <label><var:string label:value="Signature"/></label>
+                    <textarea ng-model="identity.signature"><!-- signature --></textarea>
+                  </md-input-container>
+                  <div class="pseudo-input-container"
+                       ng-if="$AccountDialogController.defaults.SOGoMailComposeMessageType == 'html'">
+                    <label class="pseudo-input-label"><var:string label:value="Signature"/></label>
+                    <sg-ckeditor
+                        class="ng-cloak"
+                        config="$AccountDialogController.ckConfig"
+                        ck-margin="8px"
+                        ng-model="identity.signature"><!-- HTML editor --></sg-ckeditor>
+                  </div>
+                </md-card-content>
+              </md-card>
+              <div layout="row" layout-align="end center">
+                <md-button type="button"
+                           ng-click="$AccountDialogController.addIdentity()"
+                           label:aria-label="New Identity">
+                  <var:string label:value="New Identity"/>
+                </md-button>
+              </div>
+            </div>
+
+            <div class="sg-padded--bottom"><!-- spacer --></div>
+
+            <md-input-container class="md-block md-input-has-value">
+              <label><var:string label:value="When I receive a request for a return receipt"/></label>
+              <md-radio-group ng-model="$AccountDialogController.account.receipts.receiptAction">
+                <md-radio-button value="ignore"><var:string label:value="Never send a return receipt"/></md-radio-button>
+                <md-radio-button value="allow"><var:string label:value="Allow return receipts for some messages"/></md-radio-button>
+              </md-radio-group>
+            </md-input-container>
+
+            <div layout="column" flex-offset="5"
+                 ng-show="$AccountDialogController.account.receipts.receiptAction == 'allow'">
+              <md-input-container class="md-block md-flex">
+                <label><var:string label:value="If I'm not in the To or Cc of the message"/></label>
+                <md-select ng-model="$AccountDialogController.account.receipts.receiptNonRecipientAction">
+                  <md-option const:value="ignore"><var:string label:value="Never send"/></md-option>
+                  <md-option const:value="send"><var:string label:value="Always send"/></md-option>
+                  <md-option const:value="ask"><var:string label:value="Ask me"/></md-option>
+                </md-select>
+              </md-input-container>
+
+              <md-input-container class="md-block md-flex">
+                <label><var:string  label:value="If the sender is outside my domain"/></label>
+                <md-select ng-model="$AccountDialogController.account.receipts.receiptOutsideDomainAction">
+                  <md-option const:value="ignore"><var:string label:value="Never send"/></md-option>
+                  <md-option const:value="send"><var:string label:value="Always send"/></md-option>
+                  <md-option const:value="ask"><var:string label:value="Ask me"/></md-option>
+                </md-select>
+              </md-input-container>
+
+              <md-input-container class="md-block md-flex">
+                <label><var:string label:value="In all other cases"/></label>
+                <md-select ng-model="$AccountDialogController.account.receipts.receiptAnyAction">
+                  <md-option const:value="ignore"><var:string label:value="Never send"/></md-option>
+                  <md-option const:value="send"><var:string label:value="Always send"/></md-option>
+                  <md-option const:value="ask"><var:string label:value="Ask me"/></md-option>
+                </md-select>
+              </md-input-container>
+            </div>
+
+          </md-content>
+        </md-tab>
+
+        <!-- security tab -->
+        <md-tab id="accountSecurityView" ng-disabled="$AccountDialogController.account.isNew" label:label="Security">
+          <md-content id="accountSecurityContent" class="md-padding">
+
+            <div layout="column" ng-show="$AccountDialogController.account.security.hasCertificate">
+              <!-- S/MIME Certificate -->
+              <sg-block-toggle class="hide-print" layout="column">
+                <md-list-item class="sg-button-toggle">
+                  <p class="md-flex">
+                    <md-icon rsrc:md-svg-src="img/certificate.svg"><!-- certificate --></md-icon>
+                    {{::'S/MIME Certificate' | loc}}
+                  </p>
+                  <md-button class="md-warn"
+                             ng-click="$AccountDialogController.removeCertificate()">
+                    <var:string label:value="Uninstall"/>
+                  </md-button>
+                  <md-icon class="sg-icon-toggle">expand_more</md-icon>
+                </md-list-item>
+                <div class="sg-block-toggle">
+                  <div class="md-margin" md-whiteframe="3">
+                    <div class="md-padding" layout="row" layout-wrap="layout-wrap">
+                      <div flex="50" flex-xs="100">
+                        <div class="md-subhead md-default-theme md-fg md-primary"
+                             ng-bind="::'Subject Name' | loc"><!-- Subject Name --></div>
+                        <div ng-repeat="field in $AccountDialogController.certificate.subject">
+                          <div class="pseudo-input-label" ng-bind="field[0] | loc"><!-- label --></div>
+                          <div class="pseudo-input-field md-body-1" ng-bind="field[1]"><!-- value --></div>
+                        </div>
+                      </div>
+                      <div flex="50" flex-xs="100">
+                        <div class="md-subhead md-default-theme md-fg md-primary"
+                             ng-bind="::'Issuer' | loc"><!-- Issuer --></div>
+                        <div ng-repeat="field in $AccountDialogController.certificate.issuer">
+                          <div class="pseudo-input-label" ng-bind="field[0] | loc"><!-- label --></div>
+                          <div class="pseudo-input-field md-body-1" ng-bind="field[1]"><!-- value --></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </sg-block-toggle>
+
+              <md-divider><!-- divider --></md-divider>
+
+              <div class="pseudo-input-container">
+                <label class="pseudo-input-label"><var:string label:value="When composing a message"/></label>
+                <div layout="column">
+                  <md-checkbox
+                      class="pseudo-input-field"
+                      ng-model="$AccountDialogController.account.security.alwaysSign"
+                      ng-true-value="1"
+                      ng-false-value="0"><var:string label:value="Digitally sign the message by default"/></md-checkbox>
+                  <md-checkbox
+                      class="pseudo-input-field"
+                      ng-model="$AccountDialogController.account.security.alwaysEncrypt"
+                      ng-true-value="1"
+                      ng-false-value="0"><var:string label:value="Always try to encrypt the message"/></md-checkbox>
+                </div>
+              </div>
+
+            </div><!-- /hasCertificate -->
+
+            <div layout="column" ng-hide="$AccountDialogController.account.security.hasCertificate">
+
+              <div layout="row" layout-align="start center">
+                <md-input-container
+                    class="md-flex"
+                    ng-class="{'md-input-invalid': $AccountDialogController.form.certificateFilename.$error.fileformat}">
+                  <label><var:string label:value="S/MIME Certificate"/></label>
+                  <input type="text" name="certificateFilename"
+                         ng-disabled="true"
+                         label:placeholder="No certificate installed"
+                         ng-model="$AccountDialogController.certificateFilename" />
+                  <div ng-messages="accountForm.certificateFilename.$error" role="alert">
+                    <div ng-message="fileformat"><var:string label:value="The SSL certificate must use the PKCS#12 (PFX) format."/></div>
+                  </div>
+                </md-input-container>
+                <div>
+                  <input id="smime-certificate-import" type="file" class="ng-hide"
+                         nv-file-select="nv-file-select"
+                         uploader="$AccountDialogController.uploader"/>
+                  <label class="md-button" for="smime-certificate-import"
+                         ng-click="$AccountDialogController.onBeforeUploadCertificate(accountForm)"
+                         ng-hide="$AccountDialogController.uploader.isUploading">
+                    <span><var:string label:value="Choose PKCS12 Certificate .."/></span>
+                  </label>
+                </div>
+              </div>
+              <md-input-container class="md-flex">
+                <label><var:string label:value="Certificate Import Password"/></label>
+                <input type="password" autocomplete="new-password"
+                       ng-required="$AccountDialogController.uploader.queue.length"
+                       ng-model="$AccountDialogController.certificatePassword" />
+              </md-input-container>
+
+              <div layout="row" layout-align="end end">
+                <md-button
+                    class="md-warn md-raised"
+                    ng-disabled="!$AccountDialogController.certificatePassword || !$AccountDialogController.certificateFilename"
+                    ng-click="$AccountDialogController.importCertificate()">
+                  <var:string label:value="Upload"/>
+                </md-button>
+              </div>
+
+            </div><!-- /!hasCertificate -->
+
+          </md-content>
+        </md-tab>
+
+      </md-tabs>
+
+    </md-dialog-content>
+    <md-dialog-actions>
+      <md-button type="button" ng-click="$AccountDialogController.cancel()"><var:string label:value="Cancel"/></md-button>
+      <md-button class="md-primary" aria-label="{{::'OK' | loc}}"
+                 ng-disabled="accountForm.$invalid"
+                 ng-click="$AccountDialogController.save()"
+                 ng-bind="::'OK' | loc"><!-- OK --></md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
+</container>

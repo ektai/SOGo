@@ -1,0 +1,364 @@
+/* this file is in UTF-8 format! */
+
+"Contact" = "Contactpersoon";
+"Address" = "Adres";
+"Photos" = "Foto's";
+"Other" = "Overige";
+"Address Books" = "Adresboeken";
+"Addressbook" = "Adresboek";
+"Addresses" = "Adressen";
+"Update" = "Opslaan";
+"Cancel" = "Annuleren";
+"Common" = "Algemeen";
+"Contact editor" = "Contactinformatie bijwerken";
+"Contact viewer" = "Contactinformatie bekijken";
+"Email" = "E-mail";
+"Screen Name" = "Weergavenaam";
+"Extended" = "Uitgebreide informatie";
+"Fax" = "Fax";
+"Firstname" = "Voornaam";
+"Home" = "Privé";
+"HomePhone" = "Privé";
+"Lastname" = "Achternaam";
+"Location" = "Adres";
+"Add a category" = "Categorie toevoegen";
+"MobilePhone" = "Mobiel";
+"Name" = "Naam";
+"OfficePhone" = "Kantoor";
+"Organization" = "Organisatie";
+"Work Phone" = "Werk";
+"Cell" = "Mobiel";
+"Pager" = "Pieper";
+"Pref" = "Voorkeur";
+"Phone" = "Telefoon";
+"Phones" = "Telefoonnummers";
+"Postal" = "Postcode";
+"Save" = "Opslaan";
+"Internet" = "Internet";
+"Unit" = "Afdeling";
+"delete" = "verwijderen";
+"edit" = "bewerken";
+"invalidemailwarn" = "Het ingevoerde e-mailadres is ongeldig.";
+"new" = "nieuw";
+"Preferred Phone" = "Voorkeurstelefoonnummer";
+"Move To" = "Verplaatsen naar";
+"Copy To" = "Kopieren naar";
+"Add to" = "Toevoegen aan";
+"To" = "Tot";
+"Carbon Copy (Cc)" = "Carbon Copy (CC)";
+"Blind Carbon Copy (Bcc)" = "Blind Carbon Copy (BCC)";
+
+/* Search scope: name fields */
+"name" = "Naam";
+
+/* Search scope: name fields */
+"c_cn" = "Naam";
+
+/* Search scope: secondary email field */
+"mozillanickname" = "Secundaire email";
+
+/* Search scope: screen name field */
+"nsaimid" = "Weergavenaam";
+
+/* Search scope: mail fields */
+"mail" = "Bericht";
+
+/* Search scope: mail fields */
+"c_mail" = "Bericht";
+
+/* Search scope: telephone field */
+"telephonenumber" = "Telefoon";
+
+/* Search scope: telephone field */
+"homephone" = "Telefoon";
+
+/* Search scope: mobile field */
+"mobile" = "Mobiel";
+
+/* Search scope: fax field */
+"facsimiletelephonenumber" = "Fax";
+
+/* Search scope: pager field */
+"pager" = "Pieper";
+
+/* Search scope: categories field */
+"c_categories" = "Categorieën";
+
+/* Search scope: categories field */
+"vcardcategories" = "Categorieën";
+
+/* Search scope: title field */
+"title" = "Titel";
+
+/* Search scope: organization field */
+"c_o" = "Organisatie";
+
+/* Search scope: organization field */
+"o" = "Organisatie";
+
+/* Search scope: department field */
+"ou" = "Afdeling";
+
+/* Search scope: city field */
+"l" = "Plaats";
+
+/* Search scope: country field */
+"c" = "Land";
+
+/* Search scope: home address field */
+"mozillahomestreet" = "Thuis adres";
+
+/* Search scope: state/province field */
+"st" = "Staat/Provincie";
+
+/* Search scope: home state/province field */
+"mozillahomestate" = "Staat van herkomst / Provincie";
+
+/* Search scope: zip/postal code field */
+"postalCode" = "Postcode";
+
+/* Search scope: home zip/postal code field */
+"mozillahomepostalcode" = "Postcode";
+
+/* Search scope: home country field */
+"mozillahomecountryname" = "Thuisland";
+
+/* Search scope: home web page field */
+"mozillahomeurl" = "Startpagina";
+
+/* Search scope: work web page field */
+"mozillaworkurl" = "Webpagina";
+
+/* Search scope: note field */
+"description" = "Notitie";
+
+/* Subheader of empty addressbook */
+"No contact" = "Geen contactpersoon";
+
+/* Subheader of system addressbook */
+"Start a search to browse this address book" = "Begin met zoeken om in adresboek te bladeren";
+
+/* Number of contacts in addressbook; string is prefixed by number */
+"contacts" = "contactpersonen";
+
+/* No contact matching search criteria */
+"No matching contact" = "Geen overeenkomstige contactpersonen";
+
+/* Number of contacts matching search criteria; string is prefixed by number */
+"matching contacts" = "overeenkomstige contactpersonen";
+
+/* Number of selected contacts in list */
+"selected" = "geselecteerd";
+
+/* Empty right pane */
+"No contact selected" = "Geen contactpersoon geselecteerd";
+
+/* Tooltips */
+"Create a new address book card" = "Nieuwe contactpersoon aanmaken";
+"Create a new list" = "Nieuwe lijst aanmaken";
+"Edit the selected card" = "Bewerk de geselecteerde contactpersoon";
+"Send a mail message" = "Stuur een e-mailbericht";
+"Delete selected card or address book" = "Verwijder geselecteerd adresboek of contactpersoon";
+"Reload all contacts" = "Herlaad alle contactpersonen";
+"htmlMailFormat_UNKNOWN" = "Onbekend";
+"htmlMailFormat_FALSE" = "Platte tekst";
+"htmlMailFormat_TRUE" = "HTML";
+"Name or Email" = "Naam of e-mail";
+"Category" = "Categorie";
+"Personal Addressbook" = "Persoonlijk adresboek";
+"Search in Addressbook" = "Adresboek doorzoeken...";
+"New Card" = "Nieuwe contactpersoon";
+"New List" = "Nieuwe lijst";
+"Edit" = "Bewerken";
+"Properties" = "Eigenschappen";
+"Sharing..." = "Delen...";
+"Write" = "Bericht opstellen...";
+"Delete" = "Verwijderen";
+"Instant Message" = "Stuur IM bericht";
+"Add..." = "Toevoegen...";
+"Remove" = "Verwijderen";
+"Please wait..." = "Even geduld alstublieft ...";
+"No possible subscription" = "Abonneren niet mogelijk";
+"Preferred" = "Voorkeurs-";
+"Display" = "Weergave";
+"Display Name" = "Weergavenaam";
+"Additional Email" = "Alternatieve e-mail";
+"Phone Number" = "Telefoon";
+"Prefers to receive messages formatted as" = "Geeft voorkeur aan berichten geformatteerd als";
+"Categories" = "Categorieën";
+"First" = "Voornaam";
+"Last" = "Achternaam";
+"Nickname" = "Bijnaam";
+"Telephone" = "Telefoon:";
+"Work" = "Werk";
+"Mobile" = "Mobiel";
+"Pager" = "Pieper";
+
+/* categories */
+"contacts_category_labels" = "Collega, Concurrent, Klant, Vriend, Familie, Zakenpartner, Leverancier, Pers, VIP";
+"New category" = "Niewe categorie";
+
+/* adresses */
+"Title" = "Titel";
+"Service" = "Service";
+"Company" = "Bedrijf";
+"Department" = "Afdeling";
+"City" = "Plaats";
+"State_Province" = "Provincie";
+"ZIP_Postal Code" = "Postcode";
+"Country" = "Land";
+"Web Page" = "Website";
+"Other Infos" = "Overige";
+"Note" = "Notitie";
+"Timezone" = "Tijdzone";
+"Birthday" = "Geboortedatum";
+"Birthday (yyyy-mm-dd)" = "Geboortedatum (yyyy-mm-dd)";
+"Freebusy URL" = "Beschikbaarheids-URL (Free/Busy)";
+"Add as..." = "Toevoegen als ...";
+"Recipient" = "Ontvanger";
+"Carbon Copy" = "Cc";
+"Blind Carbon Copy" = "Bcc";
+"New Addressbook..." = "Nieuw adresboek...";
+"Subscribe to an Addressbook..." = "Abonneren...";
+"Remove the selected Addressbook" = "Verwijderen";
+"Subscribe to a shared folder" = "Abonneren op een gedeelde map";
+"Search User" = "Zoek gebruiker";
+"Name of the Address Book" = "Naam van het adresboek";
+"Are you sure you want to delete the selected address book?"
+= "Weet u zeker dat u het geselecteerde adresboek wilt verwijderen?";
+"Are you sure you want to delete the addressbook \"%{0}\"?"
+= "Weet u zeker dat u het adresboek \"%{0}\" wilt verwijderen?";
+"You cannot remove nor unsubscribe from a public addressbook."
+= "U kunt een openbaar adresboek niet verwijderen, tevens is het afmelden hiervan niet mogelijk.";
+"You cannot remove nor unsubscribe from your personal addressbook."
+= "U kunt een persoonlijk adresboek niet verwijderen, tevens is het afmelden hiervan niet mogelijk.";
+"Are you sure you want to delete the selected contacts?"
+= "Weet u zeker dat u de geselecteerde contactpersonen wilt verwijderen?";
+"Are you sure you want to delete the card of %{0}?" = "Weet u zeker dat u de kaart van %{0} wilt verwijderen?";
+"You cannot delete the card of \"%{0}\"."
+= "U kunt da kaart van \"%{0}\" niet verwijderen.";
+"You cannot subscribe to a folder that you own!"
+= "U kunt uzelf niet abonneren op uw eigen mappen!";
+"Unable to subscribe to that folder!"
+= "Abonneren op deze map mislukt!";
+
+/* security */
+"Security" = "Beveiliging";
+"Uninstall" = "Deinstalleren";
+"Error reading the card certificate." = "Fout bij het lezen van het kaartcertificaat.";
+"No certificate associated to card." = "Geen certificaat gekoppeld aan kaart.";
+
+/* acls */
+"Access rights to" = "Toegangsrechten voor";
+"For user" = "Voor gebruiker";
+"Any Authenticated User" = "Alle geauthenticeerde gebruikers";
+"Public Access" = "Publieke toegang";
+"This person can add cards to this addressbook."
+= "Deze persoon mag contactpersonen toevoegen aan dit adresboek.";
+"This person can edit the cards of this addressbook."
+= "Deze persoon mag de contactinformatie in dit adresboek aanpassen.";
+"This person can list the content of this addressbook."
+= "Deze persoon mag de inhoud van dit adresboek opvragen.";
+"This person can read the cards of this addressbook."
+= "Deze persoon mag contactinformatie lezen in dit adresboek.";
+"This person can erase cards from this addressbook."
+= "Deze persoon mag contactpersonen verwijderen van dit adresboek";
+"The selected contact has no email address."
+= "De geselecteerde contactpersoon heeft geen e-mailadres.";
+"Please select a contact." = "Selecteer een contactpersoon.";
+
+/* Messages for move and copy */
+"%{0} card(s) copied" = "%{0} kaart(en) gekopieerd";
+"%{0} card(s) moved" = "%{0} kaart(en) verplaatst";
+"SoAccessDeniedException" = "U kunt niet naar dit adresboek schrijven.";
+"Forbidden" = "Toegang geweigerd";
+"Invalid Contact" = "De geselecteerde contactpersoon bestaat niet meer.";
+"Unknown Destination Folder" = "Het geselecteerde doeladresboek bestaat niet meer.";
+
+/* Lists */
+"List details" = "Toon details";
+"List name" = "Lijst-naam";
+"List nickname" = "Lijst-bijnaam";
+"List description" = "Beschrijving";
+"Members" = "Leden";
+"Contacts" = "Contactpersonen";
+"Add" = "Toevoegen";
+"Lists can't be moved or copied." = "Lijsten kunnen niet worden verplaatst of gekopieerd.";
+"Export" = "Export";
+"Export Address Book..." = "Adresboek exporteren...";
+"View Raw Source" = "Bekijk broncode";
+
+/* Import */
+"Import Cards" = "Contactgegevens importeren";
+"Select a vCard or LDIF file." = "Selecteer een LDIF of vCard bestand.";
+"Upload" = "Upload";
+"Uploading" = "Uploaden";
+"Done" = "Klaar";
+"An error occured while importing contacts." = "Tijdens het importeren is een fout opgetreden.";
+"No card was imported." = "Geen contactgegevens geïmporteerd.";
+"A total of %{0} cards were imported in the addressbook." = "Een totaal van %{0} kaarten werd in het adresboek geïmporteerd.";
+"Reload" = "Herladen";
+
+/* Properties window */
+"Address Book Name" = "Naam van het adresboek";
+"Links to this Address Book" = "Koppelingen naar dit adresboek";
+"Authenticated User Access" = "Toegang voor geauthenticeerde gebruikers";
+"CardDAV URL" = "CardDAV-URL";
+"Options" = "Opties";
+"Rename" = "Hernoem";
+"Subscriptions" = "Abonnementen";
+"Global Addressbooks" = "Algemene adresboeken";
+"Search" = "Zoeken";
+"Sort" = "Sorteren";
+"Descending Order" = "Aflopende volgorde";
+"Back" = "Terug";
+"Select All" = "Alles selecteren";
+"Copy contacts" = "Kopieer contactpersonen";
+"More messages options" = "Meer berichtopties";
+"New Contact" = "Nieuwe contactpersoon";
+"Close" = "Sluiten";
+"More contact options" = "Meer contactopties";
+"Organization Unit" = "Organisatie-eenheid";
+"Add Organizational Unit" = "Organisatie-eenheid toevoegen";
+"Type" = "Type";
+"Email Address" = "E-mailadres";
+"New Email Address" = "Nieuw e-mailadres";
+"New Phone Number" = "Nieuw telefoonnummer";
+"URL" = "URL";
+"New URL" = "Nieuwe URL";
+"street" = "straat";
+"street (continued)" = "straat (vervolg)";
+"Postoffice" = "Postkantoor";
+"Region" = "Regio";
+"Postal Code" = "Postcode";
+"New Address" = "Nieuw adres";
+"Reset" = "Resetten";
+"Description" = "Omschrijving";
+"Add Member" = "Lid toevoegen";
+"Subscribe" = "Abonneren";
+"Add Birthday" = "Geboortedatum toevoegen";
+"Import" = "Importeren";
+"More options" = "Meer opties";
+"Role" = "Rol";
+"Add Screen Name" = "Weergavenaam toevoegen";
+"Custom 1" = "Aanpassing 1";
+"Custom 2" = "Aanpassing 2";
+"Custom 3" = "Aanpassing 3";
+"Custom 4" = "Aanpassing 4";
+"Custom Value" = "Aangepaste waarde";
+"New Custom Value" = "Nieuwe aangepaste waarde";
+"Synchronization" = "Synchronisatie";
+"Synchronize" = "Synchroniseren";
+"Sucessfully subscribed to address book" = "Met succes geabonneerd op dit adresboek";
+
+/* Aria label for scope of search on contacts */
+"Search scope" = "Zoekbereik";
+
+/* Aria label for avatar button to select and unselect a card */
+"Toggle item" = "Selecteer item";
+
+/* Hotkey to create a new card */
+"key_create_card" = "c";
+
+/* Hotkey to create a new list */
+"key_create_list" = "l";

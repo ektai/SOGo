@@ -1,0 +1,449 @@
+/* toolbar */
+"Save and Close" = "Uložiť a zavrieť";
+"Close" = "Zavrieť";
+"Preferences saved" = "Nastavenia boli uložené.";
+
+/* Unsaved changes confirmation dialog title */
+"Unsaved Changes" = "Neuložené zmeny";
+
+/* Unsaved changes confirmation dialog text */
+"Do you want to save your changes made to the configuration?" = "Chcete uložiť zmeny v nastaveniach?";
+
+/* Unsaved changes confirmation dialog button */
+"Save" = "Uložiť";
+
+/* Unsaved changes confirmation dialog button */
+"Don't Save" = "Neukladať";
+
+/* tabs */
+"General" = "Všeobecné";
+"Calendar Options" = "Vlastnosti kalendára";
+"Contacts Options" = "Vlastnosti kontaktov";
+"Mail Options" = "Vlastnosti pošty";
+"IMAP Accounts" = "IMAP účty";
+"Vacation" = "Dovolenka";
+"Forward" = "Preposielanie";
+"Password" = "Heslo";
+"Categories" = "Kategórie";
+"Appointments invitations" = "Pozvánky na schôdzky";
+"Name" = "Meno";
+"Color" = "Farba";
+"Add" = "Pridať";
+"Delete" = "Zmazať";
+
+/* contacts categories */
+"contacts_category_labels" = "Kolega, Účastník, Zákazník, Priateľ, Rodina, Obchodný partner, Poskytovateľ, Tlač, VIP";
+
+/* vacation (auto-reply) */
+"Enable vacation auto reply" = "Zapnúť automatickú odpoveď";
+"Enable custom auto reply subject" = "Zapnúť vlastný predmet automatickej odpovede";
+"Auto reply subject" = "Predmet automatickej odpovede";
+"You can write ${subject} to insert the original subject" = "Môžeťe napísať ${subject} pre vloženie originálneho predmetu.";
+"Auto reply message" = "Automatická odpoveď";
+"Email addresses (separated by commas)" = "E-mailové adresy (oddelené čiarkami)";
+"Add default email addresses" = "Pridať predvolené e-mailové adresy";
+"Days between responses" = "Dni medzi odpoveďami";
+"Do not send responses to mailing lists" = "Neposielať odpovede e-mailovým skupinám";
+"Enable auto reply on" = "Zapnúť automatickú odpoveď od";
+"First day of vacation" = "Prvý deň neprítomnosti";
+"Disable auto reply on" = "Vypnúť automatickú odpoveď";
+"Last day of vacation" = "Posledný den neprítomnosti";
+"Enter date" = "Zadajte dátum";
+"Always send vacation message response" = "Vždy odošli správu o dovolenke";
+"The vacation message is sent prior to apply your filters." = "Správa v neprítomnosti je odoslaná ešte pred aplikovaním vašich ostatných filtrov.";
+"Discard incoming mails during vacation" = "Zrušiť príjem pošty počas neprítomnosti";
+"The vacation message is sent but incoming messages are not delivered to your inbox." = "Správa v neprítomnosti je odoslaná, ale prichádzajúca správa nebude doručena do vašej schránky.";
+"Please specify your message and your email addresses for which you want to enable auto reply."
+= "Zadajte svoj text odpovede a e-mailové adresy, pre ktoré chcete povoliť automatickú odpoveď.";
+"Your vacation message must not end with a single dot on a line." = "Vaša dovolenková správa nesmie končiť samotnou bodkou v riadku.";
+"End date of your auto reply must be in the future."
+= "Dátum konca platnosti automatickej odpovede musí byť v budúcnosti.";
+
+/* forward messages */
+"Forward incoming messages" = "Preposielať prichádzajúce správy";
+"Keep a copy" = "Ponechaj kópiu";
+"Please specify an address to which you want to forward your messages."
+= "Prosím, zvoľte adresu, na ktorú chcete preposielať vaše správy.";
+"You are not allowed to forward your messages to an external email address." = "Nemáte oprávnenie preposielať svoje správy na externú e-mailovú adresu.";
+"You are not allowed to forward your messages to an internal email address." = "Nemáte oprávnenie preposielať svoje správy na internú e-mailovú adresu.";
+"You are not allowed to forward your messages to this domain:" = "Nemáte oprávnenie preposielať svoje správy na nasledujúcu doménu:";
+
+/* d & t */
+"Current Time Zone" = "Aktuálna časová zóna";
+"Short Date Format" = "Krátky formát dátumu";
+"Long Date Format" = "Dlhý formát dátumu";
+"Time Format" = "Formát času";
+"default" = "Predvolený";
+"Default Module" = "Predvolený modul";
+"Save" = "Uložiť";
+"shortDateFmt_0" = "%d-%b-%y";
+"shortDateFmt_1" = "%d-%m-%y";
+"shortDateFmt_2" = "%d/%m/%y";
+"shortDateFmt_3" = "%e/%m/%y";
+"shortDateFmt_4" = "%d-%m-%Y";
+"shortDateFmt_5" = "%d/%m/%Y";
+"shortDateFmt_6" = "%m-%d-%y";
+"shortDateFmt_7" = "%m/%d/%y";
+"shortDateFmt_8" = "%m/%e/%y";
+"shortDateFmt_9" = "%y-%m-%d";
+"shortDateFmt_10" = "%y/%m/%d";
+"shortDateFmt_11" = "%y.%m.%d";
+"shortDateFmt_12" = "%Y-%m-%d";
+"shortDateFmt_13" = "%Y/%m/%d";
+"shortDateFmt_14" = "%Y.%m.%d";
+"shortDateFmt_15" = "%d.%m.%Y";
+"shortDateFmt_16" = "%d.%m.%y";
+"shortDateFmt_17" = "";
+
+"longDateFmt_0" = "%A, %B %d, %Y";
+"longDateFmt_1" = "%B %d, %Y";
+"longDateFmt_2" = "%A, %d %B, %Y";
+"longDateFmt_3" = "%d %B, %Y";
+"longDateFmt_4" = "";
+"longDateFmt_5" = "";
+"longDateFmt_6" = "";
+"longDateFmt_7" = "";
+"longDateFmt_8" = "";
+"longDateFmt_9" = "";
+"longDateFmt_10" = "";
+"timeFmt_0" = "%I:%M %p";
+"timeFmt_1" = "%HH:%MM";
+"timeFmt_2" = "";
+"timeFmt_3" = "";
+"timeFmt_4" = "";
+
+/* Timezone autocompletion */
+"No matches found." = "Neboli nájdené žiadne zhody.";
+
+/* calendar */
+"Week begins on" = "Týždeň začína";
+"Day start time" = "Začiatok dňa";
+"Day end time" = "Koniec dňa";
+"Day start time must be prior to day end time." = "Začiatok dňa musí byť skôr ako koniec dňa.";
+"Week days to display" = "Dni v týždni, ktoré sa budú zobrazovať.";
+"Show time as busy outside working hours" = "Čas mimo pracovnú dobu zobrazovať ako obsadený";
+"First week of year" = "Prvý týždeň roka";
+"Enable reminders for Calendar items" = "Zapni pripomienky pre položky Kalendára.";
+"Play a sound when a reminder comes due" = "Prehrať zvuk, keď príde pripomienka";
+"Default reminder" = "Predvolená pripomienka";
+"firstWeekOfYear_January1" = "Začína 1. januárom";
+"firstWeekOfYear_First4DayWeek" = "Prvý 4-dňový týždeň";
+"firstWeekOfYear_FirstFullWeek" = "Prvý celý týžden";
+"Prevent from being invited to appointments" = "Zakázať pozvánky na schôdzky";
+"White list for appointment invitations" = "Whitelist pre pozvánky na schôdzky";
+"Contacts Names" = "Mená kontaktov";
+"Duplicate name" = "Duplicitné meno";
+"Calendar categories must have unique names." = "Kategórie kalendáru musia mať unikátne názvy.";
+
+/* Default Calendar */
+"Default calendar" = "Predvolený kalendár";
+"selectedCalendar" = "Zvolený kalendár";
+"personalCalendar" = "Osobný kalendár";
+"firstCalendar" = "Prvý zapnutý kalendár";
+"reminder_NONE" = "Žiadna pripomienka";
+"reminder_5_MINUTES_BEFORE" = "5 minút";
+"reminder_10_MINUTES_BEFORE" = "10 minút";
+"reminder_15_MINUTES_BEFORE" = "15 minút";
+"reminder_30_MINUTES_BEFORE" = "30 minút";
+"reminder_45_MINUTES_BEFORE" = "45 minút pred";
+"reminder_1_HOUR_BEFORE" = "1 hodina";
+"reminder_2_HOURS_BEFORE" = "2 hodiny";
+"reminder_5_HOURS_BEFORE" = "5 hodiny";
+"reminder_15_HOURS_BEFORE" = "15 hodín";
+"reminder_1_DAY_BEFORE" = "1 deň";
+"reminder_2_DAYS_BEFORE" = "2 dni";
+"reminder_1_WEEK_BEFORE" = "1 týždeň pred";
+
+/* Mailer */
+"Labels" = "Štítok";
+"Label" = "Štítok";
+"IMAP Label" = "IMAP štítok";
+"Invalid label" = "Nepoužívajte medzeru, ani znaky ( ) { } % * \" \\";
+"Duplicate label" = "Duplicitný štítok";
+"IMAP labels must have unique names." = "IMAP štítky musia mať unikátne názvy.";
+"New label" = "Nový štítok";
+"Show subscribed mailboxes only" = "Zobraziť len odoberané poštové schránky";
+"Synchronize only default mail folders (EAS)" = "Synchronizovať iba predvolené e-mailové priečinky (EAS).";
+"Fetch count of unseen messages for all mailboxes" = "Načítať počet neprečítaných správ pre všetky schránky";
+"Sort messages by threads" = "Usporiadať správy podľa konverzácie";
+"Always open mail composer" = "Vždy otvoriť editor správy.";
+"Inside current window" = "V aktuálnom okne";
+"In a popup window" = "Vo vyskakovacom okne";
+"When sending mail, add unknown recipients to my" = "Automaticky pridávať odchádzajúcu e-mailovú adresu do adresára:";
+"Address Book" = "Adresár";
+"Forward messages" = "Preposielať správy";
+"messageforward_inline" = "V texte";
+"messageforward_attached" = "Ako prílohu";
+"When replying to a message" = "Pri odpovedaní na správu";
+"replyplacement_above" = "Odpoveď začína nad citáciou";
+"replyplacement_below" = "Odpoveď začína pod citáciou";
+"And place my signature" = "A umiestniť môj podpis";
+"signatureplacement_above" = "pod odpoveďou";
+"signatureplacement_below" = "pod citáciou";
+"Compose messages in" = "Vytvoriť správu v";
+"composemessagestype_html" = "HTML";
+"composemessagestype_text" = "Čistý text";
+
+/* Base font size for messages composed in HTML */
+"Default font size" = "Predvolená veľkosť písma";
+
+"Display remote inline images" = "Zobraziť externe pripojené obrázky.";
+"displayremoteinlineimages_never" = "Nikdy";
+"displayremoteinlineimages_always" = "Vždy";
+"Auto save every" = "Automaticky ukladať každých";
+"minutes" = "minút";
+
+/* Contact */
+"Personal Address Book" = "Osobné kontakty";
+"Collected Address Book" = "Pozbierané osobné kontakty";
+"Contact categories must have unique names." = "Kategórie kontaktov musia mať jedinečné názvy.";
+
+/* IMAP Accounts */
+"Settings" = "Nastavenia";
+"Security" = "Zabezpečenie";
+"Mail Account" = "Mailový účet";
+"New Mail Account" = "Nový mailový účet";
+"Server Name" = "Meno servera";
+"Port" = "Port";
+"Encryption" = "Šifrovanie";
+"None" = "Žiadne";
+"User Name" = "Používateľské meno";
+"Full Name" = "Celé meno";
+"Email" = "E-mailová adresa";
+"Reply To Email" = "E-mailová adresa pre odpoveď";
+"Signature" = "Podpis";
+"(Click to create)" = "(kliknúť pre vytvorenie)";
+"Please enter your signature below" = "Prosím, vložte svoj podpis nižšie.";
+"Please specify a valid sender address." = "Prosím, zvoľte platnú adresu odosielateľa.";
+"Please specify a valid reply-to address." = "Prosím, zvoľte platnú adresu pre odpoveď.";
+"Specify a hostname other than the local host" = "Zadajte iné doménové meno ako local host.";
+
+"No certificate installed" = "Nie je nainštalovaný žiadny certifikát.";
+"The SSL certificate must use the PKCS#12 (PFX) format." = "SSL certifikát musí byť vo PKCS#12 (PFX) formáte.";
+"Uninstall" = "Odinštalovať";
+"Choose PKCS12 Certificate .." = "Vyberte PKCS12 certifikát ..";
+"Certificate Import Password" = "Heslo pre import certifikátu";
+"Upload" = "Nahrať";
+"When composing a message" = "Pri vytvaraní správy";
+"Digitally sign the message by default" = "Vždy digitálne podpísať správu";
+"Always try to encrypt the message" = "Vždy sa pokúsiť o šifrovanie správy";
+"An error occurred while importing the certificate. Verify your password." = "Pri importovaní certifikátu sa vyskytla chyba. Skontorlujte svoje heslo.";
+
+/* Additional Parameters */
+"Additional Parameters" = "Ďalšie parametre";
+
+/* password */
+"New password" = "Nové heslo";
+"Confirmation" = "Potvrdenie";
+"Change" = "Zmeniť";
+
+/* Event+task classifications */
+"Default events classification" = "Predvolená klasifikácia udalostí";
+"Default tasks classification" = "Predvolená klasifikácia úloh";
+"PUBLIC_item" = "Verejný";
+"CONFIDENTIAL_item" = "Dôverný";
+"PRIVATE_item" = "Súkromný";
+
+/* Event+task categories */
+"Calendar Category" = "Kategória kalendára";
+"Add Calendar Category" = "Pridať kategóriu kalendára";
+"New category" = "Nová kategória";
+"Reset to defaults" = "Obnoviť predvolené hodnoty";
+"Remove Calendar Category" = "Odstrániť kategóriu kalendára";
+"Contact Category" = "Kategória kontaktov";
+"Add Contact Category" = "Pridať kategóriu kontaktov";
+"Remove Contact Category" = "Odstrániť kategóriu kontaktov";
+"category_none" = "Žiadne";
+"calendar_category_labels" = "Výročia,Narodeniny,Obchod,Hovory,Zákazníci,Konkurencia,Klient,Obľúbené,Sledovať,Darčeky,Prázdniny,Nápady,Stretnutia,Problémy,Rôzne,Osobné,Projekty,Štátne sviatky,Stav,Dodávatelia,Cestovanie,Dovolenka";
+
+/* Default module */
+"Calendar" = "Kalendár";
+"Contacts" = "Adresár";
+"Mail" = "Pošta";
+"Last" = "Naposledy použité";
+"Default Module " = "Predvolený modul";
+"SOGo Version" = "Verzia SOGo";
+
+/* Confirmation asked when changing the language */
+"Save preferences and reload page now?" = "Uložiť nastavenia a znovu načítať stránku?";
+"Language" = "Jazyk";
+"choose" = "Vyber...";
+"Arabic" = "العربية";
+"Basque" = "Euskara";
+"Catalan" = "Català";
+"ChineseChina" = "简体中文";
+"ChineseTaiwan" = "正體中文";
+"Croatian" = "Hrvatski";
+"Czech" = "Česky";
+"Danish" = "Dansk (Danmark)";
+"Dutch" = "Nederlands";
+"English" = "English";
+"Finnish" = "Suomi";
+"French" = "Français";
+"German" = "Deutsch";
+"Hebrew" = "עברית";
+"Hungarian" = "Magyar";
+"Icelandic" = "Íslenska";
+"Indonesian" = "bahasa Indonesia";
+"Italian" = "Italiano";
+"Japanese" = "日本語";
+"Latvian" = "Latviešu";
+"Lithuanian" = "Lietuvių";
+"Macedonian" = "Македонски";
+"NorwegianBokmal" = "Norsk bokmål";
+"NorwegianNynorsk" = "Norsk nynorsk";
+"Polish" = "Polski";
+"Portuguese" = "Português";
+"BrazilianPortuguese" = "Português brasileiro";
+"Romanian" = "Română";
+"Russian" = "Русский";
+"Serbian" = "Српски";
+"Slovak" = "Slovensky";
+"Slovenian" = "Slovenščina";
+"SpanishSpain" = "Español (España)";
+"SpanishArgentina" = "Español (Argentina)";
+"Swedish" = "Svenska";
+"TurkishTurkey" = "Türkçe (Türkiye)";
+"Ukrainian" = "Українська";
+"Welsh" = "Cymraeg";
+
+"Refresh View" = "Obnoviť zobrazenie";
+"refreshview_manually" = "Ručne";
+"refreshview_every_minute" = "Každú minútu";
+"refreshview_every_2_minutes" = "Každé 2 minúty";
+"refreshview_every_5_minutes" = "Každých 5 minút";
+"refreshview_every_10_minutes" = "Každých 10 minút";
+"refreshview_every_20_minutes" = "Každých 20 minút";
+"refreshview_every_30_minutes" = "Každých 30 minút";
+"refreshview_once_per_hour" = "Raz za hodinu";
+
+/* Return receipts */
+"When I receive a request for a return receipt" = "Keď dostanem požiadavku na potvrdenie o doručení.";
+"Never send a return receipt" = "Nikdy neposielať potvrdenie o doručení.";
+"Allow return receipts for some messages" = "Povoliť potvrdenie o doručení pre niektoré správy.";
+"If I'm not in the To or Cc of the message" = "Pokiaľ nie som v políčkach  Pre alebo Kópia správy.";
+"If the sender is outside my domain" = "Pokiaľ je odosielateľ mimo mojej domény.";
+"In all other cases" = "Vo všetkých ostatných prípadoch.";
+"Never send" = "Nikdy neposielaj.";
+"Always send" = "Vždy posielaj.";
+"Ask me" = "Opýtať sa.";
+
+/* Filters - UIxPreferences */
+"Filters" = "Filtre";
+"Active" = "Aktívne";
+"Move Up" = "Posuň hore.";
+"Move Down" = "Posuň dole.";
+"Connection error" = "Chyba spojenia";
+"Service temporarily unavailable" = "Služba je dočasne nedostupná.";
+
+/* Aria label for filter enable checkbox */
+"Enable filter" = "Zapnúť filter";
+
+/* Filters - UIxFilterEditor */
+"Filter name" = "Meno filtra";
+/* Button label */
+"Add a condition" = "Pridať podmienku";
+/* Button label */
+"Add an action" = "Pridať akciu";
+"For incoming messages that" = "Pre prichádzajúce správy, ktoré";
+"match all of the following rules" = "splň všetky nasledujúce pravidlá";
+"match any of the following rules" = "zodpovedá ktorémukoľvek z nasledujúcich pravidiel";
+"match all messages" = "zodpovedá pre všetky správy";
+"Perform these actions" = "Vykonaj nasledovné úlohy";
+"Untitled Filter" = "Nepomenovaný filter";
+"Subject" = "Predmet";
+"From" = "Od";
+"To" = "Pre";
+"Cc" = "Kópia";
+"To or Cc" = "Pre alebo Kópia";
+"Size (Kb)" = "Veľkosť (Kb)";
+"Header" = "Hlavička";
+"Body" = "Telo";
+"Flag the message with" = "Oštítkuj správu ako";
+
+/* Select field label of "flag message" mail filter action */
+"Flag" = "Štítok";
+
+"Discard the message" = "Zahoď správu";
+"File the message in" = "Súbor správy v";
+
+/* Select field label of "file message" mail filter action */
+"Mailbox" = "Poštová schránka";
+
+"Keep the message" = "Ponechaj správu";
+"Forward the message to" = "Preposlať správu na";
+
+/* Input field label of "forward" mail filter action */
+"Email" = "E-mailová adresa";
+
+"Send a reject message" = "Pošli odmietnutie";
+
+/* Input field label of "reject" mail filter action */
+"Message" = "Správa";
+
+"Send a vacation message" = "Odošli správu o dovolenke";
+"Stop processing filter rules" = "Zastav spracovávanie filtrovacích pravidiel";
+"is under" = "je pod";
+"is over" = "je nad";
+"is" = "je";
+"is not" = "nie je";
+"contains" = "obsahuje";
+"does not contain" = "neobsahuje";
+"matches" = "zodpovedá";
+"does not match" = "nezodpovedá";
+"matches regex" = "zodpovedá regulárnemu výrazu";
+"does not match regex" = "nezodpovedá regulárnemu výrazu";
+/* Placeholder for the value field of a condition */
+"Value" = "Hodnota";
+"Seen" = "Videné";
+"Deleted" = "Vymazané";
+"Answered" = "Odpovedané";
+"Flagged" = "Oštítkované";
+"Junk" = "Nevyžiadaná pošta";
+"Not Junk" = "Ako normálna správa";
+
+/* Password policy */
+"The password was changed successfully." = "Heslo bolo úspešne zmenené.";
+"Password must not be empty." = "Heslo nemôže byť prázdne.";
+"The passwords do not match. Please try again." = "Heslá sa nezhodujú. Skúste to znova.";
+"Password change failed" = "Zmena hesla nebola úspešná.";
+"Password change failed - Permission denied" = "Zmena hesla nebola úspešná - nemáte dostatočné oprávnenia.";
+"Password change failed - Insufficient password quality" = "Zmena hesla nebola úspešná - nedostatočná kvalita hesla.";
+"Password change failed - Password is too short" = "Zmena hesla nebola úspešná - heslo je príliš krátke";
+"Password change failed - Password is too young" = "Zmena hesla nebola úspešná - heslo bolo nedávno použité.";
+"Password change failed - Password is in history" = "Zmena hesla nebola úspešná - heslo je v histórii.";
+"Unhandled policy error: %{0}" = "Neočakávaná chyba v postupe: %{0}";
+"Unhandled error response" = "Neočakávaná chybová odpoveď.";
+"Password change is not supported." = "Zmena hesla nie je podporovaná.";
+"Unhandled HTTP error code: %{0}" = "Neočakávané HTTP chybové hlásenie: %{0}";
+"Cancel" = "Zrušiť";
+"Invitations" = "Pozvánky";
+"Edit Filter" = "Uprav filter";
+"Delete Filter" = "Vymazať filter";
+"Create Filter" = "Vytvoriť filter";
+"Delete Label" = "Vymazať štítok";
+"Create Label" = "Vytvoriť štítok";
+"Accounts" = "Účty";
+"Edit Account" = "Upraviť účet";
+"Delete Account" = "Vymazať účet";
+"Create Account" = "Vytvoriť účet";
+"Account Name" = "Meno účtu";
+"SSL" = "SSL";
+"TLS" = "TLS";
+
+/* Avatars */
+"Use Gravatar" = "Používať gravatar";
+"Alternate Avatar" = "Alternatívny avatar";
+"none" =  "Žiadny";
+"identicon" = "Identifikácia ikony";
+"monsterid" = "Monster";
+"wavatar" = "Wavatar";
+"retro" = "Retro";
+
+/* Animation Level */
+"Animation Level" = "Úroveň animácie";
+/* Normal Animation Mode */
+"animation_NORMAL" = "Normálna";
+/* Limited Animation Mode */
+"animation_LIMITED" = "Obmedzená";
+"animation_NONE" = "Žiadna";

@@ -1,0 +1,364 @@
+/* this file is in UTF-8 format! */
+
+"Contact" = "Kontakt";
+"Address" = "Adresa";
+"Photos" = "Fotografie";
+"Other" = "Ostatní";
+"Address Books" = "Složky kontaktů";
+"Addressbook" = "Složka kontaktů";
+"Addresses" = "Adresy";
+"Update" = "Aktualizace";
+"Cancel" = "Storno";
+"Common" = "Common";
+"Contact editor" = "Editor kontaktů";
+"Contact viewer" = "Zobrazit kontakty";
+"Email" = "E-mail";
+"Screen Name" = "Zobrazované jméno";
+"Extended" = "Rozšířené";
+"Fax" = "Fax";
+"Firstname" = "Křestní jméno";
+"Home" = "Bydliště";
+"HomePhone" = "Telefon domů";
+"Lastname" = "Příjmení";
+"Location" = "Místo";
+"Add a category" = "Přidat kategorii";
+"MobilePhone" = "Mobilní telefon";
+"Name" = "Jméno";
+"OfficePhone" = "Telefon do kanceláře";
+"Organization" = "Organizace";
+"Work Phone" = "Pracovní telefon";
+"Cell" = "Mobil";
+"Pager" = "Pager";
+"Pref" = "Pref";
+"Phone" = "Telefon";
+"Phones" = "Telefony";
+"Postal" = "Pošta";
+"Save" = "Uložit";
+"Internet" = "Internet";
+"Unit" = "Jednotka";
+"delete" = "smazat";
+"edit" = "upravit";
+"invalidemailwarn" = "Specifikovaný e-mail je neplatný";
+"new" = "nový";
+"Preferred Phone" = "Upřednostňovaný telefon";
+"Move To" = "Přesunout do";
+"Copy To" = "Kopírovat do";
+"Add to" = "Přidat do";
+"To" = "Komu";
+"Carbon Copy (Cc)" = "Kopie (Cc)";
+"Blind Carbon Copy (Bcc)" = "Skrytá kopie (Bcc)";
+
+/* Search scope: name fields */
+"name" = "Jméno";
+
+/* Search scope: name fields */
+"c_cn" = "Jméno";
+
+/* Search scope: secondary email field */
+"mozillanickname" = "Sekundární email";
+
+/* Search scope: screen name field */
+"nsaimid" = "Zobrazované jméno";
+
+/* Search scope: mail fields */
+"mail" = "Pošta";
+
+/* Search scope: mail fields */
+"c_mail" = "Pošta";
+
+/* Search scope: telephone field */
+"telephonenumber" = "Telefon";
+
+/* Search scope: telephone field */
+"homephone" = "Telefon";
+
+/* Search scope: mobile field */
+"mobile" = "Mobil";
+
+/* Search scope: fax field */
+"facsimiletelephonenumber" = "Fax";
+
+/* Search scope: pager field */
+"pager" = "Pager";
+
+/* Search scope: categories field */
+"c_categories" = "Kategorie";
+
+/* Search scope: categories field */
+"vcardcategories" = "Kategorie";
+
+/* Search scope: title field */
+"title" = "Titul";
+
+/* Search scope: organization field */
+"c_o" = "Organizace";
+
+/* Search scope: organization field */
+"o" = "Organizace";
+
+/* Search scope: department field */
+"ou" = "Oddělení";
+
+/* Search scope: city field */
+"l" = "Město";
+
+/* Search scope: country field */
+"c" = "Země";
+
+/* Search scope: home address field */
+"mozillahomestreet" = "Soukromá adresa";
+
+/* Search scope: state/province field */
+"st" = "Kraj";
+
+/* Search scope: home state/province field */
+"mozillahomestate" = "Kraj (soukromá adresa)";
+
+/* Search scope: zip/postal code field */
+"postalCode" = "PSČ";
+
+/* Search scope: home zip/postal code field */
+"mozillahomepostalcode" = "PSČ";
+
+/* Search scope: home country field */
+"mozillahomecountryname" = "Země (soukromá adresa)";
+
+/* Search scope: home web page field */
+"mozillahomeurl" = "Soukromá webová stránka";
+
+/* Search scope: work web page field */
+"mozillaworkurl" = "Webová stránka";
+
+/* Search scope: note field */
+"description" = "Poznámka";
+
+/* Subheader of empty addressbook */
+"No contact" = "Není kontakt";
+
+/* Subheader of system addressbook */
+"Start a search to browse this address book" = "Vyhledat adresář kontaktů k prohlížení";
+
+/* Number of contacts in addressbook; string is prefixed by number */
+"contacts" = "kontaktů";
+
+/* No contact matching search criteria */
+"No matching contact" = "Žádný odpovídající kontakt";
+
+/* Number of contacts matching search criteria; string is prefixed by number */
+"matching contacts" = "odpovídajících kontaktů";
+
+/* Number of selected contacts in list */
+"selected" = "vybráno";
+
+/* Empty right pane */
+"No contact selected" = "Nebyl vybrán žádný kontakt";
+
+/* Tooltips */
+"Create a new address book card" = "Vytvořit nový kontakt";
+"Create a new list" = "Vytvořit novou skupinu";
+"Edit the selected card" = "Upravit označený kontakt";
+"Send a mail message" = "Poslat zprávu";
+"Delete selected card or address book" = "Smazat označený kontakt nebo složku kontaktů";
+"Reload all contacts" = "Aktualizovat všechny kontakty";
+"htmlMailFormat_UNKNOWN" = "Neznámý";
+"htmlMailFormat_FALSE" = "Prostý text";
+"htmlMailFormat_TRUE" = "HTML";
+"Name or Email" = "Jméno nebo e-mail";
+"Category" = "Kategorie";
+"Personal Addressbook" = "Osobní kontakty";
+"Search in Addressbook" = "Vyhledávat v kontaktech";
+"New Card" = "Nový kontakt";
+"New List" = "Nová skupina";
+"Edit" = "Upravit";
+"Properties" = "Vlastnosti";
+"Sharing..." = "Sdílení...";
+"Write" = "Napsat";
+"Delete" = "Smazat";
+"Instant Message" = "Instant Message";
+"Add..." = "Přidat...";
+"Remove" = "Odebrat";
+"Please wait..." = "Čekejte prosím...";
+"No possible subscription" = "Žádné možné odebírání";
+"Preferred" = "Upřednostňovaný";
+"Display" = "Zobrazované jméno";
+"Display Name" = "Zobrazované jméno";
+"Additional Email" = "Další e-mail";
+"Phone Number" = "Telefonní číslo";
+"Prefers to receive messages formatted as" = "Upřednostňovaný formát zpráv";
+"Categories" = "Kategorie";
+"First" = "Křestní jméno";
+"Last" = "Příjmení";
+"Nickname" = "Přezdívka";
+"Telephone" = "Telefon";
+"Work" = "Zaměstnání";
+"Mobile" = "Mobilní telefon";
+"Pager" = "Pager";
+
+/* categories */
+"contacts_category_labels" = "Kolega, Konkurent, Zákazník, Přítel, Rodina, Obchodní partner, Dodavatel, Tisk, VIP";
+"New category" = "Nová kategorie";
+
+/* adresses */
+"Title" = "Pozice";
+"Service" = "Služba";
+"Company" = "Společnost";
+"Department" = "Oddělení";
+"City" = "Město";
+"State_Province" = "Stát/Provincie";
+"ZIP_Postal Code" = "PSČ";
+"Country" = "Země";
+"Web Page" = "Web";
+"Other Infos" = "Ostatní informace";
+"Note" = "Poznámka";
+"Timezone" = "Časové pásmo";
+"Birthday" = "Datum narození";
+"Birthday (yyyy-mm-dd)" = "Datum narození (yyyy-mm-dd)";
+"Freebusy URL" = "Freebusy URL";
+"Add as..." = "Přidat jako...";
+"Recipient" = "Adresát";
+"Carbon Copy" = "Kopie";
+"Blind Carbon Copy" = "Skrytá kopie";
+"New Addressbook..." = "Nová složka kontaktů...";
+"Subscribe to an Addressbook..." = "Odebírat složku kontaktů...";
+"Remove the selected Addressbook" = "Smazat složku kontaktů";
+"Subscribe to a shared folder" = "Odebírat sdílenou složku";
+"Search User" = "Vyhledat uživatele";
+"Name of the Address Book" = "Název složky kontaktů";
+"Are you sure you want to delete the selected address book?"
+= "Opravdu chcete odstranit označenou složku kontaktů?";
+"Are you sure you want to delete the addressbook \"%{0}\"?"
+= "Opravdu chcete smazat složku kontaktů \"%{0}\"?";
+"You cannot remove nor unsubscribe from a public addressbook."
+= "Nemůžete odebrat nebo se odhlásit od odebírání veřejného adresáře.";
+"You cannot remove nor unsubscribe from your personal addressbook."
+= "Nemůžete odebrat nebo se odhlásit od odebírání svého vlastního adresáře";
+"Are you sure you want to delete the selected contacts?"
+= "Opravdu chcete smazat označené kontakty?";
+"Are you sure you want to delete the card of %{0}?" = "Opravdu chcete odstranit kontakt %{0}?";
+"You cannot delete the card of \"%{0}\"."
+= "Nemůžete smazat kontakt \"%{0}\".";
+"You cannot subscribe to a folder that you own!"
+= "Nemůžete se přihlásit k odebírání vlastní složky! ";
+"Unable to subscribe to that folder!"
+= "Nemůžete se přihlásit k odebírání této složky!";
+
+/* security */
+"Security" = "Zabezpečení";
+"Uninstall" = "Odinstalovat";
+"Error reading the card certificate." = "Chyba při čtení certifikátu uloženého na kartě.";
+"No certificate associated to card." = "Ke kartě není přiřazen žádný certifikát.";
+
+/* acls */
+"Access rights to" = "Přístupová práva k";
+"For user" = "Pro uživatele";
+"Any Authenticated User" = "Všichni ověření uživatelé";
+"Public Access" = "Veřejný přístup";
+"This person can add cards to this addressbook."
+= "Tato osoba může přidávat kontakty do této složky.";
+"This person can edit the cards of this addressbook."
+= "Tato osoba může upravovat kontakty v této složce.";
+"This person can list the content of this addressbook."
+= "Tato osoba si může prohlížet obsah této složky.";
+"This person can read the cards of this addressbook."
+= "Tato osoba si může pročítat kontakty této složky.";
+"This person can erase cards from this addressbook."
+= "Tato osoba může mazat kontakty z této složky.";
+"The selected contact has no email address."
+= "Označený kontakt nemá žádné e-mailové adresy.";
+"Please select a contact." = "Vyberte prosím kontakt.";
+
+/* Messages for move and copy */
+"%{0} card(s) copied" = "%{0} kontakt(ů) zkopírováno";
+"%{0} card(s) moved" = "%{0} kontakt(ů) přesunuto";
+"SoAccessDeniedException" = "Nemůžete zapisovat do tohoto adresáře.";
+"Forbidden" = "Zakázané";
+"Invalid Contact" = "Označený kontakt již neexistuje.";
+"Unknown Destination Folder" = "Zvolený cílový adresář již neexistuje.";
+
+/* Lists */
+"List details" = "Skupina";
+"List name" = "Název";
+"List nickname" = "Zkratka";
+"List description" = "Popis";
+"Members" = "Členové skupiny";
+"Contacts" = "Kontakty";
+"Add" = "Přidat";
+"Lists can't be moved or copied." = "Skupinu nelze přesunout nebo kopírovat.";
+"Export" = "Exportovat";
+"Export Address Book..." = "Exportovat adresář...";
+"View Raw Source" = "Zobrazit surový zdroj";
+
+/* Import */
+"Import Cards" = "Importovat kontakty";
+"Select a vCard or LDIF file." = "Zvolte LDIF nebo vCard soubor.";
+"Upload" = "Upload";
+"Uploading" = "Nahrávání";
+"Done" = "Hotovo";
+"An error occured while importing contacts." = "Při importu došlo k chybě.";
+"No card was imported." = "Nebyl importován žádný kontakt.";
+"A total of %{0} cards were imported in the addressbook." = "Do adresáře bylo importováno %{0} kontaktů.";
+"Reload" = "Aktualizovat";
+
+/* Properties window */
+"Address Book Name" = "Název adresáře";
+"Links to this Address Book" = "Odkazy na tento adresář";
+"Authenticated User Access" = "Přístup pro ověřené uživatele";
+"CardDAV URL" = "CardDAV URL";
+"Options" = "Možnosti";
+"Rename" = "Přejmenovat";
+"Subscriptions" = "Odebírání";
+"Global Addressbooks" = "Globální kontakty";
+"Search" = "Hledat";
+"Sort" = "Setřídit";
+"Descending Order" = "Sestupně";
+"Back" = "Zpět";
+"Select All" = "Vybrat vše";
+"Copy contacts" = "Kopírovat kontakty";
+"More messages options" = "Další možnosti zpráv";
+"New Contact" = "Nový kontakt";
+"Close" = "Zavřít";
+"More contact options" = "Více možností kontaktu";
+"Organization Unit" = "Organizační jednotka";
+"Add Organizational Unit" = "Přidat organizační jednotku";
+"Type" = "Typ";
+"Email Address" = "E-mail";
+"New Email Address" = "Nový e-mail";
+"New Phone Number" = "Nové telefonní číslo";
+"URL" = "URL";
+"New URL" = "Nové URL";
+"street" = "ulice";
+"street (continued)" = "ulice (pokračování)";
+"Postoffice" = "Pošta";
+"Region" = "Region";
+"Postal Code" = "PSČ";
+"New Address" = "Nová adresa";
+"Reset" = "Obnovit";
+"Description" = "Popis";
+"Add Member" = "Přidat člena";
+"Subscribe" = "Odebírat";
+"Add Birthday" = "Přidat datum narození";
+"Import" = "Importovat";
+"More options" = "Více možností";
+"Role" = "Role";
+"Add Screen Name" = "Přidat zobrazované jméno";
+"Custom 1" = "Vlastní 1";
+"Custom 2" = "Vlastní 2";
+"Custom 3" = "Vlastní 3";
+"Custom 4" = "Vlastní 4";
+"Custom Value" = "Vlastní Hodnota";
+"New Custom Value" = "Nová Vlastní Hodnota";
+"Synchronization" = "Synchronizace";
+"Synchronize" = "Synchronizovat";
+"Sucessfully subscribed to address book" = "Přihlášení k odebírání adresáře kontaktů proběhlo úspěšně";
+
+/* Aria label for scope of search on contacts */
+"Search scope" = "Oblast hledání";
+
+/* Aria label for avatar button to select and unselect a card */
+"Toggle item" = "Přepnout položku";
+
+/* Hotkey to create a new card */
+"key_create_card" = "c";
+
+/* Hotkey to create a new list */
+"key_create_list" = "l";

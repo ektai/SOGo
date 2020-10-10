@@ -1,0 +1,231 @@
+{ /* -*- Mode: java; indent-tabs-mode: nil; c-basic-offset: 2 -*- */
+  requires = ( MAIN, Appointments, CommonUI );
+
+  publicResources = ();
+
+  factories = {
+  };
+
+  classes = {
+    SOGoRootPage = {
+      superclass  = "SoComponent";
+      protectedBy = "<public>";
+      defaultRoles = {
+        "View" = ( "Authenticated", "PublicUser" );
+      };
+    };
+    SOGoObject = {
+      protectedBy = "<public>";
+      defaultAccess = "allow";
+      defaultRoles = {
+        "View" = ( "Owner", "ObjectViewer" );
+        "Change Images And Files"  = ( "Owner", "ObjectEditor", "PROPPATCHer" );
+        "Access Object" = ( "Owner", "ObjectViewer", "ObjectEditor", "ObjectCreator", "ObjectEraser" );
+        "Access Contents Information" = ( "Owner", "ObjectViewer" );
+        "Add Documents, Images, and Files" = ( "Owner", "ObjectCreator" );
+        "Add Folders" = ( "Owner", "FolderCreator" );
+        "ReadAcls" = ( "Owner" );
+        "Change Permissions" = ( "Owner" );
+        "Delete Object" = ( "Owner", "ObjectEraser" );
+        "WebDAV Access" = ( "Owner", "ObjectViewer", "ObjectEditor", "ObjectCreator", "ObjectEraser" );
+      };
+      methods = {
+        DELETE = { 
+          protectedBy = "Delete Object";
+        };
+        GET = {
+          protectedBy = "Access Contents Information";
+        };
+        PUT = {
+          protectedBy = "Change Images And Files";
+        };
+      };
+    };
+    SOGoContentObject = {
+      superclass = "SOGoObject";
+      defaultAccess = "allow";
+      /* defaultAccess = "Access Contents Information"; */
+      protectedBy = "Access Object";
+      defaultRoles = {
+        "Access Contents Information" = ( "Owner", "ObjectViewer", "ObjectEditor" );
+        "Change Images And Files" = ( "Owner", "ObjectEditor" );
+        "Delete Objects" = ( "Owner", "ObjectEraser" );
+      };
+    };
+    SOGoFolder = {
+      superclass = "SOGoObject";
+      protectedBy = "Access Object";
+      defaultRoles = {
+        "Change Images And Files"  = ( "Owner", "ObjectEditor", "PROPPATCHer" );
+        "View" = ( "Owner", "ObjectViewer", "ObjectEditor" );
+        "Access Object" = ( "Owner", "AuthorizedSubscriber" );
+        "Access Contents Information" = ( "Owner", "ObjectViewer", "ObjectEditor", "ObjectCreator", "ObjectEraser" );
+        "WebDAV Access" = ( "Owner", "AuthorizedSubscriber", "ObjectCreator", "ObjectEraser" );
+        "Delete Object" = ( "Owner" );
+        "Delete Objects" = ( "Owner", "ObjectEraser" );
+      };
+    };
+    SOGoParentFolder = {
+      superclass = "SOGoFolder";
+      protectedBy = "<public>";
+      defaultRoles = {
+        "Access Contents Information" = ( "Authenticated", "PublicUser" );
+        "WebDAV Access" = ( "Authenticated", "PublicUser" );
+        "Add Folders" = ( "Owner" );
+      };
+    };
+    SOGoUserFolder = {
+      superclass = "SOGoFolder";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+        "Access Contents Information" = ( "Authenticated", "PublicUser" );
+        "WebDAV Access" = ( "Authenticated", "PublicUser" );
+        "View" = ( "Authenticated" );
+      };
+    };
+    SOGoGCSFolder = {
+      superclass = "SOGoFolder";
+    };
+    SOGoPublicBaseFolder = {
+      superclass = "SOGoFolder";
+      protectedBy = "Access Contents Information";
+      defaultRoles = {
+        "Access Contents Information" = ( "Authenticated", "PublicUser" );
+        "WebDAV Access" = ( "Authenticated", "PublicUser" );
+        "View" = ( "Authenticated" );
+      };
+    };
+  };
+
+  categories = {
+    SOGo = { // TODO: move decls to class
+      slots = {
+        toolbar = {
+          value = "none"; // keep this in order to avoid lookups on username "toolbar"
+        };
+      };
+      methods = {
+        view = {
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage"; 
+        };
+        index = { 
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage"; 
+        };
+        Microsoft-Server-ActiveSync = {
+          protectedBy = "<public>";
+          actionClass = "SOGoMicrosoftActiveSyncActions"; 
+          actionName = "microsoftServerActiveSync";
+        };
+        casProxy = { 
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage"; 
+          actionName = "casProxy";
+        };
+        saml2-metadata = {
+          protectedBy = "<public>";
+          actionClass = "SOGoSAML2Actions"; 
+          actionName = "saml2Metadata";
+        };
+        saml2-signon-post = {
+          protectedBy = "<public>";
+          actionClass = "SOGoSAML2Actions"; 
+          actionName = "saml2SignOnPOST";
+        };
+        saml2-sls = {
+          protectedBy = "<public>";
+          actionClass = "SOGoSAML2Actions"; 
+          actionName = "saml2SingleLogoutService";
+        };
+        /*  saml2-signon-redirect = {
+            protectedBy = "<public>";
+            actionClass = "SOGoSAML2Actions"; 
+            actionName = "saml2SignOnRedirect";
+            };
+            saml2-signon-soap = {
+            protectedBy = "<public>";
+            actionClass = "SOGoSAML2Actions"; 
+            actionName = "saml2SignOnSOAP";
+            };
+            crash = {
+            protectedBy = "<public>";
+            pageName = "SOGoRootPage";
+            actionName = "crash";
+            };
+            exception = {
+            protectedBy = "<public>";
+            pageName = "SOGoRootPage";
+            actionName = "exception";
+            };
+            raisedException = {
+            protectedBy = "<public>";
+            pageName = "SOGoRootPage";
+            actionName = "raisedException";
+        }; */
+        connect = {
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage";
+          actionName = "connect";
+        };
+        changePassword = {
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage";
+          actionName = "changePassword";
+        };
+        loading = {
+          protectedBy = "<public>";
+          pageName    = "UIxLoading";
+        };
+        GET = { // more or less a hack, see README of dbd
+          protectedBy = "<public>";
+          pageName = "SOGoRootPage"; 
+        };
+      };
+    };
+    SOGoRootPage = {
+    };
+    SOGoUserFolder = {
+      methods = {
+        view = { 
+          protectedBy = "<public>";
+          pageName = "SOGoUserHomePage"; 
+        };
+        recover = { 
+          protectedBy = "View";
+          pageName = "SOGoUserHomePage"; 
+          actionName = "recover";
+        };
+        logoff = {
+          protectedBy = "<public>";
+          pageName = "SOGoUserHomePage";
+          actionName = "logoff";
+        };
+        usersSearch = {
+          protectedBy = "View";
+          pageName = "SOGoUserHomePage";
+          actionName = "usersSearch";
+        };
+        foldersSearch = {
+          protectedBy = "View";
+          pageName = "SOGoUserHomePage";
+          actionName = "foldersSearch";
+        };
+        date = {
+          protectedBy = "View";
+          pageName = "SOGoUserHomePage";
+          actionName = "date";
+        };
+      };
+    };
+    SOGoFreeBusyObject = {
+      methods = {
+        ajaxRead = { 
+          protectedBy = "<public>";
+          pageName = "SOGoUserHomePage"; 
+          actionName = "readFreeBusy";
+        };
+      };
+    };
+  };
+}

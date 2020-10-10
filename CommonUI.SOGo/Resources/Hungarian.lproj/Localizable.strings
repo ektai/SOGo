@@ -1,0 +1,215 @@
+/* this file is in UTF-8 format! */
+
+/* toolbars */
+"Save" = "Mentés";
+"Close" = "Bezárás";
+"Edit User Rights" = "Felhasználói jogosultságok";
+"Home" = "Nyitólap";
+"Calendar" = "Naptár";
+"Address Book"  = "Címjegyzék";
+"Mail" = "Levelezés";
+"Preferences" = "Beállítások";
+"Administration" = "Rendszerfelügyelet";
+"Disconnect" = "Kilépés";
+"Toggle Menu" = "Menüt összecsuk";
+"Right Administration" = "Jogosultság szerkesztése";
+"Log Console (dev.)" = "Napló konzol (fejl.)";
+"User" = "Felhasználó";
+"Vacation message is enabled" = "Távollét üzenet bekapcsolva";
+"Help" = "Súgó";
+"noJavascriptError" = "A SOGo-nak Javascript futtatási környezetre van szüksége. Kérem győződjön meg, hogy böngészője támogatja-e, illetve be van-e kapcsolva ez az opció.";
+"noJavascriptRetry" = "Újra";
+"Owner" = "Tulajdonos";
+"Publish the Free/Busy information" = "Foglaltsági információ nyilvánossá tétele";
+"Add..." = "Hozzáadás...";
+"Remove" = "Törlés";
+"Subscribe User" = "Felhasználót felirathat";
+"Any Authenticated User" = "Bejelentkezett felhasználók";
+"Public Access" = "Nyilvános hozzáférés";
+"Any user not listed above" = "Az összes fel nem sorolt felhasználó";
+"Anybody accessing this resource from the public area" = "Bárki, aki a publikus tartományból az erőforrást elérheti";
+"Sorry, the user rights can not be configured for that object." = "Sajnálom, erre az objektumra nem állíthatók be felhasználói jogosultságok.";
+"Any user with an account on this system will be able to access your mailbox \"%{0}\". Are you certain you trust them all?"
+     = "A rendszer bármely felhasználója el tudja érni az alábbi email fiókot: \"%{0}\". Biztos, hogy megbízik mindegyikükben?";
+"Any user with an account on this system will be able to access your calendar \"%{0}\". Are you certain you trust them all?"
+     = "A rendszer bármely felhasználója el tudja érni az alábbi naptárját: \"%{0}\". Biztos, hogy megbízik mindegyikükben?";
+"Potentially anyone on the Internet will be able to access your calendar \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?"
+     = "Lényegében bárki az interneten el tudja érni a(z) \"%{0}\" naptárját, még akkor is, ha nem rendelkezik fiókkal a rendszerben. Biztos, hogy a naptár publikus adatokat tartalmaz?";
+"Any user with an account on this system will be able to access your address book \"%{0}\". Are you certain you trust them all?"
+     = "A rendszer bármely felhasználója el tudja érni az alábbi címjegyzékét: \"%{0}\". Biztos, hogy megbízik mindegyikükben?";
+"Potentially anyone on the Internet will be able to access your address book \"%{0}\", even if they do not have an account on this system. Is this information suitable for the public Internet?"
+     = "Lényegében bárki az interneten el tudja érni a(z) \"%{0}\" címjegyzékét, még akkor is, ha nem rendelkezik fiókkal a rendszerben. Biztos, hogy a címjegyzék publikus adatokat tartalmaz?";
+"Give Access" = "Hozzáférés biztosítása";
+"Keep Private" = "Magán célúnak megtart";
+
+/* generic.js */
+"Unable to subscribe to that folder!"
+        = "A mappára nem lehet feliratkozni!";
+"You cannot subscribe to a folder that you own!"
+        = "Saját tulajdonban lévő mappára nem lehet feliratkozni!";
+"Unable to unsubscribe from that folder!"
+        = "A mappáról nem lehet leiratkozni!";
+"You cannot unsubscribe from a folder that you own!"
+        = "Saját tulajdonban lévő mappáról nem lehet leiratkozni!";
+"Unable to rename that folder!" = "A mappát nem lehet átnevezni!";
+"You have already subscribed to that folder!"
+        = "Erre a mappára már feliratkozott!";
+"The user rights cannot be edited for this object!"
+        = "Ezen az objektumon nem szerkeszthetőek a felhasználói jogosultságok!";
+"A folder by that name already exists." = "Ezzel a névvel már létezik mappa.";
+"You cannot create a list in a shared address book."
+        = "Nem hozható létre lista egy megosztott címjegyzékben.";
+"Warning" = "Figyelmeztetés";
+"Can't contact server" = "Hiba történt a kiszolgálóhoz kapcsolódás során. Kérem próbálja újra később.";
+"You are not allowed to access this module or this system. Please contact your system administrator."
+= "Önnek nem engedélyezett a hozzáférés ehhez a modulhoz vagy rendszerhez. Kérem lépjen kapcsolatba a rendszergazdával.";
+"You don't have the required privileges to perform the operation."
+= "Önnek nincs jogosultsága ehhez a művelethez.";
+"noEmailForDelegation" = "Meg kell adnia a címet, amelyre a meghívását átruházza.";
+"delegate is organizer" = "Az átruházott személy nem lehet a szervező, kérem adjon meg mást.";
+"delegate is a participant" = "Az átruházott személy nem lehet résztvevő.";
+"delegate is a group" = "A megadott cím egy csoporté, átruházni csak egy személyre lehet.";
+
+/* common buttons */
+"OK" = "Ok";
+"Cancel" = "Mégse";
+"Yes" = "Igen";
+"No" = "Nem";
+
+/* generic messages */
+"Error" = "Hiba";
+"Success" = "Sikeres";
+
+/* confirmation dialog box */
+"Confirmation" = "Megerősítés";
+
+/* alarms */
+"Reminder" = "Emlékeztető";
+"Start" = "Kezdés";
+"Due Date" = "Lejárat dátuma";
+"Location" = "Helyszín";
+"Snooze" = "Szundi";
+"Snooze for " = "Szundi:";
+"5 minutes" = "5 perc";
+"10 minutes" = "10 perc";
+"15 minutes" = "15 perc";
+"30 minutes" = "30 perc";
+"45 minutes" = "45 perc";
+"1 hour" = "1 óra";
+"1 day" = "1 nap";
+
+/* mail labels */
+"Important" = "Fontos";
+"Work" = "Hivatalos";
+"Personal" = "Személyes";
+"To Do" = "Teendő";
+"Later" = "Később";
+"Return Receipt Sent" = "Visszaigazolás elküldve";
+"a2_Sunday" = "Va";
+"a2_Monday" = "Hé";
+"a2_Tuesday" = "Ke";
+"a2_Wednesday" = "Sz";
+"a2_Thursday" = "Cs";
+"a2_Friday" = "Pé";
+"a2_Saturday" = "Sz";
+"Access Rights" = "Hozzáférési jogok";
+"Add User" = "Felhasználó hozzáadása";
+"Loading" = "Betöltés";
+"No such user." = "Nincs ilyen felhasználó";
+"You cannot (un)subscribe to a folder that you own!" = "Saját tulajdonban lévő mappá(ra/ról) nem lehet feliratkozni, vagy leiratkozni.";
+
+/* SMIME Certificate field */
+"S/MIME Certificate" = "S/MIME tanúsítvány";
+"Subject Name" = "Tulajdonos";
+"Issuer" = "Kibocsátó";
+"countryName" = "Ország";
+"organizationName" = "Szervezet";
+"organizationalUnitName" = "Szervezeti egység";
+"commonName" = "Általános név";
+"emailAddress" = "Email cím";
+
+/* Authentication username */
+"Username" = "Felhasználónév";
+
+/* Authentication password */
+"Password" = "Jelszó";
+
+/* Authentication failed */
+"Wrong username or password." = "Hibás felhasználónév vagy jelszó";
+
+/* Error message displayed bellow search field when the search string has less than the required number of characters */
+"Enter at least %{minimumSearchLength} characters" = "Adjon meg legalább %{minimumSearchLength} karaktert";
+
+/* Error message displayed when a file upload exceeds WOMaxUploadSize */
+"File size upload limit reached" = "Elérte a maximális állomány feltöltési méretkorlátot";
+
+/* Generic server error */
+"An error occured, please try again." = "Hiba történt, próbálja újra.";
+
+/* Open datepicker */
+"Open Calendar" = "Naptár megnyitása";
+
+/* Toggle visibility (ex: mail account in left navigation menu) */
+"Toggle visibility" = "Láthatóság összecsukása";
+
+"Keyboard Shortcuts" = "Gyorsbillentyűk";
+
+/* Aria label for avatar button to select and unselect an item */
+"Toggle item" = "Elem összecsukása";
+
+/* Toggle multiple items at the same time (hotkeys cheatsheet) */
+"Toggle range of items" = "Több elem módosítása";
+
+/* Question mark shows list of hotkeys */
+"Show or hide this help" = "Mutassa vagy elrejtse ezt a súgót";
+
+/* Space key */
+"key_space" = "space";
+
+/* Delete key */
+"key_delete" = "törlés";
+
+/* Shift and space key */
+"key_shift+space" = "shift + space";
+
+/* Up arrow key */
+"key_up" = "↑";
+
+/* Down arrow key */
+"key_down" = "↓";
+
+/* Left arrow key */
+"key_left" = "←";
+
+/* Right arrow key */
+"key_right" = "→";
+
+/* Shift and up arrow combo keys */
+"key_shift+up" = "shift + ↑";
+
+/* Shift and down arrow combo keys */
+"key_shift+down" = "shift + ↓";
+
+/* Backspace key */
+"key_backspace" = "⌫";
+
+/* Hotkey to start a search */
+"hotkey_search" = "s";
+
+/* Hotkey description to select next list item */
+"View next item" = "Következő elem megtekintése";
+
+/* Hotkey description to select previous list item */
+"View previous item" = "Előző elem megtekintése";
+
+/* Hotkey description to add next list item to selection */
+"Add next item to selection" = "Következő elem hozzáadása a kiválasztáshoz";
+
+/* Hotkey description to add previous list item to selection */
+"Add previous item to selection" = "Előző elem hozzáadása a kiválasztáshoz";
+
+/* Hotkey description to move backward in current view */
+"Move backward" = "Mozgatás vissza";
+
+/* Hotkey description to move forward in current view */
+"Move forward" = "Mozgatás előre";

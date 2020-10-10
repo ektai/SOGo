@@ -1,0 +1,68 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE container>
+<container
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:var="http://www.skyrix.com/od/binding"
+    xmlns:const="http://www.skyrix.com/od/constant"
+    xmlns:label="OGo:label"
+    xmlns:uix="OGo:uix">
+  <md-dialog flex="50" flex-sm="80" flex-xs="100">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <div class="sg-md-title md-flex"><var:string label:value="Subscribe to a shared folder"/></div>
+        <md-button class="md-icon-button" ng-click="subscribe.close()">
+          <md-icon label:aria-label="Close">close</md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content class="md-dialog-content">
+      <form name="searchForm">
+        <md-input-container class="md-icon-float md-block md-flex md-icon-left">
+          <md-icon>search</md-icon>
+          <label><var:string label:value="Search User"/></label>
+          <input type="search"
+                 name="userSearch"
+                 autocomplete="off"
+                 md-autofocus="true"
+                 ng-model="subscribe.searchText"
+                 ng-model-options="subscribe.searchTextOptions"
+                 var:minlength="minimumSearchLength"
+                 ng-change="subscribe.onChange(searchForm.userSearch)"/>
+          <div ng-messages="searchForm.userSearch.$error">
+            <div ng-message="minlength"><var:string value="minimumSearchLengthLabel"/></div>
+            <div ng-message="matches">{{'No such user.' | loc }}</div>
+          </div>
+        </md-input-container>
+      </form>
+      <md-card ng-repeat="user in subscribe.users"
+               ng-class="{ 'sg-collapsed': user.uid != subscribe.selectedUser.uid,
+                           'sg-expanded': user.uid == subscribe.selectedUser.uid }">
+        <md-button ng-click="subscribe.selectUser($index)">
+          <div layout="row" layout-align="start center" class="md-flex">
+            <sg-avatar-image class="md-avatar md-tile-left"
+                             sg-email="user.c_email"
+                             size="40">{{ user.$avatarIcon }}</sg-avatar-image>
+            <div class="sg-tile-content">
+              <div class="sg-md-subhead"><div>{{user.cn}}</div></div>
+              <div class="sg-md-body"><div>{{user.c_email}}</div></div>
+            </div>
+            <md-icon ng-class="{'md-rotate-180': user.uid == subscribe.selectedUser.uid}">expand_more</md-icon>
+          </div>
+        </md-button>
+        <md-card-content ng-show="user == subscribe.selectedUser">
+          <div ng-show="user.$$folders.length == 0">
+            <md-icon>warning</md-icon>
+            <var:string label:value="No possible subscription"/>
+          </div>
+          <div layout="row" layout-align="start center"
+               ng-repeat="folder in user.$$folders">
+            <md-icon>{{ folder.type == 'Contact' ? 'contacts' : 'event' }}</md-icon>
+            <div class="sg-padded--left md-flex" md-truncate="md-truncate">{{folder.displayName}}</div>
+            <md-button class="md-raised"
+                       ng-click="subscribe.selectFolder(folder)"><var:string label:value="Subscribe"/></md-button>
+          </div>
+        </md-card-content>
+      </md-card>
+    </md-dialog-content>
+  </md-dialog>
+</container>

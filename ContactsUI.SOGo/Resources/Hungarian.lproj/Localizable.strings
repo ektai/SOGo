@@ -1,0 +1,364 @@
+/* this file is in UTF-8 format! */
+
+"Contact" = "Kapcsolat";
+"Address" = "Címek";
+"Photos" = "Képek";
+"Other" = "Egyéb";
+"Address Books" = "Címjegyzékek";
+"Addressbook" = "Címjegyzék";
+"Addresses" = "Címek";
+"Update" = "Mentés";
+"Cancel" = "Mégsem";
+"Common" = "Közös";
+"Contact editor" = "Kapcsolatszerkesztő";
+"Contact viewer" = "Kapcsolat betekintő";
+"Email" = "Email";
+"Screen Name" = "Megjelenített név";
+"Extended" = "Kiterjesztett";
+"Fax" = "Fax";
+"Firstname" = "Keresztnév";
+"Home" = "Otthoni";
+"HomePhone" = "Otthoni telefon";
+"Lastname" = "Vezetéknév";
+"Location" = "Hely";
+"Add a category" = "Kategória hozzáadása";
+"MobilePhone" = "Mobil telefon";
+"Name" = "Név";
+"OfficePhone" = "Hivatali telefon";
+"Organization" = "Szervezet";
+"Work Phone" = "Munkahelyi telefon";
+"Cell" = "Cella";
+"Pager" = "Személyhívó";
+"Pref" = "Beállítás";
+"Phone" = "Telefon";
+"Phones" = "Telefonszámok";
+"Postal" = "Irányítószám";
+"Save" = "Mentés";
+"Internet" = "Internet";
+"Unit" = "Egység";
+"delete" = "Töröl";
+"edit" = "Szerkeszt";
+"invalidemailwarn" = "A megadott email cím érvénytelen";
+"new" = "új";
+"Preferred Phone" = "Preferált telefon";
+"Move To" = "Áthelyezés";
+"Copy To" = "Másolás";
+"Add to" = "Add to";
+"To" = "Címzett";
+"Carbon Copy (Cc)" = "Másolat (Cc)";
+"Blind Carbon Copy (Bcc)" = "Titkos másolat (Bcc)";
+
+/* Search scope: name fields */
+"name" = "Név";
+
+/* Search scope: name fields */
+"c_cn" = "Név";
+
+/* Search scope: secondary email field */
+"mozillanickname" = "Másodlagos email";
+
+/* Search scope: screen name field */
+"nsaimid" = "Megjelenített név";
+
+/* Search scope: mail fields */
+"mail" = "Mail";
+
+/* Search scope: mail fields */
+"c_mail" = "Mail";
+
+/* Search scope: telephone field */
+"telephonenumber" = "Telefon";
+
+/* Search scope: telephone field */
+"homephone" = "Telefon";
+
+/* Search scope: mobile field */
+"mobile" = "Mobil";
+
+/* Search scope: fax field */
+"facsimiletelephonenumber" = "Fax";
+
+/* Search scope: pager field */
+"pager" = "Személyhívó";
+
+/* Search scope: categories field */
+"c_categories" = "Kategóriák";
+
+/* Search scope: categories field */
+"vcardcategories" = "Kategóriák";
+
+/* Search scope: title field */
+"title" = "Beosztás";
+
+/* Search scope: organization field */
+"c_o" = "Szervezet";
+
+/* Search scope: organization field */
+"o" = "Szervezet";
+
+/* Search scope: department field */
+"ou" = "Részleg";
+
+/* Search scope: city field */
+"l" = "Település";
+
+/* Search scope: country field */
+"c" = "Ország";
+
+/* Search scope: home address field */
+"mozillahomestreet" = "Otthoni cím";
+
+/* Search scope: state/province field */
+"st" = "Állam/tartomány";
+
+/* Search scope: home state/province field */
+"mozillahomestate" = "Otthoni állam/tartomány";
+
+/* Search scope: zip/postal code field */
+"postalCode" = "Irányítószám";
+
+/* Search scope: home zip/postal code field */
+"mozillahomepostalcode" = "Irányítószám";
+
+/* Search scope: home country field */
+"mozillahomecountryname" = "Otthoni ország";
+
+/* Search scope: home web page field */
+"mozillahomeurl" = "Kezdőlap";
+
+/* Search scope: work web page field */
+"mozillaworkurl" = "Weboldal";
+
+/* Search scope: note field */
+"description" = "Megjegyzés";
+
+/* Subheader of empty addressbook */
+"No contact" = "Nincs kapcsolat";
+
+/* Subheader of system addressbook */
+"Start a search to browse this address book" = "Indítson egy keresést a címjegyzék tallózásához.";
+
+/* Number of contacts in addressbook; string is prefixed by number */
+"contacts" = "kapcsolat";
+
+/* No contact matching search criteria */
+"No matching contact" = "Nincs megfelelő kapcsolat";
+
+/* Number of contacts matching search criteria; string is prefixed by number */
+"matching contacts" = "megfelelő kapcsolat";
+
+/* Number of selected contacts in list */
+"selected" = "kijelölt";
+
+/* Empty right pane */
+"No contact selected" = "Nincs kijelölt kapcsolat";
+
+/* Tooltips */
+"Create a new address book card" = "Új névjegykártya készítése";
+"Create a new list" = "Új csoportlista készítése";
+"Edit the selected card" = "A kijelölt névjegy szerkesztése";
+"Send a mail message" = "Email üzenet küldése";
+"Delete selected card or address book" = "Kijelölt névjegy vagy címjegyzék törlése";
+"Reload all contacts" = "Minden kapcsolat újratöltése";
+"htmlMailFormat_UNKNOWN" = "Ismeretlen";
+"htmlMailFormat_FALSE" = "Egyszerű szöveg";
+"htmlMailFormat_TRUE" = "HTML";
+"Name or Email" = "Név vagy email";
+"Category" = "Kategória";
+"Personal Addressbook" = "Személyes címjegyzék";
+"Search in Addressbook" = "Keresés a címjegyzékben";
+"New Card" = "Új névjegy";
+"New List" = "Új csoportlista";
+"Edit" = "Szerkesztés";
+"Properties" = "Tulajdonságok";
+"Sharing..." = "Megosztás...";
+"Write" = "Üzenet írása";
+"Delete" = "Törlés";
+"Instant Message" = "Azonnali üzenet";
+"Add..." = "Hozzáadás...";
+"Remove" = "Törlés";
+"Please wait..." = "Kérem várjon...";
+"No possible subscription" = "Nincs mappa, melyre feliratkozhat";
+"Preferred" = "Előnyben részesített";
+"Display" = "Megjelenítendő név";
+"Display Name" = "Megjelenítendő név";
+"Additional Email" = "További email";
+"Phone Number" = "Telefon";
+"Prefers to receive messages formatted as" = "Előnyben részesített üzenet formátum";
+"Categories" = "Kategóriák";
+"First" = "Keresztnév";
+"Last" = "Vezetéknév";
+"Nickname" = "Becenév";
+"Telephone" = "Telefon";
+"Work" = "Munkahely";
+"Mobile" = "Mobil";
+"Pager" = "Személyhívó";
+
+/* categories */
+"contacts_category_labels" = "Munkatárs, Versenytárs, Felhasználó, Barát, Család, Üzleti partner, Szolgáltató, Sajtó, VIP";
+"New category" = "Új kategória";
+
+/* adresses */
+"Title" = "Cím";
+"Service" = "Szolgáltatás";
+"Company" = "Vállalat";
+"Department" = "Részleg";
+"City" = "Város";
+"State_Province" = "Állam/tartomány";
+"ZIP_Postal Code" = "Irányítószám";
+"Country" = "Ország";
+"Web Page" = "Web";
+"Other Infos" = "Egyéb";
+"Note" = "Megjegyzés";
+"Timezone" = "Időzóna";
+"Birthday" = "Születésnap";
+"Birthday (yyyy-mm-dd)" = "Születésnap (éééé-hh-nn)";
+"Freebusy URL" = "Foglaltság URL";
+"Add as..." = "Hozzáadás mint...";
+"Recipient" = "Címzett";
+"Carbon Copy" = "Másolat";
+"Blind Carbon Copy" = "Titkos másolat";
+"New Addressbook..." = "Új címjegyzék...";
+"Subscribe to an Addressbook..." = "Feliratkozás címjegyzékre...";
+"Remove the selected Addressbook" = "Kijelölt címjegyzék törlése";
+"Subscribe to a shared folder" = "Feliratkozás megosztott mappára";
+"Search User" = "Felhasználó keresése";
+"Name of the Address Book" = "A címjegyzék neve";
+"Are you sure you want to delete the selected address book?"
+= "Biztosan törli a kijelölt címjegyzéket?";
+"Are you sure you want to delete the addressbook \"%{0}\"?"
+= "Biztosan törli ezt a címjegyzéket: \"%{0}\" ?";
+"You cannot remove nor unsubscribe from a public addressbook."
+= "Nem lehet törölni vagy leiratkozni a publikus címjegyzékről.";
+"You cannot remove nor unsubscribe from your personal addressbook."
+= "Nem lehet törölni vagy leiratkozni a személyes címjegyzékről.";
+"Are you sure you want to delete the selected contacts?"
+= "Biztosan törli a kijelölt kapcsolatokat?";
+"Are you sure you want to delete the card of %{0}?" = "Biztosan törli ezt a névjegyet: %{0}?";
+"You cannot delete the card of \"%{0}\"."
+= "Az alábbi névjegy nem törölhető:  \"%{0}\".";
+"You cannot subscribe to a folder that you own!"
+= "Saját tulajdonú mappára nem lehet feliratkozni.";
+"Unable to subscribe to that folder!"
+= "Erre a mappára nem lehet feliratkozni.";
+
+/* security */
+"Security" = "Biztonság";
+"Uninstall" = "Eltávolítás";
+"Error reading the card certificate." = "Hiba történt a kártya tanúsítvány beolvasása során.";
+"No certificate associated to card." = "Nincs tanúsítvány összerendelés a kártyához.";
+
+/* acls */
+"Access rights to" = "Hozzáférés az alábbiaknak:";
+"For user" = "Felhasználónak";
+"Any Authenticated User" = "Bármely azonosított felhasználó";
+"Public Access" = "Nyilvános hozzáférés";
+"This person can add cards to this addressbook."
+= "Az alábbi személy hozzáadhat névjegyeket ehhez a címjegyzékhez.";
+"This person can edit the cards of this addressbook."
+= "Az alábbi személy szerkesztheti a névjegyeket ebben a címjegyzékben.";
+"This person can list the content of this addressbook."
+= "Az alábbi személy kilistázhatja a névjegyeket ebben a címjegyzékben.";
+"This person can read the cards of this addressbook."
+= "Az alábbi személy olvashatja a névjegyeket ebben a címjegyzékben.";
+"This person can erase cards from this addressbook."
+= "Az alábbi személy névjegyeket törölhet ebből a címjegyzékből.";
+"The selected contact has no email address."
+= "A kiválasztott kapcsolat nem rendelkezik email címmel.";
+"Please select a contact." = "Kérem válasszon egy kapcsolatot.";
+
+/* Messages for move and copy */
+"%{0} card(s) copied" = "%{0} névjegy másolva";
+"%{0} card(s) moved" = "%{0} névjegy átmozgatva";
+"SoAccessDeniedException" = "Ön nem írhat ebbe a címjegyzékbe.";
+"Forbidden" = "Tiltott";
+"Invalid Contact" = "A kijelölt kapcsolat már nem létezik.";
+"Unknown Destination Folder" = "A kijelölt címjegyzék már nem elérhető.";
+
+/* Lists */
+"List details" = "Lista részletek";
+"List name" = "Lista név";
+"List nickname" = "Lista becenév";
+"List description" = "Lista leírás";
+"Members" = "Tagok";
+"Contacts" = "Kapcsolatok";
+"Add" = "Hozzáad";
+"Lists can't be moved or copied." = "Listákat nem lehet mozgatni vagy másolni.";
+"Export" = "Exportálás";
+"Export Address Book..." = "Címjegyzék exportálása...";
+"View Raw Source" = "Forrás megtekintése";
+
+/* Import */
+"Import Cards" = "Névjegyek importálása";
+"Select a vCard or LDIF file." = "Válasszon LDIF vagy vCard állományt.";
+"Upload" = "Feltöltés";
+"Uploading" = "Feltöltés";
+"Done" = "Kész";
+"An error occured while importing contacts." = "Hiba lépett fel a kapcsolatok importálása során.";
+"No card was imported." = "Névjegy nem került importálásra.";
+"A total of %{0} cards were imported in the addressbook." = "Az összes %{0} névjegy importálástra került a címjegyzékbe.";
+"Reload" = "Újratöltés";
+
+/* Properties window */
+"Address Book Name" = "Címjegyzék neve";
+"Links to this Address Book" = "Hivatkozások erre a címjegyzékre";
+"Authenticated User Access" = "Bejelentkezett felhasználó hozzáférése";
+"CardDAV URL" = "CardDAV URL";
+"Options" = "Beállítások";
+"Rename" = "Átnevezés";
+"Subscriptions" = "Előfizetések";
+"Global Addressbooks" = "Általános címjegyzékek";
+"Search" = "Keresés";
+"Sort" = "Rendezés";
+"Descending Order" = "Csökkenő sorrend";
+"Back" = "Vissza";
+"Select All" = "Összes kijelölése";
+"Copy contacts" = "Kapcsolatok másolása";
+"More messages options" = "További üzenet tulajdonságok";
+"New Contact" = "Új kapcsolat";
+"Close" = "Bezárás";
+"More contact options" = "További kapcsolat tulajdonságok";
+"Organization Unit" = "Szervezeti egység";
+"Add Organizational Unit" = "Szervezeti egység hozzáadása";
+"Type" = "Típus";
+"Email Address" = "Email cím";
+"New Email Address" = "Új email cím";
+"New Phone Number" = "Új telefonszám";
+"URL" = "URL";
+"New URL" = "Új URL";
+"street" = "utca";
+"street (continued)" = "utca (folytatás)";
+"Postoffice" = "Postahivatal";
+"Region" = "Megye";
+"Postal Code" = "Irányítószám";
+"New Address" = "Új cím";
+"Reset" = "Alaphelyzet";
+"Description" = "Leírás";
+"Add Member" = "Résztvevő hozzáadása";
+"Subscribe" = "Feliratkozás";
+"Add Birthday" = "Új születésnap";
+"Import" = "Importálás";
+"More options" = "További tulajdonságok";
+"Role" = "Szerepkör";
+"Add Screen Name" = "Új becenév";
+"Custom 1" = "Kiegészítés 1";
+"Custom 2" = "Kiegészítés 2";
+"Custom 3" = "Kiegészítés 3";
+"Custom 4" = "Kiegészítés 4";
+"Custom Value" = "Kiegészítő adat";
+"New Custom Value" = "Új kiegészítő adat";
+"Synchronization" = "Szinkronizálás";
+"Synchronize" = "Szinkronizálás";
+"Sucessfully subscribed to address book" = "Sikeresen feliratkozott a címjegyzékre";
+
+/* Aria label for scope of search on contacts */
+"Search scope" = "Keresés hatóköre";
+
+/* Aria label for avatar button to select and unselect a card */
+"Toggle item" = "Elem összecsukása";
+
+/* Hotkey to create a new card */
+"key_create_card" = "c";
+
+/* Hotkey to create a new list */
+"key_create_list" = "l";

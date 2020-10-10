@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE div>
+<div xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:var="http://www.skyrix.com/od/binding"
+  xmlns:label="OGo:label"
+  class="linked_attachment_frame">
+
+  <div class="pseudo-input-container">
+    <label class="pseudo-input-label"><var:string label:value="Subject"/></label>
+    <div>
+      <var:string value="messageSubject"/>
+    </div>
+  </div>
+
+  <div class="pseudo-input-container">
+    <label class="pseudo-input-label"><var:string label:value="From"/></label>
+    <div>
+      <var:string value="fromAddresses"/>
+    </div>
+  </div>
+
+  <div class="pseudo-input-container">
+    <label class="pseudo-input-label"><var:string label:value="Date"/></label>
+    <div>
+      <var:string value="envelope.date"  formatter="context.mailDateFormatter"/>
+    </div>
+  </div>
+
+  <div class="pseudo-input-container">
+    <label class="pseudo-input-label"><var:string label:value="To"/></label>
+    <div>
+      <var:string value="toAddresses"/>
+    </div>
+  </div>
+  
+  <var:if condition="envelope.hasCC">
+    <div class="pseudo-input-container">
+      <label class="pseudo-input-label"><var:string label:value="CC"/></label>
+      <div>
+        <var:string value="ccAddresses"/>
+      </div>
+    </div>
+  </var:if>
+  <md-divider class="md-margin"><!-- divider --></md-divider>
+</div>
